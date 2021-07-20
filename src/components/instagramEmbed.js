@@ -2,6 +2,7 @@ import React from "react"
 import PropTypes from "prop-types"
 
 const InstaEmbed = ({ url }) => {
+  console.log("url: ", url)
   return (
     <blockquote
       className="instagram-media"
@@ -32,7 +33,7 @@ const InstaEmbed = ({ url }) => {
             width: "100%",
           }}
           target="_blank"
-          rel="noreferrer"
+          rel="noreferrer noopener"
         >
           <div
             style={{
@@ -243,38 +244,6 @@ const InstaEmbed = ({ url }) => {
             />
           </div>
         </a>
-        <p
-          style={{
-            color: "#c9c8cd",
-            fontFamily: "Arial,sans-serif",
-            fontSize: "14px",
-            lineHeight: "17px",
-            marginBottom: 0,
-            marginTop: "8px",
-            overflow: "hidden",
-            padding: "8px 0 7px",
-            textAlign: "center",
-            textOverflow: "ellipsis",
-            whiteSpace: "nowrap",
-          }}
-        >
-          <a
-            href={url}
-            style={{
-              color: "#c9c8cd",
-              fontFamily: "Arial,sans-serif",
-              fontSize: "14px",
-              fontStyle: "normal",
-              fontWeight: "normal",
-              lineHeight: "17px",
-              textDecoration: "none",
-            }}
-            target="_blank"
-            rel="noreferrer"
-          >
-            A post shared by Los Pichy Boys (@lospichyboys)
-          </a>
-        </p>
       </div>
     </blockquote>
   )
@@ -284,5 +253,5 @@ export default InstaEmbed
 
 //
 InstaEmbed.propTypes = {
-  url: PropTypes.string.isRequired,
+  url: PropTypes.string,
 }
