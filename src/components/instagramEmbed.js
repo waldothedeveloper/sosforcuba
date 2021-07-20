@@ -1,11 +1,12 @@
 import React from "react"
+import PropTypes from "prop-types"
 
-const InstaEmbed = () => {
+const InstaEmbed = ({ url }) => {
   return (
     <blockquote
       className="instagram-media"
       data-instgrm-captioned
-      data-instgrm-permalink="https://www.instagram.com/p/CRPQDtehcF0/?utm_source=ig_embed&utm_campaign=loading"
+      data-instgrm-permalink={url}
       data-instgrm-version={13}
       style={{
         background: "#FFF",
@@ -13,15 +14,15 @@ const InstaEmbed = () => {
         borderRadius: "12px",
         boxShadow: "0 0 1px 0 rgba(0,0,0,0.5),0 1px 10px 0 rgba(0,0,0,0.15)",
         margin: "1px",
-        maxWidth: "540px",
-        minWidth: "326px",
+        maxWidth: "320",
+        minWidth: "226px",
         padding: 0,
-        width: "calc(100% - 12px)",
+        width: "calc(100% - 2px)",
       }}
     >
       <div style={{ padding: "16px" }}>
         <a
-          href="https://www.instagram.com/p/CRPQDtehcF0/?utm_source=ig_embed&utm_campaign=loading"
+          href={url}
           style={{
             background: "#FFFFFF",
             lineHeight: 0,
@@ -258,7 +259,7 @@ const InstaEmbed = () => {
           }}
         >
           <a
-            href="https://www.instagram.com/p/CRPQDtehcF0/?utm_source=ig_embed&utm_campaign=loading"
+            href={url}
             style={{
               color: "#c9c8cd",
               fontFamily: "Arial,sans-serif",
@@ -280,3 +281,8 @@ const InstaEmbed = () => {
 }
 
 export default InstaEmbed
+
+//
+InstaEmbed.propTypes = {
+  url: PropTypes.string.isRequired,
+}

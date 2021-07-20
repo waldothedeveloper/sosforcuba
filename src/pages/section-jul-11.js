@@ -2,16 +2,13 @@ import React from "react"
 import YoutubeEmbed from "../components/youtubeEmbed"
 import protests_map_july_11 from "../images/protests-map-july-11.png"
 import san_antonio from "../images/san-antonio-de-los-banos.png"
-import dead_boy from "../images/13-year-old-kid-dead-cuba-protests-july-2021.jpeg"
-import man_washington from "../images/man-washington-protest.jpg"
-import girl_protesting from "../images/girl_protesting.jpg"
+import { pichyboysVideos } from "../utils/instagram_vids"
 import boinas_negras from "../images/boinas_negras.jpeg"
 import policia from "../images/policia_cubana.jpg"
 import minint from "../images/minint_cuba.jpg"
 import Divider from "../components/divider"
-import Carousel from "../components/carousel"
+import SocialMediaEmbedCarousel from "../components/carousel"
 import { TwitterTweetEmbed } from "react-twitter-embed"
-import InstaEmbed from "../components/instagramEmbed"
 
 const July11 = () => {
   return (
@@ -203,10 +200,8 @@ const July11 = () => {
                 high level of violence from the communist government.
               </p>
 
-              <InstaEmbed />
-
               {/* This should be a carousel of instagram videos  */}
-              <Carousel photos={[dead_boy, man_washington, girl_protesting]} />
+              <SocialMediaEmbedCarousel data={pichyboysVideos} />
             </div>
           </div>
         </div>
