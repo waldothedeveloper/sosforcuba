@@ -9,6 +9,8 @@ import minint from "../images/minint_cuba.jpg"
 import Divider from "../components/divider"
 import SocialMediaEmbedCarousel from "../components/carousel"
 import { TwitterTweetEmbed } from "react-twitter-embed"
+import etecsa from "../images/ETECSA_logo.png"
+import list_of_detained from "../images/642-dissapeared-people.jpg"
 
 const July11 = () => {
   return (
@@ -31,8 +33,7 @@ const July11 = () => {
             {/* section 1 */}
             <div className="mt-12 prose prose-red prose-lg text-gray-300 mx-auto max-w-4xl">
               <p className="mt-8 leading-8">
-                On an odd Sunday of July, a large group of people took the
-                streets on{" "}
+                On Sunday July 11, a large group of people took the streets on{" "}
                 <span className="text-yellow-400 underline">
                   San Antonio de los Baños
                 </span>{" "}
@@ -97,28 +98,28 @@ const July11 = () => {
               </p>
 
               <p>
-                The majority of the protests -if not all- were pacific. No one
-                in Cuba -by law- is allowed to carry firearms or any other type
-                of weapon. But to be accurate, it&apos;s no one
+                The majority of the protests -if not all- were peacefully
+                initiated. No one in Cuba -by law- is allowed to carry firearms
+                or any other type of weapon. To be accurate, it&apos;s no one
+                but
               </p>
               <blockquote>
                 <p>
-                  except the government, military personnel, and the national
-                  police.
+                  the government, military personnel, and the national police.
                 </p>
               </blockquote>
             </div>
 
             {/* section 2 */}
 
-            <div className="my-32 prose prose-red prose-lg text-gray-300 mx-auto max-w-4xl">
+            <div className="mt-32 prose prose-red prose-lg text-gray-300 mx-auto max-w-4xl">
               <div className="text-lg max-w-prose mx-auto">
                 <h1>
                   <span className="block text-base text-center text-red-600 font-semibold tracking-wide uppercase">
                     later on July 11, 2021
                   </span>
                   <span className="mt-2 block text-3xl text-center leading-8 font-extrabold tracking-tight text-gray-50 sm:text-4xl">
-                    Government response
+                    Government Response
                   </span>
                 </h1>
               </div>
@@ -186,7 +187,8 @@ const July11 = () => {
                 <div>
                   <p className="pb-12">
                     As well as other gov officials dressed as civilians carrying
-                    huge sticks ready to beat anyone peacefully protesting:
+                    wood sticks ready to beat anyone who would be peacefully
+                    protesting:
                   </p>
                   {/* twitter here */}
                   <TwitterTweetEmbed
@@ -196,12 +198,104 @@ const July11 = () => {
                 </div>
               </div>
               <p className="py-12">
-                The videos and pictures from the protesters themselves show a
-                high level of violence from the communist government.
+                The videos and pictures shared on the internet from the
+                protesters themselves show the shocking level of violence of the
+                communist government&apos;s response.
               </p>
 
               {/* This should be a carousel of instagram videos  */}
               <SocialMediaEmbedCarousel data={pichyboysVideos} />
+
+              <blockquote>
+                <p>
+                  And we are ready for anything. They will have to pass over our
+                  dead bodies if they think they can defeat the revolution
+                </p>
+              </blockquote>
+
+              <p className="pt-12">Added the president in his speech...</p>
+            </div>
+
+            {/* section 3 */}
+            <div className="space-y-12 mt-32 prose prose-blue prose-lg text-gray-300 mx-auto max-w-4xl">
+              <p>
+                In addition to this, the Cuban government took an additional
+                measurement step:
+              </p>
+
+              <span className="mt-2 block text-3xl text-center leading-8 font-extrabold tracking-tight text-yellow-400 sm:text-4xl">
+                Cutting the internet for the entire population of Cuba.
+              </span>
+
+              <p>
+                <span className="font-bold text-md">The BBC News</span> wrote an{" "}
+                <a
+                  target="_blank"
+                  rel="noreferrer noopener"
+                  href="https://www.bbc.com/news/world-latin-america-57818918"
+                >
+                  <span className="text-blue-400 font-semibold">article</span>
+                </a>{" "}
+                explaining the strategy behind the Cuban government&apos;s
+                actions:
+              </p>
+              {/* cut the internet wire */}
+              <blockquote>
+                <p>
+                  This prevents people from sharing information about the
+                  gatherings and claims of abuse against authorities known for
+                  their repressive tactics to silence criticism.
+                </p>
+
+                <p>...</p>
+                <p>
+                  Facebook, the most popular social platform in Cuba, as well as
+                  WhatsApp, Instagram and Telegram remained restricted by
+                  Etecsa&apos;s servers, according to monitoring site Netblocks.
+                </p>
+              </blockquote>
+
+              <p>
+                <span className="font-semibold">ETECSA</span> is the only phone
+                & internet company on the island. Which is in absolute control
+                of the government.
+              </p>
+
+              <figure className="flex justify-center">
+                <img
+                  className="w-auto h-auto object-cover"
+                  src={etecsa}
+                  alt="etecsa logo, the only phone and internet company in Cuba"
+                />
+              </figure>
+
+              <p>
+                People are also afraid of taking out their phones on the streets
+                -even if it is to look at the time- thinking that if the police
+                catch them, they will think that they are making a video against
+                the government.
+              </p>
+            </div>
+
+            {/* section 4 - people dissapeared */}
+            <div className="space-y-12 mt-32 prose prose-blue prose-lg text-gray-300 mx-auto max-w-4xl">
+              <Divider />
+              <div className="text-lg max-w-prose mx-auto">
+                <h1>
+                  <span className="block text-base text-center text-red-600 font-semibold tracking-wide uppercase">
+                    events after July 11, 2021
+                  </span>
+                  <span className="mt-2 block text-3xl text-center leading-8 font-extrabold tracking-tight text-gray-50 sm:text-4xl">
+                    Missing and Detained People
+                  </span>
+                </h1>
+              </div>
+
+              <img
+                className="h-auto w-auto object-cover"
+                src={list_of_detained}
+                alt="list of people detained and/or dissapeared"
+              />
             </div>
           </div>
         </div>

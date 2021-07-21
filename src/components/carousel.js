@@ -1,9 +1,10 @@
 import React from "react"
 import InstaEmbed from "./instagramEmbed"
 import PropTypes from "prop-types"
+import "../styles/scrollbarHide.css"
 
 const SocialMediaEmbedCarousel = ({ data }) => (
-  <div className="flex overflow-x-scroll overflow-y-hidden">
+  <div id="hide-scrollbar" className="flex overflow-x-scroll overflow-y-hidden">
     {data.map(file => (
       <div key={file.title} className="flex flex-nowrap rounded-lg">
         <div className="flex px-2">
