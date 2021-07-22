@@ -10,7 +10,8 @@ import Divider from "../components/divider"
 import SocialMediaEmbedCarousel from "../components/carousel"
 import { TwitterTweetEmbed } from "react-twitter-embed"
 import etecsa from "../images/ETECSA_logo.png"
-import list_of_detained from "../images/642-dissapeared-people.jpg"
+// import list_of_detained from "../images/642-dissapeared-people.jpg"
+import InstaEmbed from "../components/instagramEmbed"
 // import dinastars from "../images/dinastars.jpg"
 // import military_police from "../images/military-police-cuba.jpeg"
 
@@ -528,9 +529,9 @@ const July11 = () => {
               </p>
 
               <p>
-                Here&apos;s a video of their detention after peacefully
-                protesting in front of the Cuban Institute of Radio and
-                Television (ICRT in spanish)
+                Here&apos;s a video of the arrests after peacefully protesting
+                in front of the Cuban Institute of Radio and Television (ICRT in
+                spanish)
               </p>
 
               {/* 27NCuba movemement */}
@@ -539,11 +540,55 @@ const July11 = () => {
                 placeholder="Loading"
               />
 
+              <p>
+                Luis Manuel Otero, who is a Cuban performance artist known for
+                his public performances that openly criticize the Cuban
+                government and its policies, said in a video posted on July
+                11th.
+              </p>
+
+              <blockquote>
+                <p>
+                  Family, I&apos;m going to the streets...it has been too much
+                  of this dictatorship, S.O.S Cuba, we need democracy.
+                </p>
+              </blockquote>
+
+              <InstaEmbed url="https://www.instagram.com/p/CRMcwjlBz74/" />
+
+              <p>
+                He is now detained and was sent to a maximum-security prison,
+                accused of Attack, Resistance, and Contempt.
+              </p>
+
+              <p>
+                Jose Miguel Vivanco, the executive director of Humans Right
+                Watch for the Americas is calling for his immediate release.
+              </p>
+
+              <TwitterTweetEmbed
+                tweetId="1416362092932780032"
+                placeholder="loading"
+              />
+
+              <TwitterTweetEmbed
+                tweetId="1417856137206980609"
+                placeholder="loading"
+              />
+
+              <TwitterTweetEmbed
+                tweetId="1417580302487195650"
+                placeholder="loading"
+              />
+
+              {/* Biden tweet about sanctions  */}
+              {/* 1418272522219532295 */}
+              {/* 
               <img
                 className="h-auto w-auto object-cover"
                 src={list_of_detained}
                 alt="list of people detained and/or dissapeared"
-              />
+              /> */}
             </div>
           </div>
         </div>
