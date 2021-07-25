@@ -10,10 +10,10 @@ import Divider from "../components/divider"
 import SocialMediaEmbedCarousel from "../components/carousel"
 import { TwitterTweetEmbed } from "react-twitter-embed"
 import etecsa from "../images/ETECSA_logo.png"
-// import list_of_detained from "../images/642-dissapeared-people.jpg"
+import jdferrer from "../images/jdferrer.jpg"
 import InstaEmbed from "../components/instagramEmbed"
-// import dinastars from "../images/dinastars.jpg"
-// import military_police from "../images/military-police-cuba.jpeg"
+import PeopleDetained from "../components/people_detained"
+import StatisticsOfDetainedPeople from "../components/statistics_of_detained_people"
 
 const July11 = () => {
   return (
@@ -384,7 +384,6 @@ const July11 = () => {
                   </span>
                 </h1>
               </div>
-
               <div
                 className="getty embed image"
                 style={{
@@ -440,7 +439,6 @@ const July11 = () => {
                   />
                 </div>
               </div>
-
               <p>
                 In response to the demonstrations, members of the National
                 Revolutionary Police, the Riot Squads, and the State Security
@@ -448,15 +446,13 @@ const July11 = () => {
                 against people who were demonstrating peacefully, including
                 university students.
               </p>
-
+              {/* 
               <p>
-                Similarly, people from different independent media outlets and
-                activists denounced the installation of security devices around
-                their homes to prevent them from going out onto the streets, a
-                practice that the Cuban authorities have previously adopted as a
-                tactic of intimidation.
-              </p>
-
+                Independent media outlets and activists denounced the
+                installation of security devices around their homes to prevent
+                them from going out onto the streets, a practice that the Cuban
+                authorities have previously adopted as a tactic of intimidation.
+              </p> */}
               {/* Anyelo Troya */}
               <p>
                 <a
@@ -471,12 +467,10 @@ const July11 = () => {
                 in prison in a summary trial -without a lawyer- just for filming
                 the #11JCuba protests.
               </p>
-
               <TwitterTweetEmbed
                 tweetId="1417946236384993280"
                 placeholder="loading"
               />
-
               {/* Dina Stars */}
               <p>
                 <a
@@ -499,27 +493,21 @@ const July11 = () => {
                 as she was discussing the sweeping arrests of activists,
                 protesters and journalists.
               </p>
-
               <YoutubeEmbed embedId="S-gGqfryL-A" />
-
               <blockquote>
                 <p>
                   I hold the government responsible for anything that may happen
                   to me
                 </p>
               </blockquote>
-
               <p>
                 the 25-year-old youtuber told the program&apos;s host before
                 abruptly leaving the interview.
               </p>
-
               <p>She added:</p>
-
               <blockquote>
                 <p>I have to go. They told me to accompany them.</p>
               </blockquote>
-
               {/* 27NCuba */}
               <p>
                 The 27NCuba movement is a group of independent Cuban artists,
@@ -527,69 +515,249 @@ const July11 = () => {
                 wake of the unjust arrest of rapper Denis Solis Gonzalez on
                 November 27, 2020.
               </p>
-
               <p>
                 Here&apos;s a video of the arrests after peacefully protesting
                 in front of the Cuban Institute of Radio and Television (ICRT in
                 spanish)
               </p>
-
               {/* 27NCuba movemement */}
               <TwitterTweetEmbed
                 tweetId="1414389085003784194"
                 placeholder="Loading"
               />
-
               <p>
                 Luis Manuel Otero, who is a Cuban performance artist known for
                 his public performances that openly criticize the Cuban
                 government and its policies, said in a video posted on July
                 11th.
               </p>
-
               <blockquote>
                 <p>
                   Family, I&apos;m going to the streets...it has been too much
                   of this dictatorship, S.O.S Cuba, we need democracy.
                 </p>
               </blockquote>
-
               <InstaEmbed url="https://www.instagram.com/p/CRMcwjlBz74/" />
-
-              <p>
-                He is now detained and was sent to a maximum-security prison,
-                accused of Attack, Resistance, and Contempt.
-              </p>
-
+              <span className="py-12 block text-3xl text-center leading-8 font-extrabold tracking-tight text-yellow-400 sm:text-4xl">
+                He was detained and sent to a maximum-security prison.
+              </span>
+              <span className="py-12 block text-3xl text-center leading-8 font-extrabold tracking-tight text-yellow-400 sm:text-4xl">
+                Allegedly accused of Attack, Resistance, and Contempt.
+              </span>
               <p>
                 Jose Miguel Vivanco, the executive director of Humans Right
                 Watch for the Americas is calling for his immediate release.
               </p>
-
               <TwitterTweetEmbed
                 tweetId="1416362092932780032"
                 placeholder="loading"
               />
-
               <TwitterTweetEmbed
                 tweetId="1417856137206980609"
                 placeholder="loading"
               />
-
               <TwitterTweetEmbed
                 tweetId="1417580302487195650"
                 placeholder="loading"
               />
+              <p>
+                And no one scapes to this level of repression, Spanish-born{" "}
+                <a
+                  href="https://www.instagram.com/aprespinosa/"
+                  target="_blank"
+                  rel="noreferrer noopener"
+                >
+                  Ramon Espinosa
+                </a>
+                , a staff photographer with Associated Press (AP), was attacked
+                by the police while covering the protests.
+              </p>
+              {/* Ramon Espinosa AP photographer */}
+              <div
+                className="getty embed image"
+                style={{
+                  backgroundColor: "#fff",
+                  display: "inline-block",
+                  fontFamily: "Roboto,sans-serif",
+                  color: "#a7a7a7",
+                  fontSize: 11,
+                  width: "100%",
+                  maxWidth: 594,
+                }}
+              >
+                <div style={{ padding: 0, margin: 0, textAlign: "left" }}>
+                  <a
+                    href="http://www.gettyimages.com/detail/1233931176"
+                    target="_blank"
+                    style={{
+                      color: "#a7a7a7",
+                      textDecoration: "none",
+                      fontWeight: "normal !important",
+                      border: "none",
+                      display: "inline-block",
+                    }}
+                    rel="noreferrer"
+                  >
+                    Embed from Getty Images
+                  </a>
+                </div>
+                <div
+                  style={{
+                    overflow: "hidden",
+                    position: "relative",
+                    height: 0,
+                    padding: "66.66667% 0 0 0",
+                    width: "100%",
+                  }}
+                >
+                  <iframe
+                    src="//embed.gettyimages.com/embed/1233931176?et=KDFSNRkSQ1ZIJ2fmJu3g7Q&tld=com&sig=5lEyMGWCUbUEG4DbCbVGYEgiRN3e_124oL_lsrX5eVs=&caption=true&ver=1"
+                    scrolling="no"
+                    frameBorder={0}
+                    width={594}
+                    height={396}
+                    style={{
+                      display: "inline-block",
+                      position: "absolute",
+                      top: 0,
+                      left: 0,
+                      width: "100%",
+                      height: "100%",
+                      margin: 0,
+                    }}
+                  />
+                </div>
+              </div>
 
-              {/* Biden tweet about sanctions  */}
-              {/* 1418272522219532295 */}
-              {/* 
-              <img
-                className="h-auto w-auto object-cover"
-                src={list_of_detained}
-                alt="list of people detained and/or dissapeared"
-              /> */}
+              <div
+                className="getty embed image"
+                style={{
+                  backgroundColor: "#fff",
+                  display: "inline-block",
+                  fontFamily: "Roboto,sans-serif",
+                  color: "#a7a7a7",
+                  fontSize: 11,
+                  width: "100%",
+                  maxWidth: 594,
+                }}
+              >
+                <div style={{ padding: 0, margin: 0, textAlign: "left" }}>
+                  <a
+                    href="http://www.gettyimages.com/detail/1233931147"
+                    target="_blank"
+                    style={{
+                      color: "#a7a7a7",
+                      textDecoration: "none",
+                      fontWeight: "normal !important",
+                      border: "none",
+                      display: "inline-block",
+                    }}
+                    rel="noreferrer"
+                  >
+                    Embed from Getty Images
+                  </a>
+                </div>
+                <div
+                  style={{
+                    overflow: "hidden",
+                    position: "relative",
+                    height: 0,
+                    padding: "66.66667% 0 0 0",
+                    width: "100%",
+                  }}
+                >
+                  <iframe
+                    src="//embed.gettyimages.com/embed/1233931147?et=eSN5cJkCTxhsjPvCZV8UdQ&tld=com&sig=KxfskqclSFNmrhXShKv3pFfaExqfMZaTIM7f7pLKua4=&caption=true&ver=1"
+                    scrolling="no"
+                    frameBorder={0}
+                    width={594}
+                    height={396}
+                    style={{
+                      display: "inline-block",
+                      position: "absolute",
+                      top: 0,
+                      left: 0,
+                      width: "100%",
+                      height: "100%",
+                      margin: 0,
+                    }}
+                  />
+                </div>
+              </div>
+
+              {/* Jose Daniel Ferrer UNPACU */}
+              <p>
+                José Daniel Ferrer García is a Cuban human rights activist and
+                leader of the Patriotic Union of Cuba (UNPACU in Spanish). Jose
+                was detained since July 11th by the regime. He has been a
+                political prisoner twice. No information has been made public
+                about his conditions, and many wonder if he&apos;s still alive.
+              </p>
+
+              <figure>
+                <img
+                  className="h-auto w-auto object-cover"
+                  src={jdferrer}
+                  alt="Jose Daniel Ferrer, leader of UNPACU"
+                />
+              </figure>
+              <p>
+                Here&apos;s a video where his wife and son demand the government
+                to see him. They mention that no one is allow to see, speak, or
+                send him medicines. The authorities are keeping him in solitary
+                confinement.
+              </p>
+
+              <TwitterTweetEmbed
+                tweetId="1417823784355213312"
+                placeholder="loading"
+              />
+
+              <p>His wife also said:</p>
+
+              <blockquote>
+                <p>
+                  We&apos;re going to attempt to see him at the Center of
+                  Operations and Investigations of Criminal Instruction of
+                  Santiago of Cuba, the center of torture here in Santiago, if
+                  we haven&apos;t come back by 8 pm, we have also been detained.
+                </p>
+              </blockquote>
+
+              <p>
+                On April 22, 2021 Senators Rick Scott, Marco Rubio, and Ted Cruz
+                introduced a{" "}
+                <a
+                  href="https://www.rickscott.senate.gov/sen-rick-scott-leads-resolution-honoring-cuban-democracy-and-human-rights-leader-jose-daniel-ferrer"
+                  target="_blank"
+                  rel="noreferrer noopener"
+                >
+                  resolution
+                </a>{" "}
+                honoring the efforts of Cuban democracy and human rights
+                activist José Daniel Ferrer and the vital contribution and
+                humanitarian efforts of the Patriotic Union of Cuba (UNPACU).
+              </p>
+
+              <p>
+                Others whose disappearances have been documented include the
+                director of Hora de Cuba, Henry Constantin; Iris Mariño Garcia;
+                Neife Rigau and Orelvys Cabrera Sotolongo; Rolando Rodriguez
+                Lobaina; and Niober Garcia. Several individuals were also
+                detained, such as the director of Tremenda Nota, Maykel González
+                Vivero. The arbitrary detention of journalist Camila Acosta, who
+                is the Cuban correspondent for the Spanish newspaper ABC and
+                collaborates with Cubanet News.
+              </p>
+
+              <p className="py-6">And the list is very long...</p>
             </div>
+
+            <PeopleDetained />
+
+            {/* Biden tweet about sanctions  */}
+            {/* 1418272522219532295 */}
+            <StatisticsOfDetainedPeople />
           </div>
         </div>
       </div>
