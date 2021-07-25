@@ -32,7 +32,7 @@ const PeopleDetained = () => {
   return (
     <>
       <div className="flex items-center justify-between text-gray-400 mt-3 mb-2">
-        <p>FullName</p>
+        <p>Full Name</p>
         <p>Date of Detention</p>
       </div>
       <InfiniteScroll
@@ -50,7 +50,7 @@ const PeopleDetained = () => {
                   <div className="flex-1 space-y-1">
                     <div className="flex items-center justify-between">
                       <h3 className="text-sm font-medium text-gray-50">
-                        {person.first_name} {person.lastname}
+                        {id + 1}. {person.first_name} {person.lastname}
                       </h3>
                       <p className="text-sm text-gray-300">
                         {person.date_of_arrest}
