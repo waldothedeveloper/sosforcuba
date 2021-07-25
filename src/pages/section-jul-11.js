@@ -743,21 +743,29 @@ const July11 = () => {
                 Others whose disappearances have been documented include the
                 director of Hora de Cuba, Henry Constantin; Iris Mariño Garcia;
                 Neife Rigau and Orelvys Cabrera Sotolongo; Rolando Rodriguez
-                Lobaina; and Niober Garcia. Several individuals were also
-                detained, such as the director of Tremenda Nota, Maykel González
-                Vivero. The arbitrary detention of journalist Camila Acosta, who
-                is the Cuban correspondent for the Spanish newspaper ABC and
-                collaborates with Cubanet News.
+                Lobaina; and Niober Garcia.
               </p>
 
-              <p className="py-6">And the list is very long...</p>
+              <StatisticsOfDetainedPeople />
+
+              <p>
+                Several individuals were also detained, such as the director of
+                Tremenda Nota, Maykel González Vivero. The arbitrary detention
+                of journalist Camila Acosta, who is the Cuban correspondent for
+                the Spanish newspaper ABC and collaborates with Cubanet News.
+              </p>
+
+              <p>
+                And the list starts to resemble the thousand of Polish-Jewish
+                people that died in the Holocaust.
+              </p>
             </div>
 
-            <PeopleDetained />
-
+            <div className="my-12">
+              <PeopleDetained />
+            </div>
             {/* Biden tweet about sanctions  */}
             {/* 1418272522219532295 */}
-            <StatisticsOfDetainedPeople />
           </div>
         </div>
       </div>
