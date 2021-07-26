@@ -234,9 +234,10 @@ const Section4_People_Detained = () => {
             resolution
           </span>
         </a>{" "}
-        honoring the efforts of Cuban democracy and human rights activist José
-        Daniel Ferrer and the vital contribution and humanitarian efforts of the
-        Patriotic Union of Cuba (UNPACU).
+        honoring the efforts of Cuban democracy and human rights activist{" "}
+        <span className="underline">José Daniel Ferrer</span> and the vital
+        contribution and humanitarian efforts of the Patriotic Union of Cuba
+        (UNPACU).
       </p>
 
       <p>
@@ -249,9 +250,8 @@ const Section4_People_Detained = () => {
 
       <blockquote>
         <p>
-          The list of detained and/or missing people after these protests starts
-          to resemble the thousand of Polish-Jewish people that died in the
-          Holocaust.
+          The list of detained/missing people start to resemble the thousand of
+          Polish-Jewish people that died in the Holocaust
         </p>
       </blockquote>
     </div>

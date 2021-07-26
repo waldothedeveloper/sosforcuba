@@ -3,9 +3,9 @@ import girl_protesting from "../images/girl_protesting.jpg"
 
 const Header = () => {
   return (
-    <div className="">
-      <main className="relative">
-        <div className="flex flex-col mx-auto max-w-7xl w-full pb-20 text-left">
+    <>
+      <div>
+        <div className="relative flex flex-col mx-auto max-w-7xl w-full pb-20 text-left">
           <div className="p-8">
             <img
               className="w-full h-full object-cover rounded-xl shadow-sm"
@@ -20,7 +20,7 @@ const Header = () => {
             </h1>
           </div>
         </div>
-      </main>
+      </div>
       <div className="flex items-center justify-start mt-12 pl-6">
         <h2 className="text-xl font-extrabold text-white sm:text-4xl">
           <span className="block text-xl text-gray-400">we need urgent</span>
@@ -29,7 +29,7 @@ const Header = () => {
           <span className="block text-red-500 text-4xl">INTERVENTION.</span>
         </h2>
       </div>
-    </div>
+    </>
   )
 }
 

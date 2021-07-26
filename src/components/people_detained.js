@@ -30,7 +30,7 @@ const PeopleDetained = () => {
   }
 
   return (
-    <>
+    <div className="my-12">
       <div className="flex items-center justify-between text-gray-400 mt-3 mb-2">
         <p>Full Name</p>
         <p>Date of Detention</p>
@@ -63,7 +63,20 @@ const PeopleDetained = () => {
           </ul>
         </div>
       </InfiniteScroll>
-    </>
+
+      <span className="mt-12 text-gray-400 text-sm">
+        Although every effort is put into keeping this list updated, you can
+        find the latest updates for missing or detained people{" "}
+        <a
+          className="text-yellow-400 underline font-medium"
+          href="https://docs.google.com/spreadsheets/d/1-38omFpJdDiKTSBoUOg19tv2nJxtNRS3-2HfVUUwtSw/edit#gid=627497176"
+          target="_blank"
+          rel="noopener noreferrer"
+        >
+          here.
+        </a>
+      </span>
+    </div>
   )
 }
 
