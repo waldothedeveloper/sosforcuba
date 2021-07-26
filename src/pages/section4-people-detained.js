@@ -250,8 +250,8 @@ const Section4_People_Detained = () => {
 
       <blockquote>
         <p>
-          The list of detained/missing people start to resemble the thousand of
-          Polish-Jewish people that died in the Holocaust
+          The list start to resemble the thousand of Polish-Jewish people that
+          died in the Holocaust
         </p>
       </blockquote>
     </div>

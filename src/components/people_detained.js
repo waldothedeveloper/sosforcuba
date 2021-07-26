@@ -69,7 +69,7 @@ const PeopleDetained = () => {
         find the latest updates for missing or detained people{" "}
         <a
           className="text-yellow-400 underline font-medium"
-          href="https://docs.google.com/spreadsheets/d/1-38omFpJdDiKTSBoUOg19tv2nJxtNRS3-2HfVUUwtSw/edit#gid=627497176"
+          href="https://www.facebook.com/centrodedenunciasFDP"
           target="_blank"
           rel="noopener noreferrer"
         >

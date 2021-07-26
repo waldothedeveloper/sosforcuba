@@ -14,10 +14,19 @@ const StatisticsOfDetainedPeople = () => {
         <dl className="mt-10 text-center sm:max-w-3xl sm:mx-auto sm:grid sm:grid-cols-3 sm:gap-8">
           <div className="flex flex-col">
             <dt className="order-2 mt-2 text-lg leading-6 font-medium text-gray-400">
-              Detained or Missing
+              Dissapeared or Detained
             </dt>
             <dd className="order-1 text-5xl font-extrabold text-red-600">
-              {557 + 699}
+              742
+            </dd>
+          </div>
+
+          <div className="flex flex-col mt-10">
+            <dt className="order-2 mt-2 text-lg leading-6 font-medium text-gray-400">
+              Missing or Detained
+            </dt>
+            <dd className="order-1 text-5xl font-extrabold text-red-600">
+              562
             </dd>
           </div>
 
