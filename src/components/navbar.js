@@ -3,6 +3,7 @@ import React from "react"
 import { Fragment } from "react"
 import { Popover, Transition } from "@headlessui/react"
 import sos_cuba_logo from "../images/sos_for_cuba_logo.jpg"
+import { classNames } from "../utils/classNames"
 
 import {
   AnnotationIcon,
@@ -14,32 +15,28 @@ import {
 } from "@heroicons/react/outline"
 import { ChevronDownIcon } from "@heroicons/react/solid"
 
-function classNames(...classes) {
-  return classes.filter(Boolean).join(" ")
-}
-
 const solutions = [
   {
-    name: "Inbox",
+    name: "Events on July 11, 2021",
     description:
       "Get a better understanding of where your traffic is coming from.",
     href: "#",
     icon: InboxIcon,
   },
   {
-    name: "Messaging",
+    name: "Cuban Government Response",
     description: "Speak directly to your customers in a more meaningful way.",
     href: "#",
     icon: AnnotationIcon,
   },
   {
-    name: "Live Chat",
+    name: "Internet ban",
     description: "Your customers' data will be safe and secure.",
     href: "#",
     icon: ChatAlt2Icon,
   },
   {
-    name: "Knowledge Base",
+    name: "Detained peoople",
     description: "Connect with third-party tools that you're already using.",
     href: "#",
     icon: QuestionMarkCircleIcon,
@@ -75,11 +72,11 @@ const NavBar = () => {
                     <>
                       <Popover.Button
                         className={classNames(
-                          open ? "text-gray-900" : "text-gray-500",
-                          "group bg-white rounded-md inline-flex items-center text-base font-medium hover:text-gray-900 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-blue-500"
+                          open ? "text-gray-300" : "text-gray-400",
+                          "group inline-flex rounded-md items-center text-base font-medium hover:text-gray-300 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-blue-500"
                         )}
                       >
-                        <span>Solutions</span>
+                        <span>Events</span>
                         <ChevronDownIcon
                           className={classNames(
                             open ? "text-gray-600" : "text-gray-400",
@@ -111,7 +108,7 @@ const NavBar = () => {
                                   href={item.href}
                                   className="-m-3 p-3 flex items-start rounded-lg hover:bg-gray-50"
                                 >
-                                  <div className="flex-shrink-0 flex items-center justify-center h-10 w-10 rounded-md bg-gradient-to-r from-red-600 to-blue-600 text-white sm:h-12 sm:w-12">
+                                  <div className="flex-shrink-0 flex items-center justify-center h-10 w-10 rounded-md bg-gradient-to-r from-indigo-600 to-blue-600 text-white sm:h-12 sm:w-12">
                                     <item.icon
                                       className="h-6 w-6"
                                       aria-hidden="true"
@@ -137,27 +134,27 @@ const NavBar = () => {
 
                 <a
                   href="#"
-                  className="text-base font-medium text-gray-500 hover:text-gray-900"
+                  className="text-base font-medium text-gray-400 hover:text-gray-300"
                 >
-                  Pricing
+                  Protests
                 </a>
                 <a
                   href="#"
-                  className="text-base font-medium text-gray-500 hover:text-gray-900"
+                  className="text-base font-medium text-gray-400 hover:text-gray-300"
                 >
-                  Partners
+                  Human Rights
                 </a>
                 <a
                   href="#"
-                  className="text-base font-medium text-gray-500 hover:text-gray-900"
+                  className="text-base font-medium text-gray-400 hover:text-gray-300"
                 >
-                  Company
+                  Legal
                 </a>
               </Popover.Group>
               <div className="hidden md:flex items-center justify-end md:flex-1 lg:w-0">
                 <a
                   href="#"
-                  className="whitespace-nowrap text-base font-medium text-gray-500 hover:text-gray-900"
+                  className="whitespace-nowrap text-base font-medium text-gray-400 hover:text-gray-300"
                 >
                   Sign in
                 </a>
@@ -230,19 +227,19 @@ const NavBar = () => {
                         href="#"
                         className="text-base font-medium text-gray-900 hover:text-gray-700"
                       >
-                        Pricing
+                        Protests
                       </a>
                       <a
                         href="#"
                         className="text-base font-medium text-gray-900 hover:text-gray-700"
                       >
-                        Partners
+                        Human Rights
                       </a>
                       <a
                         href="#"
                         className="text-base font-medium text-gray-900 hover:text-gray-700"
                       >
-                        Company
+                        Legal
                       </a>
                     </div>
                     <div className="mt-6">

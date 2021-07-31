@@ -1,6 +1,7 @@
 /* eslint-disable react/display-name */
 import React from "react"
 import { ChevronDownIcon } from "@heroicons/react/solid"
+import { Link } from "gatsby"
 
 const navigation = {
   events: [
@@ -10,10 +11,10 @@ const navigation = {
     { name: "Detained people", href: "#" },
   ],
   protests: [
-    { name: "Upcoming protests", href: "#" },
-    { name: "Submit your protest", href: "#" },
+    { name: "Upcoming protests", href: "/protests" },
+    { name: "Submit your protest", href: "/submit-protest" },
   ],
-  human_rights: [{ name: "Violations", href: "#" }],
+  human_rights: [{ name: "Violations", href: "/section5-human-rights" }],
   impact: [
     { name: "World Impact", href: "#" },
     { name: "USA response", href: "#" },
@@ -59,7 +60,10 @@ const navigation = {
 
 const Footer = () => {
   return (
-    <footer className="bg-gray-800" aria-labelledby="footer-heading">
+    <footer
+      className="bg-gray-800 divide-y divide-gray-600"
+      aria-labelledby="footer-heading"
+    >
       <h2 id="footer-heading" className="sr-only">
         Footer
       </h2>
@@ -110,12 +114,12 @@ const Footer = () => {
                 <ul className="mt-4 space-y-4">
                   {navigation.human_rights.map(item => (
                     <li key={item.name}>
-                      <a
-                        href={item.href}
+                      <Link
+                        to={item.href}
                         className="text-base text-gray-300 hover:text-white"
                       >
                         {item.name}
-                      </a>
+                      </Link>
                     </li>
                   ))}
                 </ul>

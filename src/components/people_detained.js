@@ -1,33 +1,12 @@
 import React from "react"
 import InfiniteScroll from "react-infinite-scroll-component"
 import { list_of_detained_people } from "../utils/detained_people"
-import { useState, useEffect } from "react"
+import { useInfiniteScrollData } from "../hooks/useInfiniteScrollData"
 
 const PeopleDetained = () => {
-  const [hasMore, setHasMore] = useState(true)
-  const [data, setData] = React.useState([])
-
-  useEffect(() => {
-    const slicedData = list_of_detained_people.slice(0, 6)
-
-    setData(slicedData)
-    return () => {
-      setData([])
-    }
-  }, [])
-
-  const fetchMoreData = () => {
-    if (data.length >= list_of_detained_people.length) {
-      setHasMore(false)
-    }
-
-    // fetch more
-    const moreData = list_of_detained_people.slice(data.length, data.length * 2)
-    // console.log("moreData: ", moreData)
-
-    const newData = data.concat(moreData)
-    setData(newData)
-  }
+  const { data, hasMore, fetchMoreData } = useInfiniteScrollData(
+    list_of_detained_people
+  )
 
   return (
     <div className="my-12">

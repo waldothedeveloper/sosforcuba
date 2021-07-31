@@ -2,6 +2,7 @@ import React from "react"
 import Layout from "../components/layout"
 import { useFetchProtests } from "../hooks/useFetchProtests"
 import { useFetchPhotos } from "../hooks/useFetchPhotos"
+import ProtestFilter from "../components/protestFilter"
 const options = {
   weekday: "short",
   year: "numeric",
@@ -30,6 +31,7 @@ const Protests = () => {
                 libero labore natus atque, ducimus sed.
               </p>
             </div>
+            <ProtestFilter />
             <div className="mt-12 max-w-lg mx-auto grid gap-5 lg:grid-cols-3 lg:max-w-none">
               {data.map(post => (
                 <div
