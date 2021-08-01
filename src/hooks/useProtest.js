@@ -1,14 +1,46 @@
 import { useState, useEffect } from "react"
+import { saveProtestInDB } from "../config/faunadb"
 
 export const useProtestForm = validate => {
   const [values, setValues] = useState({})
   const [errors, setErrors] = useState({})
   const [isSubmitting, setIsSubmitting] = useState(false)
+  const [savedToDB, setSavedToDB] = useState("pending")
 
   useEffect(() => {
     if (Object.keys(errors).length === 0 && isSubmitting) {
-      // callback a.k.a submit
-      console.log("submit baby")
+      const data = {
+        approved: "pending",
+        name: values.event_name,
+        time: values.time,
+        date: values.date,
+        address: {
+          country: values.country,
+          street_address: values.street_address,
+          city: values.city,
+          state: values.state,
+          zipcode: values.zipcode,
+        },
+        contact: {
+          email: values.email,
+          phone_number: values.phone_number,
+          message: values.message,
+        },
+      }
+      // save the protest in the fauna dababase
+      saveProtestInDB({ data })
+        .then(ret => {
+          console.log(ret)
+          setValues({})
+          setIsSubmitting(false)
+          setSavedToDB(true)
+          // ! REMEMBER TO IMPLEMENT SOME EMAIL FEATURE THAT NOTIFY ME AND THE PERSON SUBMITTING THIS FORM
+        })
+        .catch(err => {
+          console.error("Error: %s", err)
+          setSavedToDB(false)
+          setIsSubmitting(false)
+        })
     }
   }, [errors])
 
@@ -37,5 +69,12 @@ export const useProtestForm = validate => {
     setErrors(validate(values))
   }
 
-  return { values, handleValues, handleSubmit, handleCountry, errors }
+  return {
+    values,
+    handleValues,
+    handleSubmit,
+    handleCountry,
+    errors,
+    savedToDB,
+  }
 }

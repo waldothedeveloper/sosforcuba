@@ -3,14 +3,26 @@ import { useStaticQuery, graphql } from "gatsby"
 export const useFetchProtests = () => {
   const data = useStaticQuery(graphql`
     {
-      allProtest {
+      allProtest(filter: { approved: { eq: "true" } }) {
         edges {
           node {
             id
             name
-            location
-            date
-            organizer
+            contact {
+              email
+              message
+              phone_number
+            }
+            address {
+              city
+              country
+              state
+              street_address
+              zipcode
+            }
+            _id
+            time
+            date(formatString: "dddd, MMM Do")
           }
         }
       }

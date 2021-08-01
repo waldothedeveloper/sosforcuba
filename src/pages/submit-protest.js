@@ -4,11 +4,18 @@ import "../styles/protests-form.css"
 import { useProtestForm } from "../hooks/useProtest"
 import { validate } from "../utils/protestFormValidation"
 import ListOfCountries from "../components/list_of_countries"
+import ProtestNotification from "../components/protest_notification"
 import { Link } from "gatsby"
 
 const SubmitProtest = () => {
-  const { values, handleValues, handleSubmit, handleCountry, errors } =
-    useProtestForm(validate)
+  const {
+    values,
+    handleValues,
+    handleSubmit,
+    handleCountry,
+    errors,
+    savedToDB,
+  } = useProtestForm(validate)
 
   //
   const getCurrentDate = () => {
@@ -128,6 +135,7 @@ const SubmitProtest = () => {
                       </label>
                       {/* list of countries */}
                       <ListOfCountries
+                        selectedCountry={values.country || "Select Country"}
                         handleCountry={handleCountry}
                         errors={errors}
                       />
@@ -294,14 +302,15 @@ const SubmitProtest = () => {
                       </label>
                       <div className="mt-1 sm:mt-0 sm:col-span-2">
                         <textarea
-                          id="about"
-                          name="about"
+                          onChange={handleValues}
+                          value={values.message || ""}
+                          id="message"
+                          name="message"
                           rows={3}
                           className="text-gray-200 bg-transparent max-w-lg shadow-sm block w-full focus:ring-blue-500 focus:border-blue-500 sm:text-sm border border-gray-300 rounded-md"
-                          defaultValue={""}
                         />
                         <p className="mt-2 text-sm text-gray-500">
-                          Anything specfic about the event?
+                          Share any relevant details about this event.
                         </p>
                       </div>
                     </div>
@@ -330,6 +339,7 @@ const SubmitProtest = () => {
           </div>
         </div>
       </Layout>
+      <ProtestNotification savedToDB={savedToDB} />
     </>
   )
 }

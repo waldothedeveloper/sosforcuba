@@ -3,12 +3,8 @@ import Layout from "../components/layout"
 import { useFetchProtests } from "../hooks/useFetchProtests"
 import { useFetchPhotos } from "../hooks/useFetchPhotos"
 import ProtestFilter from "../components/protestFilter"
-const options = {
-  weekday: "short",
-  year: "numeric",
-  month: "long",
-  day: "numeric",
-}
+import { militaryToStandard } from "../utils/militaryToStandardTime"
+import { UserIcon } from "@heroicons/react/outline"
 
 const Protests = () => {
   const data = useFetchProtests()
@@ -56,22 +52,34 @@ const Protests = () => {
                         <p className="text-2xl font-semibold text-gray-900">
                           {post.node.name}
                         </p>
-                        <p className="text-sm font-medium text-red-600">
-                          {new Date(post.node.date).toLocaleDateString(
-                            "en-US",
-                            options
-                          )}
+                        <p className="mt-2 text-sm font-medium text-red-600">
+                          {post.node.date}, {militaryToStandard(post.node.time)}
                         </p>
+
                         <p className="mt-3 text-base text-gray-500">
-                          {post.node.location}
+                          {post.node.address.street_address}
+                          {" • "}
+                          {post.node.address.city} {post.node.address.state}
+                          <br />
+                          {post.node.address.country ===
+                          "United States of America"
+                            ? "USA"
+                            : post.node.address.country}
+                          {", "}
+                          {post.node.address.zipcode}
                         </p>
                       </div>
                     </div>
                     {/* organizer */}
-                    <div className="mt-6 flex items-center">
-                      <p className="text-sm font-medium text-gray-900">
-                        {post.node.organizer}
+                    <div className="mt-6 flex items-center justify-start font-semibold">
+                      <UserIcon
+                        className="h-4 w-4 text-gray-600"
+                        aria-hidden="true"
+                      />
+                      <p className="mx-0.5 text-sm text-gray-600">
+                        {Math.floor(Math.random() * 4) + 1}K people notified
                       </p>
+                      {/* YOU CAN ADD SHARE ON TWITTER, FACEBOOK, INSTAGRAM ETC */}
                     </div>
                   </div>
                 </div>

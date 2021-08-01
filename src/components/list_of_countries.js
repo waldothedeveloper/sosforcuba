@@ -1,7 +1,6 @@
 import React, { Fragment } from "react"
 import InfiniteScroll from "react-infinite-scroll-component"
 import useCountries from "../hooks/useCountries"
-import { useState } from "react"
 import { Menu, Transition } from "@headlessui/react"
 import { ChevronDownIcon } from "@heroicons/react/solid"
 import { classNames } from "../utils/classNames"
@@ -9,9 +8,8 @@ import { useInfiniteScrollData } from "../hooks/useInfiniteScrollData"
 import "../styles/scrollbarHide.css"
 import PropTypes from "prop-types"
 
-const ListOfCountries = ({ handleCountry, errors }) => {
+const ListOfCountries = ({ handleCountry, errors, selectedCountry }) => {
   const { countries } = useCountries()
-  const [selectedCountry, setSelectedCountry] = useState("")
   const { data, hasMore, fetchMoreData } = useInfiniteScrollData(countries)
 
   //
@@ -21,7 +19,7 @@ const ListOfCountries = ({ handleCountry, errors }) => {
         <>
           <div>
             <Menu.Button className="inline-flex justify-center w-full rounded-md border border-gray-300 shadow-sm px-4 py-2 bg-transparent text-sm font-medium text-gray-300 focus:outline-none">
-              {selectedCountry || ` Select Country`}
+              {selectedCountry}
               <ChevronDownIcon
                 className="-mr-1 ml-2 h-5 w-5"
                 aria-hidden="true"
@@ -60,7 +58,6 @@ const ListOfCountries = ({ handleCountry, errors }) => {
                         {({ active }) => (
                           <button
                             onClick={() => {
-                              setSelectedCountry(country.name)
                               handleCountry(country.name)
                             }}
                             className={classNames(
@@ -95,4 +92,5 @@ export default ListOfCountries
 ListOfCountries.propTypes = {
   handleCountry: PropTypes.func,
   errors: PropTypes.object,
+  selectedCountry: PropTypes.string,
 }
