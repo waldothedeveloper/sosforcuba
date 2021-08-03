@@ -4,6 +4,7 @@ import { Fragment } from "react"
 import { Popover, Transition } from "@headlessui/react"
 import sos_cuba_logo from "../images/sos_for_cuba_logo.jpg"
 import { classNames } from "../utils/classNames"
+import { Link } from "gatsby"
 
 import {
   AnnotationIcon,
@@ -51,14 +52,14 @@ const NavBar = () => {
           <>
             <div className="flex justify-between items-center max-w-7xl mx-auto px-4 py-6 sm:px-6 md:justify-start md:space-x-10 lg:px-8">
               <div className="flex justify-start lg:w-0 lg:flex-1">
-                <a href="#">
+                <Link to="/">
                   <span className="sr-only">S.O.S for Cuba</span>
                   <img
                     className="h-14 w-auto sm:h-10 rounded-full"
                     src={sos_cuba_logo}
                     alt="S.O.S for Cuba logo"
                   />
-                </a>
+                </Link>
               </div>
               <div className="-mr-2 -my-2 md:hidden">
                 <Popover.Button className="bg-gray-800 rounded-md p-2 inline-flex items-center justify-center text-gray-400 hover:text-gray-500 hover:bg-gray-100 focus:outline-none focus:ring-2 focus:ring-inset focus:ring-blue-500">
@@ -132,12 +133,12 @@ const NavBar = () => {
                   )}
                 </Popover>
 
-                <a
-                  href="#"
+                <Link
+                  to="/protests"
                   className="text-base font-medium text-gray-400 hover:text-gray-300"
                 >
                   Protests
-                </a>
+                </Link>
                 <a
                   href="#"
                   className="text-base font-medium text-gray-400 hover:text-gray-300"
@@ -223,12 +224,12 @@ const NavBar = () => {
                   </div>
                   <div className="py-6 px-5">
                     <div className="grid grid-cols-2 gap-4">
-                      <a
-                        href="#"
+                      <Link
+                        to="/protests"
                         className="text-base font-medium text-gray-900 hover:text-gray-700"
                       >
                         Protests
-                      </a>
+                      </Link>
                       <a
                         href="#"
                         className="text-base font-medium text-gray-900 hover:text-gray-700"

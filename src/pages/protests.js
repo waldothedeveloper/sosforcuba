@@ -1,14 +1,15 @@
 import React from "react"
 import Layout from "../components/layout"
-import { useFetchProtests } from "../hooks/useFetchProtests"
 import { useFetchPhotos } from "../hooks/useFetchPhotos"
 import ProtestFilter from "../components/protestFilter"
 import { militaryToStandard } from "../utils/militaryToStandardTime"
 import { UserIcon } from "@heroicons/react/outline"
-
+import { Link } from "gatsby"
+import { useFilterProtests } from "../hooks/useFilterProtests"
+//
 const Protests = () => {
-  const data = useFetchProtests()
   const photos = useFetchPhotos()
+  const { tabs, filterProtests, handleChange } = useFilterProtests()
 
   return (
     <>
@@ -23,13 +24,18 @@ const Protests = () => {
                 Upcoming Protests
               </h2>
               <p className="mt-3 max-w-2xl mx-auto text-xl text-gray-500 sm:mt-4">
-                Lorem ipsum dolor sit amet consectetur, adipisicing elit. Ipsa
-                libero labore natus atque, ducimus sed.
+                If you would like to submit a protest, please click{" "}
+                <Link
+                  className="underline text-blue-500 font-medium"
+                  to="/submit-protest"
+                >
+                  here
+                </Link>
               </p>
             </div>
-            <ProtestFilter />
+            <ProtestFilter tabs={tabs} handleChange={handleChange} />
             <div className="mt-12 max-w-lg mx-auto grid gap-5 lg:grid-cols-3 lg:max-w-none">
-              {data.map(post => (
+              {filterProtests.map(post => (
                 <div
                   key={post.node.id}
                   className="flex flex-col rounded-lg shadow-lg overflow-hidden"
@@ -39,8 +45,9 @@ const Protests = () => {
                     <img
                       className="h-48 w-full object-cover"
                       src={
-                        photos[Math.floor(Math.random() * photos.length) + 1]
-                          .urls.small
+                        photos[Math.floor(Math.random() * (30 - 0) + 0)].urls
+                          .small ||
+                        "https://images.unsplash.com/photo-1584026695379-979d8dbda7f2?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=774&q=80"
                       }
                       alt="photo of the upcoming cuban protests"
                     />
@@ -57,7 +64,10 @@ const Protests = () => {
                         </p>
 
                         <p className="mt-3 text-base text-gray-500">
-                          {post.node.address.street_address}
+                          {post.node.address.street_address.replace(
+                            /(^,)|(,$)/g,
+                            ""
+                          )}
                           {" • "}
                           {post.node.address.city} {post.node.address.state}
                           <br />
@@ -93,3 +103,37 @@ const Protests = () => {
 }
 
 export default Protests
+// Protests.propTypes = {
+//   data: PropTypes.object,
+// }
+
+//
+// export const data = graphql`
+//   query getAllUpcomingProtests($currentDate: Date!) {
+//     allProtest(
+//       filter: { date: { gte: $currentDate }, approved: { eq: "true" } }
+//     ) {
+//       edges {
+//         node {
+//           id
+//           name
+//           contact {
+//             email
+//             message
+//             phone_number
+//           }
+//           address {
+//             city
+//             country
+//             state
+//             street_address
+//             zipcode
+//           }
+//           _id
+//           time
+//           date(formatString: "dddd, MMM Do")
+//         }
+//       }
+//     }
+//   }
+// `

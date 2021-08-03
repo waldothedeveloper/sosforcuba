@@ -22,7 +22,8 @@ export const useFetchProtests = () => {
             }
             _id
             time
-            date(formatString: "dddd, MMM Do")
+            date
+            # date(formatString: "dddd, MMM Do")
           }
         }
       }

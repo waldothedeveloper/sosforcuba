@@ -1,12 +1,8 @@
 import React from "react"
 import { classNames } from "../utils/classNames"
-const tabs = [
-  { name: "Today", href: "#", count: "4", current: true },
-  { name: "Tomorrow", href: "#", count: "6", current: false },
-  { name: "This weekend", href: "#", count: "12", current: false },
-]
+import PropTypes from "prop-types"
 
-const ProtestFilter = () => {
+const ProtestFilter = ({ tabs, handleChange }) => {
   return (
     <div className="my-12">
       <div className="sm:hidden">
@@ -14,13 +10,16 @@ const ProtestFilter = () => {
           Select a tab
         </label>
         <select
+          value={tabs.find(tab => tab.current).name}
+          onChange={event => handleChange(event)}
           id="tabs"
           name="tabs"
-          className="block w-full pl-3 pr-10 py-2 text-base border-gray-300 focus:outline-none focus:ring-blue-500 focus:border-blue-500 sm:text-sm rounded-md"
-          defaultValue={tabs.find(tab => tab.current).name}
+          className="block w-full pl-3 pr-10 py-2 text-base border-gray-300  focus:ring-blue-500 focus:border-blue-500 sm:text-sm rounded-md"
         >
           {tabs.map(tab => (
-            <option key={tab.name}>{tab.name}</option>
+            <option value={tab.name} key={tab.name}>
+              {tab.name}
+            </option>
           ))}
         </select>
       </div>
@@ -28,13 +27,14 @@ const ProtestFilter = () => {
         <div className="border-b border-gray-200">
           <nav className="-mb-px flex space-x-8" aria-label="Tabs">
             {tabs.map(tab => (
-              <div
+              <a
                 key={tab.name}
+                onClick={() => handleChange(tab.name)}
                 className={classNames(
                   tab.current
-                    ? "border-blue-500 text-blue-600"
+                    ? "border-indigo-500 text-indigo-600"
                     : "border-transparent text-gray-500 hover:text-gray-700 hover:border-gray-200",
-                  "whitespace-nowrap flex py-4 px-1 border-b-2 font-medium text-sm"
+                  "whitespace-nowrap flex py-4 px-1 border-b-2 font-medium text-sm cursor-pointer"
                 )}
                 aria-current={tab.current ? "page" : undefined}
               >
@@ -43,7 +43,7 @@ const ProtestFilter = () => {
                   <span
                     className={classNames(
                       tab.current
-                        ? "bg-blue-100 text-blue-600"
+                        ? "bg-indigo-100 text-indigo-600"
                         : "bg-gray-100 text-gray-900",
                       "hidden ml-3 py-0.5 px-2.5 rounded-full text-xs font-medium md:inline-block"
                     )}
@@ -51,7 +51,7 @@ const ProtestFilter = () => {
                     {tab.count}
                   </span>
                 ) : null}
-              </div>
+              </a>
             ))}
           </nav>
         </div>
@@ -61,3 +61,7 @@ const ProtestFilter = () => {
 }
 
 export default ProtestFilter
+ProtestFilter.propTypes = {
+  tabs: PropTypes.array,
+  handleChange: PropTypes.function,
+}

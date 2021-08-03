@@ -6,6 +6,7 @@ import { validate } from "../utils/protestFormValidation"
 import ListOfCountries from "../components/list_of_countries"
 import ProtestNotification from "../components/protest_notification"
 import { Link } from "gatsby"
+import { getToday } from "../utils/getToday"
 
 const SubmitProtest = () => {
   const {
@@ -14,19 +15,12 @@ const SubmitProtest = () => {
     handleSubmit,
     handleCountry,
     errors,
-    savedToDB,
+    openNotification,
+    dbError,
+    setOpenNotification,
   } = useProtestForm(validate)
 
   //
-  const getCurrentDate = () => {
-    const dateObj = new Date()
-    const month = dateObj.getUTCMonth()
-    const day = dateObj.getUTCDate()
-    const year = dateObj.getUTCFullYear()
-
-    const newCurrentDate = `${year}/${month}/${day}`
-    return newCurrentDate
-  }
 
   return (
     <>
@@ -118,7 +112,7 @@ const SubmitProtest = () => {
                           type="date"
                           id="date"
                           name="date"
-                          min={getCurrentDate()}
+                          min={getToday()}
                         />
                         <p className="mt-2 text-sm text-red-600">
                           {errors.date || ""}
@@ -321,7 +315,7 @@ const SubmitProtest = () => {
               <div className="pt-5">
                 <div className="flex justify-end">
                   <Link
-                    to="/"
+                    to="/protests"
                     type="button"
                     className="bg-gray-700 py-2 px-4 border border-gray-300 rounded-md shadow-sm text-sm font-medium text-gray-50 hover:bg-gray-500 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-blue-500"
                   >
@@ -339,7 +333,11 @@ const SubmitProtest = () => {
           </div>
         </div>
       </Layout>
-      <ProtestNotification savedToDB={savedToDB} />
+      <ProtestNotification
+        openNotification={openNotification}
+        dbError={dbError}
+        setOpenNotification={setOpenNotification}
+      />
     </>
   )
 }

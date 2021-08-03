@@ -57,6 +57,7 @@ const ListOfCountries = ({ handleCountry, errors, selectedCountry }) => {
                       <Menu.Item>
                         {({ active }) => (
                           <button
+                            type="button"
                             onClick={() => {
                               handleCountry(country.name)
                             }}

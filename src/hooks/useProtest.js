@@ -5,7 +5,8 @@ export const useProtestForm = validate => {
   const [values, setValues] = useState({})
   const [errors, setErrors] = useState({})
   const [isSubmitting, setIsSubmitting] = useState(false)
-  const [savedToDB, setSavedToDB] = useState("pending")
+  const [openNotification, setOpenNotification] = useState(false)
+  const [dbError, setDbError] = useState(null)
 
   useEffect(() => {
     if (Object.keys(errors).length === 0 && isSubmitting) {
@@ -33,12 +34,13 @@ export const useProtestForm = validate => {
           console.log(ret)
           setValues({})
           setIsSubmitting(false)
-          setSavedToDB(true)
+          setOpenNotification(true)
           // ! REMEMBER TO IMPLEMENT SOME EMAIL FEATURE THAT NOTIFY ME AND THE PERSON SUBMITTING THIS FORM
         })
         .catch(err => {
           console.error("Error: %s", err)
-          setSavedToDB(false)
+          setOpenNotification(true)
+          setDbError(err)
           setIsSubmitting(false)
         })
     }
@@ -55,6 +57,7 @@ export const useProtestForm = validate => {
 
   const handleValues = event => {
     if (event) event.persist()
+
     const name = event.target.name
     const value = event.target.value
     setValues(oldState => ({
@@ -65,8 +68,8 @@ export const useProtestForm = validate => {
 
   const handleSubmit = event => {
     if (event) event.preventDefault()
-    setIsSubmitting(true)
     setErrors(validate(values))
+    setIsSubmitting(true)
   }
 
   return {
@@ -75,6 +78,8 @@ export const useProtestForm = validate => {
     handleSubmit,
     handleCountry,
     errors,
-    savedToDB,
+    openNotification,
+    dbError,
+    setOpenNotification,
   }
 }

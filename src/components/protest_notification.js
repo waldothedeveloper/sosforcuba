@@ -1,18 +1,23 @@
 /* This example requires Tailwind CSS v2.0+ */
-import React, { Fragment, useState, useEffect } from "react"
+import React, { Fragment, useEffect } from "react"
 import { Transition } from "@headlessui/react"
 import { CheckCircleIcon, BanIcon } from "@heroicons/react/outline"
 import { XIcon } from "@heroicons/react/solid"
 import PropTypes from "prop-types"
 
-const ProtestNotification = ({ savedToDB }) => {
-  const [show, setShow] = useState(false)
-
+const ProtestNotification = ({
+  openNotification,
+  dbError,
+  setOpenNotification,
+}) => {
   useEffect(() => {
-    if (savedToDB !== "pending") {
-      setShow(true)
+    if (openNotification) {
+      setTimeout(() => {
+        setOpenNotification(false)
+        console.log("settimeout ran")
+      }, 15000)
     }
-  }, [savedToDB])
+  }, [openNotification])
 
   return (
     <>
@@ -24,7 +29,7 @@ const ProtestNotification = ({ savedToDB }) => {
         <div className="w-full flex flex-col items-center space-y-4 sm:items-end">
           {/* Notification panel, dynamically insert this into the live region when it needs to be displayed */}
           <Transition
-            show={show}
+            show={openNotification}
             as={Fragment}
             enter="transform ease-out duration-300 transition"
             enterFrom="translate-y-2 opacity-0 sm:translate-y-0 sm:translate-x-2"
@@ -37,7 +42,7 @@ const ProtestNotification = ({ savedToDB }) => {
               <div className="p-4">
                 <div className="flex items-start">
                   <div className="flex-shrink-0">
-                    {savedToDB ? (
+                    {!dbError ? (
                       <CheckCircleIcon
                         className="h-6 w-6 text-green-400"
                         aria-hidden="true"
@@ -52,21 +57,21 @@ const ProtestNotification = ({ savedToDB }) => {
                   <div className="ml-3 w-0 flex-1 pt-0.5">
                     <p
                       className={
-                        savedToDB
+                        !dbError
                           ? "text-sm font-medium text-gray-700"
                           : "text-sm font-medium text-red-500"
                       }
                     >
-                      {savedToDB ? `Success!` : `Error`}
+                      {!dbError ? `Success!` : `Error`}
                     </p>
                     <p
                       className={
-                        savedToDB
+                        !dbError
                           ? "mt-1 text-sm text-gray-500"
                           : "mt-1 text-sm text-red-500"
                       }
                     >
-                      {savedToDB
+                      {!dbError
                         ? `Thank you for your contribution. We will be in touch soon.
                       PATRIA Y VIDA!`
                         : `There was an error trying to save the protest. Please try again later!`}
@@ -76,7 +81,7 @@ const ProtestNotification = ({ savedToDB }) => {
                     <button
                       className="bg-white rounded-md inline-flex text-gray-400 hover:text-gray-500 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-indigo-500"
                       onClick={() => {
-                        setShow(false)
+                        setOpenNotification(false)
                       }}
                     >
                       <span className="sr-only">Close</span>
@@ -95,5 +100,7 @@ const ProtestNotification = ({ savedToDB }) => {
 
 export default ProtestNotification
 ProtestNotification.propTypes = {
-  savedToDB: PropTypes.oneOfType([PropTypes.string, PropTypes.bool]),
+  openNotification: PropTypes.bool,
+  dbError: PropTypes.object,
+  setOpenNotification: PropTypes.func,
 }
