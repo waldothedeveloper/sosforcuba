@@ -63,5 +63,5 @@ const ProtestFilter = ({ tabs, handleChange }) => {
 export default ProtestFilter
 ProtestFilter.propTypes = {
   tabs: PropTypes.array,
-  handleChange: PropTypes.function,
+  handleChange: PropTypes.func,
 }

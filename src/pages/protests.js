@@ -60,7 +60,8 @@ const Protests = () => {
                           {post.node.name}
                         </p>
                         <p className="mt-2 text-sm font-medium text-red-600">
-                          {post.node.date}, {militaryToStandard(post.node.time)}
+                          {new Date(post.node.date).toDateString()},{" "}
+                          {militaryToStandard(post.node.time)}
                         </p>
 
                         <p className="mt-3 text-base text-gray-500">

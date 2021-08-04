@@ -53,7 +53,6 @@ export const useFilterProtests = () => {
 
   //
   const handleChange = name => {
-    console.log("name: ", name)
     if (name === "Today" || name?.target?.value === "Today") {
       setFilterProtests(protestsToday())
       setActiveTab(name === "Today" ? name : name.target.value)
