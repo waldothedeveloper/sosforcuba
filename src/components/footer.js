@@ -5,10 +5,10 @@ import { Link } from "gatsby"
 
 const navigation = {
   events: [
-    { name: "Events on Jul-11", href: "#" },
-    { name: "Cuban gov response", href: "#" },
-    { name: "Internet ban", href: "#" },
-    { name: "Detained people", href: "#" },
+    { name: "Events on Jul-11", href: "/" },
+    { name: "Cuban gov response", href: "/cuban-gov-response" },
+    { name: "Internet ban", href: "/internet-ban" },
+    { name: "Detained people", href: "/detained-people" },
   ],
   protests: [
     { name: "Upcoming protests", href: "/protests" },
@@ -16,8 +16,8 @@ const navigation = {
   ],
   human_rights: [{ name: "Violations", href: "/section5-human-rights" }],
   impact: [
-    { name: "World Impact", href: "#" },
-    { name: "USA response", href: "#" },
+    { name: "World Impact", href: "/world-impact" },
+    { name: "USA response", href: "/usa-response" },
   ],
   social: [
     {

@@ -8,6 +8,10 @@ export const useFetchPhotos = () => {
           urls {
             small
           }
+          user {
+            name
+          }
+          alt_description
         }
       }
     }

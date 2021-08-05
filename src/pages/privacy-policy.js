@@ -241,19 +241,51 @@ const PrivacyPolicy = () => {
               </ul>
 
               <h4>2. HOW DO WE USE YOUR INFORMATION?</h4>
-              <blockquote>
-                <p>
-                  Sagittis scelerisque nulla cursus in enim consectetur quam.
-                  Dictum urna sed consectetur neque tristique pellentesque.
-                  Blandit amet, sed aenean erat arcu morbi.
-                </p>
-              </blockquote>
-              <p>
-                Faucibus commodo massa rhoncus, volutpat. Dignissim sed eget
-                risus enim. Mattis mauris semper sed amet vitae sed turpis id.
-                Id dolor praesent donec est. Odio penatibus risus viverra tellus
-                varius sit neque erat velit.
+              <p className="text-sm italic">
+                <span className="font-semibold text-gray-700">In Short:</span>{" "}
+                We process your information for purposes based on legitimate
+                business interests, the fulfillment of our contract with you,
+                compliance with our legal obligations, and/or your consent.
               </p>
+              <p>
+                We use personal information collected via our Website for a
+                variety of business purposes described below. We process your
+                personal information for these purposes in reliance on our
+                legitimate business interests, in order to enter into or perform
+                a contract with you, with your consent, and/or for compliance
+                with our legal obligations. We indicate the specific processing
+                grounds we rely on next to each purpose listed below.
+              </p>
+
+              <p>We use the information we collect or receive:</p>
+
+              <ul className="text-base">
+                <li>
+                  To send administrative information to you. We may use your
+                  personal information to send you product, service and new
+                  feature information and/or information about changes to our
+                  terms, conditions, and policies.
+                </li>
+
+                <li>
+                  To protect our Services. We may use your information as part
+                  of our efforts to keep our Website safe and secure (for
+                  example, for fraud monitoring and prevention).
+                </li>
+
+                <li>
+                  To enforce our terms, conditions and policies for business
+                  purposes, to comply with legal and regulatory requirements or
+                  in connection with our contract.
+                </li>
+
+                <li>
+                  To respond to legal requests and prevent harm. If we receive a
+                  subpoena or other legal request, we may need to inspect the
+                  data we hold to determine how to respond.
+                </li>
+              </ul>
+
               <figure>
                 <img
                   className="w-full rounded-lg"

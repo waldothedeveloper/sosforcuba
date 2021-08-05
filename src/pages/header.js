@@ -6,15 +6,15 @@ const Header = () => {
     <>
       <div>
         <div className="relative flex flex-col mx-auto max-w-7xl w-full pb-20 text-left">
-          <div className="p-8">
+          <div className="p-8 md:w-1/3">
             <img
               className="w-full h-full object-cover rounded-xl shadow-sm"
               src={girl_protesting}
               alt=""
             />
           </div>
-          <div className="absolute bottom-12 left-2">
-            <h1 className="text-8xl tracking-tight font-extrabold text-gray-50">
+          <div className="absolute bottom-12 left-2 md:top-40">
+            <h1 className="text-8xl md:text-9xl tracking-tight font-extrabold text-gray-50">
               <span className="block xl:inline text-6xl">S.O.S</span>{" "}
               <span className="block text-red-600 xl:inline pl-12">CUBA</span>
             </h1>

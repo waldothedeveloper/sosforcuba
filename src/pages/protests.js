@@ -6,9 +6,11 @@ import { militaryToStandard } from "../utils/militaryToStandardTime"
 import { UserIcon } from "@heroicons/react/outline"
 import { Link } from "gatsby"
 import { useFilterProtests } from "../hooks/useFilterProtests"
+import moment from "moment"
 //
 const Protests = () => {
   const photos = useFetchPhotos()
+  console.log("photos: ", photos)
   const { tabs, filterProtests, handleChange } = useFilterProtests()
 
   return (
@@ -49,7 +51,10 @@ const Protests = () => {
                           .small ||
                         "https://images.unsplash.com/photo-1584026695379-979d8dbda7f2?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=774&q=80"
                       }
-                      alt="photo of the upcoming cuban protests"
+                      alt={
+                        photos[Math.floor(Math.random() * (30 - 0) + 0)]
+                          .alt_description
+                      }
                     />
                   </div>
                   {/* card content */}
@@ -60,7 +65,9 @@ const Protests = () => {
                           {post.node.name}
                         </p>
                         <p className="mt-2 text-sm font-medium text-red-600">
-                          {new Date(post.node.date).toDateString()},{" "}
+                          {/* {new Date(post.node.date).toDateString()},{" "} */}
+                          {moment(post.node.date).format("dddd, MMM Do")}
+                          {` `}
                           {militaryToStandard(post.node.time)}
                         </p>
 
@@ -70,7 +77,10 @@ const Protests = () => {
                             ""
                           )}
                           {" • "}
-                          {post.node.address.city} {post.node.address.state}
+                          <span className="font-bold text-gray-500">
+                            {" "}
+                            {post.node.address.city} {post.node.address.state}
+                          </span>
                           <br />
                           {post.node.address.country ===
                           "United States of America"

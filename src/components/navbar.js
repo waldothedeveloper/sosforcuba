@@ -21,25 +21,25 @@ const solutions = [
     name: "Events on July 11, 2021",
     description:
       "Get a better understanding of where your traffic is coming from.",
-    href: "#",
+    href: "/",
     icon: InboxIcon,
   },
   {
     name: "Cuban Government Response",
     description: "Speak directly to your customers in a more meaningful way.",
-    href: "#",
+    href: "/cuban-gov-response",
     icon: AnnotationIcon,
   },
   {
     name: "Internet ban",
     description: "Your customers' data will be safe and secure.",
-    href: "#",
+    href: "/internet-ban",
     icon: ChatAlt2Icon,
   },
   {
-    name: "Detained peoople",
+    name: "Detained people",
     description: "Connect with third-party tools that you're already using.",
-    href: "#",
+    href: "/detained-people",
     icon: QuestionMarkCircleIcon,
   },
 ]
