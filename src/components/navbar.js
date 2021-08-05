@@ -2,7 +2,7 @@
 import React from "react"
 import { Fragment } from "react"
 import { Popover, Transition } from "@headlessui/react"
-import sos_cuba_logo from "../images/sos_for_cuba_logo.jpg"
+// import sos_cuba_logo from "../images/sos_for_cuba_logo.jpg"
 import { classNames } from "../utils/classNames"
 import { Link } from "gatsby"
 
@@ -54,15 +54,18 @@ const NavBar = () => {
               <div className="flex justify-start lg:w-0 lg:flex-1">
                 <Link to="/">
                   <span className="sr-only">S.O.S for Cuba</span>
-                  <img
+                  <span className="bg-gradient-to-r from-blue-500 to-red-500 bg-origin-border font-extrabold text-3xl bg-clip-text text-transparent">
+                    S.O.S <span className="">CUBA</span>
+                  </span>
+                  {/* <img
                     className="h-14 w-auto sm:h-10 rounded-full"
                     src={sos_cuba_logo}
                     alt="S.O.S for Cuba logo"
-                  />
+                  /> */}
                 </Link>
               </div>
               <div className="-mr-2 -my-2 md:hidden">
-                <Popover.Button className="bg-gray-800 rounded-md p-2 inline-flex items-center justify-center text-gray-400 hover:text-gray-500 hover:bg-gray-100 focus:outline-none focus:ring-2 focus:ring-inset focus:ring-blue-500">
+                <Popover.Button className="bg-gray-800 rounded-md p-2 inline-flex items-center justify-center text-gray-500 hover:text-gray-300 focus:outline-none focus:ring-2 focus:ring-inset focus:ring-blue-500">
                   <span className="sr-only">Open menu</span>
                   <MenuIcon className="h-6 w-6" aria-hidden="true" />
                 </Popover.Button>
@@ -163,7 +166,7 @@ const NavBar = () => {
                   href="#"
                   className="ml-8 whitespace-nowrap inline-flex items-center justify-center bg-gradient-to-r from-purple-600 to-blue-600 bg-origin-border px-4 py-2 border border-transparent rounded-md shadow-sm text-base font-medium text-white hover:from-purple-700 hover:to-blue-700"
                 >
-                  Sign up
+                  DONATE
                 </a>
               </div>
             </div>
@@ -183,18 +186,22 @@ const NavBar = () => {
                 static
                 className="absolute z-30 top-0 inset-x-0 p-2 transition transform origin-top-right md:hidden"
               >
-                <div className="rounded-lg shadow-lg ring-1 ring-black ring-opacity-5 bg-white divide-y-2 divide-gray-50">
+                <div className="rounded-lg shadow-lg ring-1 ring-blue ring-opacity-5 bg-gray-700 divide-y-2 divide-gray-800">
                   <div className="pt-5 pb-6 px-5">
                     <div className="flex items-center justify-between">
                       <div>
-                        <img
+                        <span className="sr-only">S.O.S for Cuba</span>
+                        <span className="bg-gradient-to-r from-blue-500 to-red-500 bg-origin-border font-extrabold text-3xl bg-clip-text text-transparent">
+                          S.O.S CUBA
+                        </span>
+                        {/* <img
                           className="h-14 w-auto"
                           src={sos_cuba_logo}
                           alt="S.O.S for Cuba logo"
-                        />
+                        /> */}
                       </div>
                       <div className="-mr-2">
-                        <Popover.Button className="bg-white rounded-md p-2 inline-flex items-center justify-center text-gray-400 hover:text-gray-500 hover:bg-gray-100 focus:outline-none focus:ring-2 focus:ring-inset focus:ring-blue-500">
+                        <Popover.Button className="bg-blue-50 rounded-md p-2 inline-flex items-center justify-center text-gray-400 hover:text-gray-500 hover:bg-gray-100 focus:outline-none focus:ring-2 focus:ring-inset focus:ring-blue-500">
                           <span className="sr-only">Close menu</span>
                           <XIcon className="h-6 w-6" aria-hidden="true" />
                         </Popover.Button>
@@ -208,13 +215,13 @@ const NavBar = () => {
                             href={item.href}
                             className="-m-3 p-3 flex items-center rounded-lg hover:bg-gray-50"
                           >
-                            <div className="flex-shrink-0 flex items-center justify-center h-10 w-10 rounded-md bg-gradient-to-r from-purple-600 to-blue-600 text-white">
+                            <div className="flex-shrink-0 flex items-center justify-center h-10 w-10 rounded-md bg-gradient-to-r from-blue-50 to-gray-50 text-gray-400">
                               <item.icon
                                 className="h-6 w-6"
                                 aria-hidden="true"
                               />
                             </div>
-                            <div className="ml-4 text-base font-medium text-gray-900">
+                            <div className="ml-4 text-base font-medium text-gray-100">
                               {item.name}
                             </div>
                           </a>
@@ -226,19 +233,19 @@ const NavBar = () => {
                     <div className="grid grid-cols-2 gap-4">
                       <Link
                         to="/protests"
-                        className="text-base font-medium text-gray-900 hover:text-gray-700"
+                        className="text-base font-medium text-gray-100 hover:text-gray-400"
                       >
                         Protests
                       </Link>
                       <a
                         href="#"
-                        className="text-base font-medium text-gray-900 hover:text-gray-700"
+                        className="text-base font-medium text-gray-100 hover:text-gray-400"
                       >
                         Human Rights
                       </a>
                       <a
                         href="#"
-                        className="text-base font-medium text-gray-900 hover:text-gray-700"
+                        className="text-base font-medium text-gray-100 hover:text-gray-400"
                       >
                         Legal
                       </a>
@@ -246,15 +253,12 @@ const NavBar = () => {
                     <div className="mt-6">
                       <a
                         href="#"
-                        className="w-full flex items-center justify-center bg-gradient-to-r from-purple-600 to-blue-600 bg-origin-border px-4 py-2 border border-transparent rounded-md shadow-sm text-base font-medium text-white hover:from-purple-700 hover:to-blue-700"
+                        className="w-full flex items-center justify-center bg-gradient-to-r from-blue-600 to-red-600 bg-origin-border px-4 py-2 border border-transparent rounded-md shadow-sm text-base font-medium text-white hover:from-blue-700 hover:to-gray-700"
                       >
-                        Sign up
+                        Donate
                       </a>
-                      <p className="mt-6 text-center text-base font-medium text-gray-500">
-                        Existing customer?
-                        <a href="#" className="text-gray-900">
-                          Sign in
-                        </a>
+                      <p className="mt-6 text-center text-xl font-bold text-red-50">
+                        PATRIA Y VIDA
                       </p>
                     </div>
                   </div>
