@@ -21,5 +21,6 @@ module.exports = {
     "gatsby-plugin-postcss",
     require("@tailwindcss/typography"),
     require("@tailwindcss/forms"),
+    require("@tailwindcss/aspect-ratio"),
   ],
 }

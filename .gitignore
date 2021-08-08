@@ -69,3 +69,5 @@ yarn-error.log
 .yarn-integrity
 # Fauna db
 .faunarc
+# Local Netlify folder
+.netlify

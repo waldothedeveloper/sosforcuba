@@ -217,7 +217,7 @@ const SubmitProtest = () => {
                           onChange={handleValues}
                           value={values.zipcode || ""}
                           placeholder="000-000"
-                          type="number"
+                          type="text"
                           name="zipcode"
                           id="zipcode"
                           autoComplete="postal-code"

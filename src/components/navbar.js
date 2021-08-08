@@ -54,7 +54,7 @@ const NavBar = () => {
               <div className="flex justify-start lg:w-0 lg:flex-1">
                 <Link to="/">
                   <span className="sr-only">S.O.S for Cuba</span>
-                  <span className="bg-gradient-to-r from-blue-500 to-red-500 bg-origin-border font-extrabold text-3xl bg-clip-text text-transparent">
+                  <span className="bg-gradient-to-r from-blue-500 to-red-500 bg-origin-border font-extrabold text-xl bg-clip-text text-transparent">
                     S.O.S <span className="">CUBA</span>
                   </span>
                   {/* <img
@@ -107,9 +107,9 @@ const NavBar = () => {
                           <div className="rounded-lg shadow-lg ring-1 ring-black ring-opacity-5 overflow-hidden">
                             <div className="relative grid gap-6 bg-white px-5 py-6 sm:gap-8 sm:p-8 lg:grid-cols-2">
                               {solutions.map(item => (
-                                <a
+                                <Link
+                                  to={item.href}
                                   key={item.name}
-                                  href={item.href}
                                   className="-m-3 p-3 flex items-start rounded-lg hover:bg-gray-50"
                                 >
                                   <div className="flex-shrink-0 flex items-center justify-center h-10 w-10 rounded-md bg-gradient-to-r from-indigo-600 to-blue-600 text-white sm:h-12 sm:w-12">
@@ -126,7 +126,7 @@ const NavBar = () => {
                                       {item.description}
                                     </p>
                                   </div>
-                                </a>
+                                </Link>
                               ))}
                             </div>
                           </div>
@@ -142,32 +142,32 @@ const NavBar = () => {
                 >
                   Protests
                 </Link>
-                <a
-                  href="#"
+                <Link
+                  to="/"
                   className="text-base font-medium text-gray-400 hover:text-gray-300"
                 >
                   Human Rights
-                </a>
-                <a
-                  href="#"
+                </Link>
+                <Link
+                  to="/"
                   className="text-base font-medium text-gray-400 hover:text-gray-300"
                 >
                   Legal
-                </a>
+                </Link>
               </Popover.Group>
               <div className="hidden md:flex items-center justify-end md:flex-1 lg:w-0">
-                <a
-                  href="#"
+                <Link
+                  to="/"
                   className="whitespace-nowrap text-base font-medium text-gray-400 hover:text-gray-300"
                 >
                   Sign in
-                </a>
-                <a
-                  href="#"
-                  className="ml-8 whitespace-nowrap inline-flex items-center justify-center bg-gradient-to-r from-purple-600 to-blue-600 bg-origin-border px-4 py-2 border border-transparent rounded-md shadow-sm text-base font-medium text-white hover:from-purple-700 hover:to-blue-700"
+                </Link>
+                <Link
+                  to="/"
+                  className="ml-8 whitespace-nowrap inline-flex items-center justify-center bg-gradient-to-r from-blue-600 to-red-600 bg-origin-border px-4 py-2 border border-transparent rounded-md shadow-sm text-base font-medium text-white hover:from-blue-700 hover:to-red-700"
                 >
                   DONATE
-                </a>
+                </Link>
               </div>
             </div>
 
@@ -191,7 +191,7 @@ const NavBar = () => {
                     <div className="flex items-center justify-between">
                       <div>
                         <span className="sr-only">S.O.S for Cuba</span>
-                        <span className="bg-gradient-to-r from-blue-500 to-red-500 bg-origin-border font-extrabold text-3xl bg-clip-text text-transparent">
+                        <span className="bg-gradient-to-r from-blue-500 to-red-500 bg-origin-border font-extrabold text-xl bg-clip-text text-transparent">
                           S.O.S CUBA
                         </span>
                         {/* <img
@@ -210,9 +210,9 @@ const NavBar = () => {
                     <div className="mt-6">
                       <nav className="grid grid-cols-1 gap-7">
                         {solutions.map(item => (
-                          <a
+                          <Link
+                            to={item.href}
                             key={item.name}
-                            href={item.href}
                             className="-m-3 p-3 flex items-center rounded-lg hover:bg-gray-50"
                           >
                             <div className="flex-shrink-0 flex items-center justify-center h-10 w-10 rounded-md bg-gradient-to-r from-blue-50 to-gray-50 text-gray-400">
@@ -224,7 +224,7 @@ const NavBar = () => {
                             <div className="ml-4 text-base font-medium text-gray-100">
                               {item.name}
                             </div>
-                          </a>
+                          </Link>
                         ))}
                       </nav>
                     </div>
@@ -237,26 +237,26 @@ const NavBar = () => {
                       >
                         Protests
                       </Link>
-                      <a
-                        href="#"
+                      <Link
+                        to="/"
                         className="text-base font-medium text-gray-100 hover:text-gray-400"
                       >
                         Human Rights
-                      </a>
-                      <a
-                        href="#"
+                      </Link>
+                      <Link
+                        to="/"
                         className="text-base font-medium text-gray-100 hover:text-gray-400"
                       >
                         Legal
-                      </a>
+                      </Link>
                     </div>
                     <div className="mt-6">
-                      <a
-                        href="#"
-                        className="w-full flex items-center justify-center bg-gradient-to-r from-blue-600 to-red-600 bg-origin-border px-4 py-2 border border-transparent rounded-md shadow-sm text-base font-medium text-white hover:from-blue-700 hover:to-gray-700"
+                      <Link
+                        to="/"
+                        className="w-full flex items-center justify-center bg-gradient-to-r from-blue-600 to-red-600 bg-origin-border px-4 py-2 border border-transparent rounded-md shadow-sm text-base font-medium text-white hover:from-blue-700 hover:to-red-700"
                       >
                         Donate
-                      </a>
+                      </Link>
                       <p className="mt-6 text-center text-xl font-bold text-red-50">
                         PATRIA Y VIDA
                       </p>
