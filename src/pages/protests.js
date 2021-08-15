@@ -10,7 +10,6 @@ import moment from "moment"
 //
 const Protests = () => {
   const photos = useFetchPhotos()
-  console.log("photos: ", photos)
   const { tabs, filterProtests, handleChange } = useFilterProtests()
 
   return (

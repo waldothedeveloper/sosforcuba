@@ -53,7 +53,6 @@ const NavBar = () => {
             <div className="flex justify-between items-center max-w-7xl mx-auto px-4 py-6 sm:px-6 md:justify-start md:space-x-10 lg:px-8">
               <div className="flex justify-start lg:w-0 lg:flex-1">
                 <Link to="/">
-                  <span className="sr-only">S.O.S for Cuba</span>
                   <span className="bg-gradient-to-r from-blue-500 to-red-500 bg-origin-border font-extrabold text-xl bg-clip-text text-transparent">
                     S.O.S <span className="">CUBA</span>
                   </span>
