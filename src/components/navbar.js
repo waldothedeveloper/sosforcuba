@@ -53,7 +53,7 @@ const NavBar = () => {
             <div className="flex justify-between items-center max-w-7xl mx-auto px-4 py-6 sm:px-6 md:justify-start md:space-x-10 lg:px-8">
               <div className="flex justify-start lg:w-0 lg:flex-1">
                 <Link to="/">
-                  <span className="bg-gradient-to-r from-blue-500 to-red-500 bg-origin-border font-extrabold text-xl bg-clip-text text-transparent">
+                  <span className="bg-gradient-to-r from-sky-500 to-red-500 bg-origin-border font-extrabold text-xl bg-clip-text text-transparent">
                     S.O.S <span className="">CUBA</span>
                   </span>
                   {/* <img
@@ -64,7 +64,7 @@ const NavBar = () => {
                 </Link>
               </div>
               <div className="-mr-2 -my-2 md:hidden">
-                <Popover.Button className="bg-gray-800 rounded-md p-2 inline-flex items-center justify-center text-gray-500 hover:text-gray-300 focus:outline-none focus:ring-2 focus:ring-inset focus:ring-blue-500">
+                <Popover.Button className="bg-gray-800 rounded-md p-2 inline-flex items-center justify-center text-gray-500 hover:text-gray-300 focus:outline-none focus:ring-2 focus:ring-inset focus:ring-sky-500">
                   <span className="sr-only">Open menu</span>
                   <MenuIcon className="h-6 w-6" aria-hidden="true" />
                 </Popover.Button>
@@ -76,7 +76,7 @@ const NavBar = () => {
                       <Popover.Button
                         className={classNames(
                           open ? "text-gray-300" : "text-gray-400",
-                          "group inline-flex rounded-md items-center text-base font-medium hover:text-gray-300 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-blue-500"
+                          "group inline-flex rounded-md items-center text-base font-medium hover:text-gray-300 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-sky-500"
                         )}
                       >
                         <span>Events</span>
@@ -111,7 +111,7 @@ const NavBar = () => {
                                   key={item.name}
                                   className="-m-3 p-3 flex items-start rounded-lg hover:bg-gray-50"
                                 >
-                                  <div className="flex-shrink-0 flex items-center justify-center h-10 w-10 rounded-md bg-gradient-to-r from-indigo-600 to-blue-600 text-white sm:h-12 sm:w-12">
+                                  <div className="flex-shrink-0 flex items-center justify-center h-10 w-10 rounded-md bg-gradient-to-r from-indigo-600 to-sky-600 text-white sm:h-12 sm:w-12">
                                     <item.icon
                                       className="h-6 w-6"
                                       aria-hidden="true"
@@ -163,7 +163,7 @@ const NavBar = () => {
                 </Link>
                 <Link
                   to="/"
-                  className="ml-8 whitespace-nowrap inline-flex items-center justify-center bg-gradient-to-r from-blue-600 to-red-600 bg-origin-border px-4 py-2 border border-transparent rounded-md shadow-sm text-base font-medium text-white hover:from-blue-700 hover:to-red-700"
+                  className="ml-8 whitespace-nowrap inline-flex items-center justify-center bg-gradient-to-r from-sky-600 to-red-600 bg-origin-border px-4 py-2 border border-transparent rounded-md shadow-sm text-base font-medium text-white hover:from-sky-700 hover:to-red-700"
                 >
                   DONATE
                 </Link>
@@ -185,12 +185,12 @@ const NavBar = () => {
                 static
                 className="absolute z-30 top-0 inset-x-0 p-2 transition transform origin-top-right md:hidden"
               >
-                <div className="rounded-lg shadow-lg ring-1 ring-blue ring-opacity-5 bg-gray-700 divide-y-2 divide-gray-800">
+                <div className="rounded-lg shadow-lg ring-1 ring-sky ring-opacity-5 bg-gray-700 divide-y-2 divide-gray-800">
                   <div className="pt-5 pb-6 px-5">
                     <div className="flex items-center justify-between">
                       <div>
                         <span className="sr-only">S.O.S for Cuba</span>
-                        <span className="bg-gradient-to-r from-blue-500 to-red-500 bg-origin-border font-extrabold text-xl bg-clip-text text-transparent">
+                        <span className="bg-gradient-to-r from-sky-500 to-red-500 bg-origin-border font-extrabold text-xl bg-clip-text text-transparent">
                           S.O.S CUBA
                         </span>
                         {/* <img
@@ -200,7 +200,7 @@ const NavBar = () => {
                         /> */}
                       </div>
                       <div className="-mr-2">
-                        <Popover.Button className="bg-blue-50 rounded-md p-2 inline-flex items-center justify-center text-gray-400 hover:text-gray-500 hover:bg-gray-100 focus:outline-none focus:ring-2 focus:ring-inset focus:ring-blue-500">
+                        <Popover.Button className="bg-sky-50 rounded-md p-2 inline-flex items-center justify-center text-gray-400 hover:text-gray-500 hover:bg-gray-100 focus:outline-none focus:ring-2 focus:ring-inset focus:ring-sky-500">
                           <span className="sr-only">Close menu</span>
                           <XIcon className="h-6 w-6" aria-hidden="true" />
                         </Popover.Button>
@@ -214,7 +214,7 @@ const NavBar = () => {
                             key={item.name}
                             className="-m-3 p-3 flex items-center rounded-lg hover:bg-gray-50"
                           >
-                            <div className="flex-shrink-0 flex items-center justify-center h-10 w-10 rounded-md bg-gradient-to-r from-blue-50 to-gray-50 text-gray-400">
+                            <div className="flex-shrink-0 flex items-center justify-center h-10 w-10 rounded-md bg-gradient-to-r from-sky-50 to-gray-50 text-gray-400">
                               <item.icon
                                 className="h-6 w-6"
                                 aria-hidden="true"
@@ -252,7 +252,7 @@ const NavBar = () => {
                     <div className="mt-6">
                       <Link
                         to="/"
-                        className="w-full flex items-center justify-center bg-gradient-to-r from-blue-600 to-red-600 bg-origin-border px-4 py-2 border border-transparent rounded-md shadow-sm text-base font-medium text-white hover:from-blue-700 hover:to-red-700"
+                        className="w-full flex items-center justify-center bg-gradient-to-r from-sky-600 to-red-600 bg-origin-border px-4 py-2 border border-transparent rounded-md shadow-sm text-base font-medium text-white hover:from-sky-700 hover:to-red-700"
                       >
                         Donate
                       </Link>

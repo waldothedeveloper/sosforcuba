@@ -112,7 +112,7 @@ const PrivacyPolicy = () => {
           <div className="relative px-4 sm:px-6 lg:px-8">
             <div className="text-lg max-w-prose mx-auto">
               <h1>
-                <span className="block text-base text-center text-blue-600 font-semibold tracking-wide uppercase">
+                <span className="block text-base text-center text-sky-600 font-semibold tracking-wide uppercase">
                   Last updated August 01, 2021
                 </span>
                 <span className="mt-2 block text-3xl text-center leading-8 font-extrabold tracking-tight text-gray-900 sm:text-4xl">
@@ -156,7 +156,7 @@ const PrivacyPolicy = () => {
               </p>
 
               <h3>TABLE OF CONTENTS</h3>
-              <ol className="underline font-semibold text-base text-blue-600">
+              <ol className="underline font-semibold text-base text-sky-600">
                 <li>WHAT INFORMATION DO WE COLLECT?</li>
                 <li>HOW DO WE USE YOUR INFORMATION?</li>
                 <li>WILL YOUR INFORMATION BE SHARED WITH ANYONE?</li>

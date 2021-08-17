@@ -27,7 +27,7 @@ const Protests = () => {
               <p className="mt-3 max-w-2xl mx-auto text-xl text-gray-500 sm:mt-4">
                 If you would like to submit a protest, please click{" "}
                 <Link
-                  className="underline text-blue-500 font-medium"
+                  className="underline text-sky-500 font-medium"
                   to="/submit-protest"
                 >
                   here

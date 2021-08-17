@@ -3,7 +3,8 @@ import Layout from "../components/layout"
 import Seo from "../components/seo"
 import Hero from "../components/hero"
 import Facts from "../components/facts"
-
+import CallToHelp from "../components/call-to-help"
+import CovidCrisis from "../components/covid-crisis"
 // import SectionWrapper from "./section-wrapper"
 
 const IndexPage = () => (
@@ -12,7 +13,8 @@ const IndexPage = () => (
     <Layout>
       <Hero />
       <Facts />
-
+      <CallToHelp />
+      <CovidCrisis />
       {/* <SectionWrapper /> */}
     </Layout>
   </>

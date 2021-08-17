@@ -25,7 +25,7 @@ const Header = () => {
         <h2 className="text-xl font-extrabold text-white sm:text-4xl">
           <span className="block text-xl text-gray-400">we need urgent</span>
           <span className="block text-2xl">SUPPORT.</span>
-          <span className="block text-blue-500 text-3xl">HELP.</span>
+          <span className="block text-sky-500 text-3xl">HELP.</span>
           <span className="block text-red-500 text-4xl">INTERVENTION.</span>
         </h2>
       </div>

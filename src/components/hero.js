@@ -15,21 +15,27 @@ export default function Hero() {
           <div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 sm:static">
             <div className="sm:max-w-lg">
               <h1 className="text-8xl md:text-9xl tracking-tight font-extrabold text-gray-50">
-                {/* <span className="inline text-4xl text-blue-500"># </span> */}
-                <span className="inline text-6xl">
+                {/* <span className="inline text-4xl text-sky-500"># </span> */}
+                <span className="inline text-6xl bg-gradient-to-r from-coolGray-100 to-coolGray-300 bg-clip-text text-transparent">
                   <span className="text-4xl">#</span> S.O.S
                 </span>{" "}
-                <span className="block text-red-600 xl:inline">CUBA</span>
+                <span className="block bg-gradient-to-r from-red-500 to-red-700 bg-clip-text text-transparent xl:inline">
+                  CUBA
+                </span>
               </h1>
 
               <div className="md:p-0 md:mt-12 md:static">
                 <h2 className="mt-4 text-xl font-extrabold text-white sm:text-4xl">
-                  <span className="block text-xl text-gray-400">
+                  <span className="block text-xl bg-gradient-to-r from-blueGray-500 to-yellow-100 bg-clip-text text-transparent">
                     we need urgent
                   </span>
-                  <span className="block text-2xl">SUPPORT.</span>
-                  <span className="block text-blue-500 text-3xl">HELP.</span>
-                  <span className="block text-red-500 text-4xl">
+                  <span className="block bg-gradient-to-r from-coolGray-100 to-coolGray-300 bg-clip-text text-transparent text-2xl">
+                    SUPPORT.
+                  </span>
+                  <span className="block bg-gradient-to-b from-sky-400 to-sky-200 bg-clip-text text-transparent text-3xl">
+                    HELP.
+                  </span>
+                  <span className="block bg-gradient-to-r from-red-500 to-red-700 bg-clip-text text-transparent text-4xl">
                     INTERVENTION.
                   </span>
                 </h2>

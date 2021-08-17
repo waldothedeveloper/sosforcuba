@@ -33,7 +33,7 @@ const InternetBan = () => {
             rel="noreferrer noopener"
             href="https://www.bbc.com/news/world-latin-america-57818918"
           >
-            <span className="text-blue-400 font-semibold">article</span>
+            <span className="text-sky-400 font-semibold">article</span>
           </a>{" "}
           explaining the strategy behind the Cuban government&apos;s actions:
         </p>
