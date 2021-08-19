@@ -1,12 +1,5 @@
 import React from "react"
-// import sos_pic_2 from "../images/sos_pic_2.jpg"
-import dead_boy from "../images/13-year-old-kid-dead-cuba-protests-july-2021.jpeg"
-import sos_pic_3 from "../images/sos_pic_3.jpg"
-import sos_pic_4 from "../images/sos_pic_4.jpg"
-import sos_pic_5 from "../images/sos_pic_5.webp"
-import sos_pic_7 from "../images/sos_pic_7.jpg"
-import sos_pic_8 from "../images/sos_pic_8.jpg"
-import person_hospital_4 from "../images/person_hospital_4.jpg"
+import { StaticImage } from "gatsby-plugin-image"
 
 export default function Hero() {
   return (
@@ -54,44 +47,53 @@ export default function Hero() {
                     <div className="flex items-center space-x-6 lg:space-x-8">
                       <div className="flex-shrink-0 grid grid-cols-1 gap-y-6">
                         {/* group of 2 */}
-                        <div className="w-44 h-64 rounded-lg overflow-hidden sm:opacity-0 lg:opacity-100">
-                          <img
-                            src={sos_pic_4}
-                            alt=""
-                            className="w-full h-full object-cover"
-                          />
-                        </div>
-                        <div className="w-44 h-64 rounded-lg overflow-hidden">
-                          <img
-                            src={dead_boy}
-                            alt=""
-                            className="w-full h-full object-cover"
-                          />
-                        </div>
+
+                        <StaticImage
+                          className="w-44 h-64 rounded-lg overflow-hidden"
+                          src="../images/sos_pic_4.jpg"
+                          alt=""
+                          placeholder="blurred"
+                          layout="fullWidth"
+                          transformOptions={{ fit: "cover" }}
+                        />
+
+                        <StaticImage
+                          className="w-44 h-64 rounded-lg overflow-hidden"
+                          src="../images/13-year-old-kid-dead-cuba-protests-july-2021.jpeg"
+                          alt=""
+                          placeholder="blurred"
+                          layout="fullWidth"
+                          transformOptions={{ fit: "cover" }}
+                        />
                       </div>
                       {/* group of 3 */}
                       <div className="flex-shrink-0 grid grid-cols-1 gap-y-6 lg:gap-y-8">
-                        <div className="w-44 h-64 rounded-lg overflow-hidden">
-                          <img
-                            src={sos_pic_3}
-                            alt=""
-                            className="w-full h-full object-cover"
-                          />
-                        </div>
-                        <div className="w-44 h-64 rounded-lg overflow-hidden">
-                          <img
-                            src={sos_pic_7}
-                            alt=""
-                            className="w-full h-full object-cover"
-                          />
-                        </div>
-                        <div className="w-44 h-64 rounded-lg overflow-hidden">
-                          <img
-                            src={person_hospital_4}
-                            alt=""
-                            className="w-full h-full object-cover"
-                          />
-                        </div>
+                        <StaticImage
+                          className="w-44 h-64 rounded-lg overflow-hidden"
+                          src="../images/sos_pic_3.jpg"
+                          alt=""
+                          placeholder="blurred"
+                          layout="fullWidth"
+                          transformOptions={{ fit: "cover" }}
+                        />
+
+                        <StaticImage
+                          className="w-44 h-64 rounded-lg overflow-hidden"
+                          src="../images/sos_pic_7.jpg"
+                          alt=""
+                          placeholder="blurred"
+                          layout="fullWidth"
+                          transformOptions={{ fit: "cover" }}
+                        />
+
+                        <StaticImage
+                          className="w-44 h-64 rounded-lg overflow-hidden"
+                          src="../images/person_hospital_4.jpg"
+                          alt=""
+                          placeholder="blurred"
+                          layout="fullWidth"
+                          transformOptions={{ fit: "cover" }}
+                        />
                       </div>
                     </div>
                   </div>
@@ -101,60 +103,72 @@ export default function Hero() {
                       {/* group of 2 */}
                       <div className="flex-shrink-0 grid grid-cols-1 gap-y-6">
                         <div className="w-44 h-64 rounded-lg overflow-hidden sm:opacity-0 lg:opacity-100">
-                          <img
-                            src={sos_pic_4}
+                          <StaticImage
+                            className="w-44 h-64 rounded-lg overflow-hidden sm:opacity-0 lg:opacity-100"
+                            src="../images/sos_pic_4.jpg"
                             alt=""
-                            className="w-full h-full object-cover"
+                            placeholder="blurred"
+                            layout="fullWidth"
+                            transformOptions={{ fit: "cover" }}
                           />
                         </div>
-                        <div className="w-44 h-64 rounded-lg overflow-hidden">
-                          <img
-                            src={dead_boy}
-                            alt=""
-                            className="w-full h-full object-cover"
-                          />
-                        </div>
+
+                        <StaticImage
+                          className="w-44 h-64 rounded-lg overflow-hidden"
+                          src="../images/13-year-old-kid-dead-cuba-protests-july-2021.jpeg"
+                          alt=""
+                          placeholder="blurred"
+                          layout="fullWidth"
+                          transformOptions={{ fit: "cover" }}
+                        />
                       </div>
                       {/* group of 3 */}
                       <div className="flex-shrink-0 grid grid-cols-1 gap-y-6">
-                        <div className="w-44 h-64 rounded-lg overflow-hidden">
-                          <img
-                            src={person_hospital_4}
-                            alt=""
-                            className="w-full h-full object-cover"
-                          />
-                        </div>
-                        <div className="w-44 h-64 rounded-lg overflow-hidden">
-                          <img
-                            src={sos_pic_3}
-                            alt=""
-                            className="w-full h-full object-cover"
-                          />
-                        </div>
-                        <div className="w-44 h-64 rounded-lg overflow-hidden">
-                          <img
-                            src={sos_pic_8}
-                            alt=""
-                            className="w-full h-full object-cover"
-                          />
-                        </div>
+                        <StaticImage
+                          className="w-44 h-64 rounded-lg overflow-hidden"
+                          src="../images/person_hospital_4.jpg"
+                          alt=""
+                          placeholder="blurred"
+                          layout="fullWidth"
+                          transformOptions={{ fit: "cover" }}
+                        />
+
+                        <StaticImage
+                          className="w-44 h-64 rounded-lg overflow-hidden"
+                          src="../images/sos_pic_3.jpg"
+                          alt=""
+                          placeholder="blurred"
+                          layout="fullWidth"
+                          transformOptions={{ fit: "cover" }}
+                        />
+
+                        <StaticImage
+                          className="w-44 h-64 rounded-lg overflow-hidden"
+                          src="../images/sos_pic_8.jpg"
+                          alt=""
+                          placeholder="blurred"
+                          layout="fullWidth"
+                          transformOptions={{ fit: "cover" }}
+                        />
                       </div>
                       {/* group of 2 */}
                       <div className="flex-shrink-0 grid grid-cols-1 gap-y-6">
-                        <div className="w-44 h-64 rounded-lg overflow-hidden">
-                          <img
-                            src={sos_pic_7}
-                            alt=""
-                            className="w-full h-full object-cover"
-                          />
-                        </div>
-                        <div className="w-44 h-64 rounded-lg overflow-hidden">
-                          <img
-                            src={sos_pic_5}
-                            alt=""
-                            className="w-full h-full object-cover"
-                          />
-                        </div>
+                        <StaticImage
+                          className="w-44 h-64 rounded-lg overflow-hidden"
+                          src="../images/sos_pic_7.jpg"
+                          alt=""
+                          placeholder="blurred"
+                          layout="fullWidth"
+                          transformOptions={{ fit: "cover" }}
+                        />
+                        <StaticImage
+                          className="w-44 h-64 rounded-lg overflow-hidden"
+                          src="../images/sos_pic_5.webp"
+                          alt=""
+                          placeholder="blurred"
+                          layout="fullWidth"
+                          transformOptions={{ fit: "cover" }}
+                        />
                       </div>
                     </div>
                   </div>

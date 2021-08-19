@@ -39,7 +39,7 @@ const Closings = () => {
             hope.
           </span>
         </p>
-        <p className="text-4xl md:text-6xl tracking-tight font-extrabold space-y-6">
+        <div className="text-4xl md:text-6xl tracking-tight font-extrabold space-y-6">
           <p className="block bg-gradient-to-b from-sky-500 to-sky-200 bg-clip-text text-transparent">
             Homeland & God.{" "}
           </p>
@@ -59,7 +59,7 @@ const Closings = () => {
             {" "}
             Homeland & Prosperity.
           </p>
-        </p>
+        </div>
         <p className="text-6xl md:text-9xl tracking-tight font-extrabold uppercase">
           <span className="block bg-gradient-to-r from-pink-500 via-red-500 to-yellow-500 bg-clip-text text-transparent">
             homeland & Life.

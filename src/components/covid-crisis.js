@@ -1,12 +1,6 @@
 import React from "react"
 import covid_under_control from "../images/covid-under-control-granma-2020.png"
-import mazorra1 from "../images/mazorra-1.jpg"
-import mazorra2 from "../images/mazorra-2.jpg"
-import mazorra3 from "../images/mazorra-3.jpg"
-import mazorra4 from "../images/mazorra-4.jpg"
-import mazorra5 from "../images/mazorra-5.jpg"
-import mazorra6 from "../images/mazorra-6.jpg"
-import mazorra7 from "../images/mazorra-7.jpg"
+
 import person_hospital_1 from "../images/hospital-in-cuba-1.png"
 import person_hospital_2 from "../images/person_hospital_2.jpg"
 import person_hospital_3 from "../images/person_hospital_3.jpg"
@@ -21,6 +15,8 @@ import hospital_in_cuba from "../images/hospital-in-cuba.jpeg"
 import old_people_hospital from "../images/old-people-hospital-in-cuba.jpeg"
 import cuban_doctors from "../images/cuban-doctors-going-to-international-missions.jpeg"
 import HLSVideoPlayer from "./hls-player"
+import { useMazorra } from "../hooks/useMazorra"
+import { GatsbyImage } from "gatsby-plugin-image"
 
 const products = [
   {
@@ -65,6 +61,12 @@ const products = [
 ]
 
 const CovidCrisis = () => {
+  const mazorra = useMazorra()
+  const mazGroup1and2 = mazorra.slice(0, 2)
+  const mazGroup3to5 = mazorra.slice(2, 5)
+  const mazGroup6to7 = mazorra.slice(5, 7)
+
+  //
   return (
     <div className="pt-16">
       <div className="max-w-4xl mx-auto px-4 space-y-6 overflow-hidden">
@@ -96,43 +98,24 @@ const CovidCrisis = () => {
             <div className="md:hidden">
               <div className="flex items-center space-x-6 lg:space-x-8">
                 <div className="flex-shrink-0 grid grid-cols-1 gap-y-2">
-                  <div className="w-44 h-64 rounded-lg overflow-hidden sm:opacity-0 lg:opacity-100">
-                    <img
-                      src={mazorra1}
+                  {mazGroup1and2.map(person => (
+                    <GatsbyImage
+                      key={person.node.id}
+                      className="w-44 h-64 rounded-lg overflow-hidden"
+                      image={person.node.childImageSharp.gatsbyImageData}
                       alt=""
-                      className="w-full h-full object-cover"
                     />
-                  </div>
-                  <div className="w-44 h-64 rounded-lg overflow-hidden">
-                    <img
-                      src={mazorra2}
-                      alt=""
-                      className="w-full h-full object-cover"
-                    />
-                  </div>
+                  ))}
                 </div>
                 <div className="flex-shrink-0 grid grid-cols-1 gap-y-6 lg:gap-y-8">
-                  <div className="w-44 h-64 rounded-lg overflow-hidden">
-                    <img
-                      src={mazorra3}
+                  {mazGroup3to5.map(person => (
+                    <GatsbyImage
+                      key={person.node.id}
+                      className="w-44 h-64 rounded-lg overflow-hidden"
+                      image={person.node.childImageSharp.gatsbyImageData}
                       alt=""
-                      className="w-full h-full object-cover"
                     />
-                  </div>
-                  <div className="w-44 h-64 rounded-lg overflow-hidden">
-                    <img
-                      src={mazorra4}
-                      alt=""
-                      className="w-full h-full object-cover"
-                    />
-                  </div>
-                  <div className="w-44 h-64 rounded-lg overflow-hidden">
-                    <img
-                      src={mazorra5}
-                      alt=""
-                      className="w-full h-full object-cover"
-                    />
-                  </div>
+                  ))}
                 </div>
               </div>
             </div>
@@ -140,59 +123,35 @@ const CovidCrisis = () => {
             <div className="hidden md:block">
               <div className="flex items-center justify-center space-x-6 lg:space-x-8">
                 <div className="flex-shrink-0 grid grid-cols-1 gap-y-6">
-                  <div className="w-64 h-64 rounded-lg overflow-hidden sm:opacity-0 lg:opacity-100">
-                    <img
-                      src={mazorra1}
+                  {mazGroup1and2.map(person => (
+                    <GatsbyImage
+                      key={person.node.id}
+                      className="w-64 h-64 rounded-lg overflow-hidden"
+                      image={person.node.childImageSharp.gatsbyImageData}
                       alt=""
-                      className="w-full h-full object-cover"
                     />
-                  </div>
-                  <div className="w-64 h-64 rounded-lg overflow-hidden">
-                    <img
-                      src={mazorra2}
-                      alt=""
-                      className="w-full h-full object-cover"
-                    />
-                  </div>
+                  ))}
                 </div>
                 <div className="flex-shrink-0 grid grid-cols-1 gap-y-6">
-                  <div className="w-80 h-64 rounded-lg overflow-hidden">
-                    <img
-                      src={mazorra3}
+                  {mazGroup3to5.map(person => (
+                    <GatsbyImage
+                      key={person.node.id}
+                      className="w-80 h-64 rounded-lg overflow-hidden"
+                      image={person.node.childImageSharp.gatsbyImageData}
                       alt=""
-                      className="w-full h-full object-cover"
                     />
-                  </div>
-                  <div className="w-80 h-64 rounded-lg overflow-hidden">
-                    <img
-                      src={mazorra4}
-                      alt=""
-                      className="w-full h-full object-cover"
-                    />
-                  </div>
-                  <div className="w-80 h-64 rounded-lg overflow-hidden">
-                    <img
-                      src={mazorra5}
-                      alt=""
-                      className="w-full h-full object-cover"
-                    />
-                  </div>
+                  ))}
                 </div>
                 <div className="flex-shrink-0 grid grid-cols-1 gap-y-6">
-                  <div className="w-96 h-64 rounded-lg overflow-hidden">
-                    <img
-                      src={mazorra6}
+                  {/* mazGroup6to7 */}
+                  {mazGroup6to7.map(person => (
+                    <GatsbyImage
+                      key={person.node.id}
+                      className="w-96 h-64 rounded-lg overflow-hidden"
+                      image={person.node.childImageSharp.gatsbyImageData}
                       alt=""
-                      className="w-full h-full object-cover"
                     />
-                  </div>
-                  <div className="w-96 h-64 rounded-lg overflow-hidden">
-                    <img
-                      src={mazorra7}
-                      alt=""
-                      className="w-full h-full object-cover"
-                    />
-                  </div>
+                  ))}
                 </div>
               </div>
             </div>
@@ -204,11 +163,11 @@ const CovidCrisis = () => {
           They let them freeze to death.
         </p>
 
-        <p className="mt-6 text-xl font-medium text-gray-400 sm:text-2xl leading-relaxed tracking-wide">
+        <p className="mt-4 text-3xl font-extrabold tracking-tight text-gray-50 sm:text-4xl">
           These patients were severely malnourished, almost naked, and without
           blankets to survive the cold temperatures before dying.
         </p>
-        <p className="mt-4 text-3xl font-extrabold tracking-tight text-gray-50 sm:text-4xl">
+        <p className="mt-6 text-xl font-medium text-gray-400 sm:text-2xl leading-relaxed tracking-wide">
           This place, like many facilities in Cuba, has many windows broken or
           missing.
         </p>
