@@ -1,11 +1,12 @@
 import React from "react"
-import sos_pic_1 from "../images/sos_pic_1.jpg"
-import sos_pic_2 from "../images/sos_pic_2.jpg"
+// import sos_pic_2 from "../images/sos_pic_2.jpg"
+import dead_boy from "../images/13-year-old-kid-dead-cuba-protests-july-2021.jpeg"
 import sos_pic_3 from "../images/sos_pic_3.jpg"
 import sos_pic_4 from "../images/sos_pic_4.jpg"
 import sos_pic_5 from "../images/sos_pic_5.webp"
 import sos_pic_7 from "../images/sos_pic_7.jpg"
 import sos_pic_8 from "../images/sos_pic_8.jpg"
+import person_hospital_4 from "../images/person_hospital_4.jpg"
 
 export default function Hero() {
   return (
@@ -52,6 +53,7 @@ export default function Hero() {
                   <div className="md:hidden">
                     <div className="flex items-center space-x-6 lg:space-x-8">
                       <div className="flex-shrink-0 grid grid-cols-1 gap-y-6">
+                        {/* group of 2 */}
                         <div className="w-44 h-64 rounded-lg overflow-hidden sm:opacity-0 lg:opacity-100">
                           <img
                             src={sos_pic_4}
@@ -61,12 +63,13 @@ export default function Hero() {
                         </div>
                         <div className="w-44 h-64 rounded-lg overflow-hidden">
                           <img
-                            src={sos_pic_8}
+                            src={dead_boy}
                             alt=""
                             className="w-full h-full object-cover"
                           />
                         </div>
                       </div>
+                      {/* group of 3 */}
                       <div className="flex-shrink-0 grid grid-cols-1 gap-y-6 lg:gap-y-8">
                         <div className="w-44 h-64 rounded-lg overflow-hidden">
                           <img
@@ -84,7 +87,7 @@ export default function Hero() {
                         </div>
                         <div className="w-44 h-64 rounded-lg overflow-hidden">
                           <img
-                            src={sos_pic_2}
+                            src={person_hospital_4}
                             alt=""
                             className="w-full h-full object-cover"
                           />
@@ -95,6 +98,7 @@ export default function Hero() {
                   {/* medium and large screens */}
                   <div className="hidden md:block absolute md:left-1/2 md:top-0 md:translate-x-8 lg:left-1/2 lg:-translate-y-1/2 lg:translate-x-8">
                     <div className="flex items-center space-x-6 lg:space-x-8">
+                      {/* group of 2 */}
                       <div className="flex-shrink-0 grid grid-cols-1 gap-y-6">
                         <div className="w-44 h-64 rounded-lg overflow-hidden sm:opacity-0 lg:opacity-100">
                           <img
@@ -105,16 +109,17 @@ export default function Hero() {
                         </div>
                         <div className="w-44 h-64 rounded-lg overflow-hidden">
                           <img
-                            src={sos_pic_1}
+                            src={dead_boy}
                             alt=""
                             className="w-full h-full object-cover"
                           />
                         </div>
                       </div>
+                      {/* group of 3 */}
                       <div className="flex-shrink-0 grid grid-cols-1 gap-y-6">
                         <div className="w-44 h-64 rounded-lg overflow-hidden">
                           <img
-                            src={sos_pic_2}
+                            src={person_hospital_4}
                             alt=""
                             className="w-full h-full object-cover"
                           />
@@ -134,6 +139,7 @@ export default function Hero() {
                           />
                         </div>
                       </div>
+                      {/* group of 2 */}
                       <div className="flex-shrink-0 grid grid-cols-1 gap-y-6">
                         <div className="w-44 h-64 rounded-lg overflow-hidden">
                           <img

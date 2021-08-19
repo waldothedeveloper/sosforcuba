@@ -2,8 +2,8 @@ import React, { useEffect, useRef } from "react"
 import Hls from "hls.js"
 import PropTypes from "prop-types"
 
-const HLSVideoPlayer = source => {
-  const { url } = source
+const HLSVideoPlayer = props => {
+  const { url, poster } = props
 
   const videoRef = useRef(null)
 
@@ -12,7 +12,7 @@ const HLSVideoPlayer = source => {
     if (videoRef.current) {
       const video = videoRef.current
 
-      if (url) {
+      if (url && poster) {
         if (video.canPlayType("application/vnd.apple.mpegurl")) {
           // Some browers (safari and ie edge) support HLS natively
           video.src = url
@@ -32,19 +32,20 @@ const HLSVideoPlayer = source => {
         hls.destroy()
       }
     }
-  }, [videoRef, url])
+  }, [videoRef, url, poster])
 
   return (
     <video
       className="object-cover shadow-lg rounded-lg"
       controls
       ref={videoRef}
-      // poster="https://peach.blender.org/wp-content/uploads/title_anouncement.jpg?x11217"
+      poster={poster}
     />
   )
 }
 
 export default HLSVideoPlayer
 HLSVideoPlayer.propTypes = {
-  source: PropTypes.string,
+  url: PropTypes.string,
+  poster: PropTypes.string,
 }

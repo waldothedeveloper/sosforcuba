@@ -7,7 +7,7 @@ const CallToHelp = () => {
 
   return (
     <div className="py-12 md:py-6">
-      <div className="relative bg-gray-800">
+      <div className="relative bg-gradient-to-r from-coolGray-100 to-coolGray-300">
         <div className="max-w-7xl mx-auto text-center py-12 px-4 sm:px-6 lg:py-16 lg:px-8">
           {/* <h2 className="text-sm font-semibold uppercase tracking-wider text-blueGray-400">
               Learn more about
@@ -15,7 +15,7 @@ const CallToHelp = () => {
           <p className="mt-2 bg-gradient-to-r from-red-500 to-red-600 bg-clip-text text-transparent text-3xl font-extrabold tracking-tight sm:text-4xl">
             How can you help?
           </p>
-          <p className="mt-3 text-lg bg-gradient-to-r from-coolGray-100 to-coolGray-300 bg-clip-text text-transparent max-w-2xl mx-auto">
+          <p className="mt-3 text-lg text-gray-800 max-w-2xl mx-auto font-medium">
             International solidarity at this time is urgent. If you are Cuban or
             you want to support the freedom of the Cuban people, here&apos;s
             what you can do.
