@@ -21,7 +21,7 @@ const Closings = () => {
         </p>
         <p className="text-5xl md:text-7xl tracking-tight font-extrabold">
           <span className="block bg-gradient-to-r from-red-500 to-red-700 bg-clip-text text-transparent">
-            no more hate.
+            no more repression.
           </span>
         </p>
         <p className="text-6xl md:text-8xl tracking-tight font-extrabold uppercase">

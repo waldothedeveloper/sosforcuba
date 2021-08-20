@@ -49,7 +49,8 @@ export default function Hero() {
                         {/* group of 2 */}
 
                         <StaticImage
-                          className="w-44 h-64 rounded-lg overflow-hidden"
+                          imgStyle={{ borderRadius: "0.5rem" }}
+                          className="w-44 h-64 overflow-hidden"
                           src="../images/sos_pic_4.jpg"
                           alt=""
                           placeholder="blurred"
@@ -58,7 +59,8 @@ export default function Hero() {
                         />
 
                         <StaticImage
-                          className="w-44 h-64 rounded-lg overflow-hidden"
+                          imgStyle={{ borderRadius: "0.5rem" }}
+                          className="w-44 h-64 overflow-hidden"
                           src="../images/13-year-old-kid-dead-cuba-protests-july-2021.jpeg"
                           alt=""
                           placeholder="blurred"
@@ -69,7 +71,8 @@ export default function Hero() {
                       {/* group of 3 */}
                       <div className="flex-shrink-0 grid grid-cols-1 gap-y-6 lg:gap-y-8">
                         <StaticImage
-                          className="w-44 h-64 rounded-lg overflow-hidden"
+                          imgStyle={{ borderRadius: "0.5rem" }}
+                          className="w-44 h-64 overflow-hidden"
                           src="../images/sos_pic_3.jpg"
                           alt=""
                           placeholder="blurred"
@@ -78,7 +81,8 @@ export default function Hero() {
                         />
 
                         <StaticImage
-                          className="w-44 h-64 rounded-lg overflow-hidden"
+                          imgStyle={{ borderRadius: "0.5rem" }}
+                          className="w-44 h-64 overflow-hidden"
                           src="../images/sos_pic_7.jpg"
                           alt=""
                           placeholder="blurred"
@@ -87,8 +91,9 @@ export default function Hero() {
                         />
 
                         <StaticImage
-                          className="w-44 h-64 rounded-lg overflow-hidden"
-                          src="../images/person_hospital_4.jpg"
+                          imgStyle={{ borderRadius: "0.5rem" }}
+                          className="w-44 h-64 overflow-hidden"
+                          src="../images/hosp_person_hospital_4.jpg"
                           alt=""
                           placeholder="blurred"
                           layout="fullWidth"
@@ -126,7 +131,7 @@ export default function Hero() {
                       <div className="flex-shrink-0 grid grid-cols-1 gap-y-6">
                         <StaticImage
                           className="w-44 h-64 rounded-lg overflow-hidden"
-                          src="../images/person_hospital_4.jpg"
+                          src="../images/hosp_person_hospital_4.jpg"
                           alt=""
                           placeholder="blurred"
                           layout="fullWidth"

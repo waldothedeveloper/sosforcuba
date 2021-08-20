@@ -28,14 +28,18 @@ exports.sourceNodes = async ({
 
   // get list of countries
   const countries = await fetch(`https://restcountries.eu/rest/v2/all`)
-
   const listOfCountries = await countries.json()
+
+  // get raw covid data from github API
+  const COVIDData = await fetch(
+    `https://raw.githubusercontent.com/owid/covid-19-data/master/public/data/latest/owid-covid-latest.json`
+  )
+  const CubaCovidData = await COVIDData.json()
 
   // create node for photos of Cuba
   createNode({
     results: resultData.results,
     date: getCurrentDate(),
-    // required fields
     id: `unsplash_sosforcuba`,
     parent: null,
     children: [],
@@ -54,19 +58,16 @@ exports.sourceNodes = async ({
         type: `Countries`,
         contentDigest: createContentDigest(listOfCountries),
       },
+    }),
+    // create node for COVID CUBA cases
+    createNode({
+      covid_cases_cuba: CubaCovidData,
+      id: `cuba_covid_cases`,
+      parent: null,
+      children: [],
+      internal: {
+        type: `CubaCOVIDCases`,
+        contentDigest: createContentDigest(CubaCovidData),
+      },
     })
 }
-
-// //
-// exports.createPages = ({ actions }) => {
-//   const { createPage } = actions
-
-//   // You can access the variable "currentDate" in your page queries now
-//   createPage({
-//     path: `/upcoming-protests`,
-//     component: path.resolve(`./src/pages/protests.js`),
-//     context: {
-//       currentDate: getCurrentDate(),
-//     },
-//   })
-// }

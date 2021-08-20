@@ -1,6 +1,6 @@
 /* eslint-disable react/display-name */
 import React from "react"
-import { ChevronDownIcon } from "@heroicons/react/solid"
+// import { ChevronDownIcon } from "@heroicons/react/solid"
 import { Link } from "gatsby"
 
 const navigation = {
@@ -145,7 +145,7 @@ const Footer = () => {
           </div>
           <div className="mt-12 xl:mt-0">
             <h3 className="text-sm font-semibold text-gray-400 tracking-wider uppercase">
-              Language
+              Language (coming soon...)
             </h3>
             <form className="mt-4 sm:max-w-xs">
               <fieldset className="w-full">
@@ -154,9 +154,10 @@ const Footer = () => {
                 </label>
                 <div className="relative">
                   <select
+                    disabled={true}
                     id="language"
                     name="language"
-                    className="appearance-none block w-full bg-none bg-gray-700 border border-transparent rounded-md py-2 pl-3 pr-10 text-base text-white focus:outline-none focus:ring-white focus:border-white sm:text-sm"
+                    className="appearance-none block w-full bg-none bg-gray-500 border border-transparent rounded-md py-2 pl-3 pr-10 text-base text-gray-400 focus:outline-none focus:ring-white focus:border-white sm:text-sm"
                     defaultValue="English"
                   >
                     <option>English</option>
@@ -165,12 +166,13 @@ const Footer = () => {
                     <option>Japanese</option>
                     <option>Spanish</option>
                   </select>
-                  <div className="pointer-events-none absolute inset-y-0 right-0 px-2 flex items-center">
+                  {/* DO NOT DELETE THIS!!!! */}
+                  {/* <div className="pointer-events-none absolute inset-y-0 right-0 px-2 flex items-center">
                     <ChevronDownIcon
-                      className="h-4 w-4 text-white"
+                      className="h-4 w-4 text-gray-400"
                       aria-hidden="true"
                     />
-                  </div>
+                  </div> */}
                 </div>
               </fieldset>
             </form>

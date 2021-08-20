@@ -157,15 +157,9 @@ const NavBar = () => {
               <div className="hidden md:flex items-center justify-end md:flex-1 lg:w-0">
                 <Link
                   to="/"
-                  className="whitespace-nowrap text-base font-medium text-gray-400 hover:text-gray-300"
+                  className="whitespace-nowrap inline-flex items-center justify-center bg-gradient-to-r from-pink-500 via-red-500 to-yellow-500 bg-origin-border px-4 py-2 border border-transparent rounded-md shadow-sm text-base font-medium text-gray-50"
                 >
-                  Sign in
-                </Link>
-                <Link
-                  to="/"
-                  className="ml-8 whitespace-nowrap inline-flex items-center justify-center bg-gradient-to-r from-sky-600 to-red-600 bg-origin-border px-4 py-2 border border-transparent rounded-md shadow-sm text-base font-medium text-white hover:from-sky-700 hover:to-red-700"
-                >
-                  DONATE
+                  Help Us End Communism in Cuba
                 </Link>
               </div>
             </div>
@@ -252,9 +246,9 @@ const NavBar = () => {
                     <div className="mt-6">
                       <Link
                         to="/"
-                        className="w-full flex items-center justify-center bg-gradient-to-r from-sky-600 to-red-600 bg-origin-border px-4 py-2 border border-transparent rounded-md shadow-sm text-base font-medium text-white hover:from-sky-700 hover:to-red-700"
+                        className="w-full flex items-center justify-center bg-gradient-to-r from-pink-500 via-red-500 to-yellow-500 bg-origin-border px-4 py-2 border border-transparent rounded-md shadow-sm text-base font-medium text-gray-50"
                       >
-                        Donate
+                        Help Us End Communism in Cuba
                       </Link>
                       <p className="mt-6 text-center text-xl font-bold text-red-50">
                         PATRIA Y VIDA

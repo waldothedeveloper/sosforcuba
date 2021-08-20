@@ -1,70 +1,18 @@
 import React from "react"
 import covid_under_control from "../images/covid-under-control-granma-2020.png"
-
-import person_hospital_1 from "../images/hospital-in-cuba-1.png"
-import person_hospital_2 from "../images/person_hospital_2.jpg"
-import person_hospital_3 from "../images/person_hospital_3.jpg"
-import person_hospital_4 from "../images/person_hospital_4.jpg"
-import doctor_hospital from "../images/doctor_hospital.jpeg"
-import hospital2 from "../images/hospital-in-cuba-2.jpeg"
-import hospital3 from "../images/hospital-in-cuba-3.jpg"
-import hospital4 from "../images/hospital-in-cuba-4.jpg"
-import hospital5 from "../images/hospital-in-cuba-5.jpg"
-import hospital_bed from "../images/hospital_bed_in_cuba.jpg"
-import hospital_in_cuba from "../images/hospital-in-cuba.jpeg"
-import old_people_hospital from "../images/old-people-hospital-in-cuba.jpeg"
-import cuban_doctors from "../images/cuban-doctors-going-to-international-missions.jpeg"
 import HLSVideoPlayer from "./hls-player"
 import { useMazorra } from "../hooks/useMazorra"
-import { GatsbyImage } from "gatsby-plugin-image"
+import { GatsbyImage, StaticImage } from "gatsby-plugin-image"
+import { useHospital } from "../hooks/useHospital"
+import CubaCovidData from "./cubaCovidData"
 
-const products = [
-  {
-    imageSrc: person_hospital_1,
-    imageAlt: "And old man naked in a hospital in Cuba",
-  },
-  {
-    imageSrc: person_hospital_2,
-    imageAlt: "people in rusted beds in a hospital in Cuba",
-  },
-  {
-    imageSrc: person_hospital_3,
-    imageAlt: "people on the floor in a hospital in Cuba",
-  },
-  { imageSrc: hospital4, imageAlt: "flooded floors in a hospital in Cuba" },
-  { imageSrc: hospital5, imageAlt: "a bathroom broken in a hospital in Cuba" },
-  {
-    imageSrc: doctor_hospital,
-    imageAlt: " a doctor showing a disgusting mattress in a hospital in Cuba",
-  },
-  { imageSrc: hospital_bed, imageAlt: "a broken hospital bed in Cuba" },
-  {
-    imageSrc: hospital3,
-    imageAlt: "a disgusting bathroom in a hospital in Cuba",
-  },
-  {
-    imageSrc: hospital_in_cuba,
-    imageAlt: "horrible conditions in a hospital in Cuba",
-  },
-  {
-    imageSrc: old_people_hospital,
-    imageAlt: "horrible conditions in a hospital in Cuba",
-  },
-  {
-    imageSrc: hospital2,
-    imageAlt: "horrible conditions in a hospital in Cuba",
-  },
-  {
-    imageSrc: person_hospital_4,
-    imageAlt: "a mom holds her child in her arms in a hospital in Cuba",
-  },
-]
-
+//
 const CovidCrisis = () => {
   const mazorra = useMazorra()
   const mazGroup1and2 = mazorra.slice(0, 2)
   const mazGroup3to5 = mazorra.slice(2, 5)
   const mazGroup6to7 = mazorra.slice(5, 7)
+  const hospitals = useHospital()
 
   //
   return (
@@ -73,23 +21,28 @@ const CovidCrisis = () => {
         <p className="mt-2 text-3xl font-extrabold tracking-tight text-red-600 sm:text-4xl">
           FOR {new Date().getFullYear() - 1959} YEARS
         </p>
-        <p className="mt-4 text-3xl font-extrabold tracking-tight text-gray-50 sm:text-4xl">
-          The Cuban Government has always claimed to have{" "}
-          <span className="underline">the best free healthcare system.</span>
+        <p className="mt-4 text-3xl font-extrabold tracking-tight bg-gradient-to-r from-gray-200 via-gray-400 to-gray-600 bg-clip-text text-transparent sm:text-4xl">
+          The Cuban Government has claimed to have the{" "}
+          <span className="underline text-red-600">
+            best free healthcare system.
+          </span>
         </p>
         <p className="mt-6 text-xl font-medium text-gray-400 sm:text-2xl leading-relaxed tracking-wide">
           Back in January of 2010, a cold wave of temperatures whipped the
-          capital, Havana. In a psychiatric hospital known as
-          &apos;Mazorra&apos; more than a two dozen people lost their lives of
-          hypothermia.{" "}
+          capital, Havana. Temperatures dropped down to 39°F degrees(4° Celcius
+          degrees).
         </p>
 
+        <p className="mt-6 text-xl font-medium text-gray-400 sm:text-2xl leading-relaxed tracking-wide">
+          In a psychiatric hospital known as &apos;Mazorra&apos; more than a two
+          dozen people lost their lives of hypothermia.{" "}
+        </p>
         <p className="py-32 text-lg font-bold text-red-600 sm:text-xl leading-relaxed tracking-wide underline">
           WARNING: THE FOLLOWING IMAGES ARE GRAPHIC AND MAY BE DISTURBING TO
           SOME USERS
         </p>
       </div>
-      {/* psychiatric photos of dead patients */}
+      {/* psychiatric hospital -> photos of dead patients */}
       <div className="relative">
         <div className="mt-10">
           {/* Decorative image grid */}
@@ -100,8 +53,9 @@ const CovidCrisis = () => {
                 <div className="flex-shrink-0 grid grid-cols-1 gap-y-2">
                   {mazGroup1and2.map(person => (
                     <GatsbyImage
+                      imgStyle={{ borderRadius: "0.5rem" }}
                       key={person.node.id}
-                      className="w-44 h-64 rounded-lg overflow-hidden"
+                      className="w-44 h-64 overflow-hidden"
                       image={person.node.childImageSharp.gatsbyImageData}
                       alt=""
                     />
@@ -110,6 +64,7 @@ const CovidCrisis = () => {
                 <div className="flex-shrink-0 grid grid-cols-1 gap-y-6 lg:gap-y-8">
                   {mazGroup3to5.map(person => (
                     <GatsbyImage
+                      imgStyle={{ borderRadius: "0.5rem" }}
                       key={person.node.id}
                       className="w-44 h-64 rounded-lg overflow-hidden"
                       image={person.node.childImageSharp.gatsbyImageData}
@@ -126,7 +81,7 @@ const CovidCrisis = () => {
                   {mazGroup1and2.map(person => (
                     <GatsbyImage
                       key={person.node.id}
-                      className="w-64 h-64 rounded-lg overflow-hidden"
+                      className="w-64 h-80 rounded-lg overflow-hidden"
                       image={person.node.childImageSharp.gatsbyImageData}
                       alt=""
                     />
@@ -136,7 +91,7 @@ const CovidCrisis = () => {
                   {mazGroup3to5.map(person => (
                     <GatsbyImage
                       key={person.node.id}
-                      className="w-80 h-64 rounded-lg overflow-hidden"
+                      className="w-80 h-80 rounded-lg overflow-hidden"
                       image={person.node.childImageSharp.gatsbyImageData}
                       alt=""
                     />
@@ -159,7 +114,7 @@ const CovidCrisis = () => {
         </div>
       </div>
       <div className="max-w-4xl mx-auto px-4 space-y-6 overflow-hidden">
-        <p className="mt-6 text-xl font-medium text-red-600 sm:text-2xl leading-relaxed tracking-wide">
+        <p className="pt-32 text-3xl font-extrabold tracking-tight text-red-600 sm:text-4xl">
           They let them freeze to death.
         </p>
 
@@ -173,27 +128,50 @@ const CovidCrisis = () => {
         </p>
         <p className="mt-6 text-xl font-medium text-gray-400 sm:text-2xl leading-relaxed tracking-wide">
           The government organized a security operation around the hospital, and
-          the workers were instructed to remain silent.
+          the workers{" "}
+          <span className="underline font-semibold text-red-600">
+            were instructed to remain silent.
+          </span>
         </p>
 
         <p className="text-gray-400 text-2xl flex justify-center py-6 leading-relaxed tracking-wide">
           ...
         </p>
         <p className="mt-6 text-xl font-medium text-gray-400 sm:text-2xl leading-relaxed tracking-wide">
-          The same story is being repeated now with COVID but in numbers that
-          will make you cry.
+          The same is happening now with COVID but in numbers closely comparable
+          to the Nazi Holocaust.
         </p>
 
-        <p className="mt-6 text-xl font-medium text-red-600 sm:text-2xl leading-relaxed tracking-wide">
-          People are dying in hospitals without oxygen, medicines, medical
-          attention, antibiotics, syringes, sanitary conditions, nothing.
+        <p className="mt-6 text-3xl font-extrabold tracking-tight text-red-600 sm:text-4xl">
+          Hospitals are collapsed. People are dying without oxygen, medicines,
+          medical attention, antibiotics, syringes, sanitary conditions,
+          nothing.
         </p>
       </div>
 
       <div className="max-w-4xl mx-auto px-4 space-y-6 overflow-hidden py-12">
-        <p className="mt-4 text-3xl font-extrabold tracking-tight text-gray-50 sm:text-4xl">
+        <p className="mt-4 text-3xl font-extrabold bg-gradient-to-r from-gray-200 via-gray-400 to-gray-600 bg-clip-text text-transparent sm:text-4xl">
           But the government speech sounds different. <br />
-          For them, everything is under control.
+          For them, everything is &apos;under control.&apos;
+        </p>
+
+        {/* covid cases CUBA from google */}
+        <p className="py-6 text-xl font-medium text-gray-400 sm:text-2xl leading-relaxed tracking-wide">
+          Let&apos;s examine the latest data on COVID cases in Cuba taken
+          straight from Google.
+        </p>
+
+        <CubaCovidData />
+
+        <p className="py-6 text-xl font-medium text-gray-400 sm:text-2xl leading-relaxed tracking-wide">
+          Cuba has a population of approx 11,326,616 million people. And there
+          are only five (5) hospital beds available per a thousand habitants?
+          What?
+        </p>
+
+        <p className="py-6 text-xl font-medium text-gray-400 sm:text-2xl leading-relaxed tracking-wide">
+          There are more than 500K total cases and only 4K deaths and 80
+          something deaths?
         </p>
 
         <div className="py-12 md:max-w-3xl md:mx-auto">
@@ -221,7 +199,7 @@ const CovidCrisis = () => {
                 of the temporary working group for the prevention and control of
                 COVID-19, that with the contribution of the Health system and
                 Cuban scientists{" "}
-                <span className="underline font-medium">
+                <span className="underline font-semibold text-gray-300">
                   we are decreasing, to what is almost impossible , the
                   affectations in critical and serious patients.”
                 </span>
@@ -229,9 +207,9 @@ const CovidCrisis = () => {
             </blockquote>
           </div>
         </div>
-        <p className="mt-4 text-3xl font-extrabold tracking-tight text-gray-50 sm:text-4xl">
-          The reality is totally{` `}
-          <span className="text-red-600 underline">different.</span>
+        <p className="mt-4 text-3xl font-extrabold tracking-loose text-gray-50 sm:text-4xl">
+          The reality is overwhelmingly <br />
+          <span className="text-red-600 underline uppercase">different.</span>
         </p>
 
         <p className="py-32 text-lg font-bold text-red-600 sm:text-xl leading-relaxed tracking-wide underline">
@@ -240,29 +218,28 @@ const CovidCrisis = () => {
         </p>
         {/* images of hospitals */}
         <div className="mt-6 grid grid-cols-1 md:grid-cols-2 gap-x-4 gap-y-10 sm:gap-x-6">
-          {products.map(product => (
-            <div key={product.imageSrc} className="group relative">
-              <div className="w-full bg-gray-200 rounded-md overflow-hidden group-hover:opacity-75 h-96">
-                <img
-                  src={product.imageSrc}
-                  alt={product.imageAlt}
-                  className="w-full h-full object-top object-cover"
-                />
-              </div>
+          {hospitals.map(sos => (
+            <div key={sos.id} className="group relative">
+              <GatsbyImage
+                imgStyle={{ objectPosition: "top" }}
+                className="w-full bg-gray-200 rounded-md overflow-hidden group-hover:opacity-75 h-96"
+                image={sos.imageSrc}
+                alt={sos.imageAlt}
+              />
             </div>
           ))}
         </div>
         <p className="pt-12 text-xl font-medium text-red-600 sm:text-2xl leading-relaxed tracking-wide">
-          People are dying in hospitals without oxygen, medicines, medical
-          attention, antibiotics, syringes, sanitary conditions, nothing.
+          Hospitals are collapsed. People are dying without oxygen, medicines,
+          medical attention, antibiotics, syringes, sanitary conditions,
+          nothing.
         </p>
 
         {/* Videos of hospital facilities in Cuba */}
-
         <div className="flex flex-col space-y-4 py-12">
           <p className="py-6 text-xl font-medium text-gray-50 sm:text-2xl leading-relaxed tracking-wide">
-            An exclusive video shows the men&apos;s bathroom in a principal
-            hospital in Cuba.
+            A video shows the men&apos;s bathroom in a principal hospital in
+            Cuba.
           </p>
           <div className="md:aspect-w-3 md:aspect-h-2 w-full px-12">
             <HLSVideoPlayer
@@ -271,8 +248,8 @@ const CovidCrisis = () => {
             />
           </div>
           <p className="py-6 text-xl font-medium text-gray-50 sm:text-2xl leading-relaxed tracking-wide">
-            Another exclusive video showing the hallways and dark rooms of the
-            internal medicine area of a hospital in Cuba.
+            Another video showing the hallways and dark rooms of the internal
+            medicine area of a hospital in Cuba.
           </p>
 
           <div className="md:aspect-w-3 md:aspect-h-2 w-full px-12">
@@ -300,22 +277,26 @@ const CovidCrisis = () => {
           international missions.
         </p>
 
-        <div className="w-full bg-gray-200 rounded-md overflow-hidden group-hover:opacity-75 h-96">
-          <img
-            src={cuban_doctors}
-            alt="Cuban doctors ready to go on an international mission"
-            className="w-full h-full object-top object-cover"
-          />
+        <StaticImage
+          imgStyle={{ borderRadius: "0.5rem" }}
+          className="w-full rounded-md overflow-hidden group-hover:opacity-75 h-96"
+          src="../images/cuban-doctors-going-to-international-missions.jpeg"
+          alt="Cuban doctors ready to go on an international mission"
+          placeholder="blurred"
+          layout="fullWidth"
+          transformOptions={{ fit: "cover" }}
+        />
+        <div className="space-y-12">
+          <p className="py-6 text-3xl font-extrabold tracking-tight text-gray-50 sm:text-4xl">
+            They pay the Cuban doctors pennies and put the rest in their
+            pockets.
+          </p>
+
+          <p className="pt-12 text-3xl font-extrabold tracking-tight text-gray-50 sm:text-4xl">
+            These have become one of the most lucrative businesses for the
+            totalitarian regime.
+          </p>
         </div>
-
-        <p className="mt-4 text-3xl font-extrabold tracking-tight text-gray-50 sm:text-4xl">
-          They pay the Cuban doctors pennies and put the rest in their pockets.
-        </p>
-
-        <p className="mt-4 text-3xl font-extrabold tracking-tight text-gray-50 sm:text-4xl">
-          These have become one of the most lucrative businesses for the
-          totalitarian regime.
-        </p>
       </div>
     </div>
   )
