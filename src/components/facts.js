@@ -77,12 +77,12 @@ const Facts = () => {
             by the totalitarian Cuban communist regime.
           </p>
           <p className="mt-24 text-3xl font-extrabold tracking-tight text-gray-400 sm:text-4xl">
-            If you want to know more..
+            The list of prohibitions that Cubans have faced for{" "}
+            {new Date().getFullYear() - 1959}
+            {` `}
+            years is much worse.
           </p>
-          <p className="mt-24 text-3xl font-extrabold tracking-tight text-gray-400 sm:text-4xl">
-            The list of prohibitions that Cubans have faced in all these years
-            is even worse.
-          </p>
+
           <p className="mt-24 text-3xl font-extrabold tracking-tight text-gray-50 sm:text-4xl text-left">
             Cubans <span className="text-red-600">can NOT:</span>
           </p>

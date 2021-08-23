@@ -34,7 +34,7 @@ export const useCubaCovidData = () => {
       stat: data?.cubaCovidCases?.covid_cases_cuba?.CUB?.total_deaths,
     },
     {
-      name: "New Deaths",
+      name: "New deaths",
       stat: data?.cubaCovidCases?.covid_cases_cuba?.CUB?.new_deaths,
     },
     {

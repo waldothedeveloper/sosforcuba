@@ -24,7 +24,7 @@ const Closings = () => {
             no more repression.
           </span>
         </p>
-        <p className="text-6xl md:text-8xl tracking-tight font-extrabold uppercase">
+        {/* <p className="text-6xl md:text-8xl tracking-tight font-extrabold uppercase">
           <span className="block bg-gradient-to-r from-blueGray-500 to-yellow-100 bg-clip-text text-transparent">
             let&apos;s bring.
           </span>
@@ -64,7 +64,7 @@ const Closings = () => {
           <span className="block bg-gradient-to-r from-pink-500 via-red-500 to-yellow-500 bg-clip-text text-transparent">
             homeland & Life.
           </span>
-        </p>
+        </p> */}
       </div>
     </div>
   )

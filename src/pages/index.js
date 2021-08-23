@@ -6,6 +6,7 @@ import Facts from "../components/facts"
 import CallToHelp from "../components/call-to-help"
 import CovidCrisis from "../components/covid-crisis"
 import Closings from "../components/closing"
+import NoUSEmbargo from "../components/no-us-embargo"
 // import SectionWrapper from "./section-wrapper"
 
 const IndexPage = () => (
@@ -14,10 +15,11 @@ const IndexPage = () => (
     <Layout>
       <Hero />
       <Facts />
+      <NoUSEmbargo />
       <CallToHelp />
       <CovidCrisis />
-      <CallToHelp />
       <Closings />
+      <CallToHelp />
       {/* <SectionWrapper /> */}
     </Layout>
   </>

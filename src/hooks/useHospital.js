@@ -111,6 +111,23 @@ export const useHospital = () => {
         })
         break
 
+      case "hosp_hospital_ambrosio_grillo_stgo_of_cuba":
+        newData.push({
+          id: fact.node.id,
+          imageSrc: fact.node.childImageSharp.gatsbyImageData,
+          imageAlt:
+            "a collapsed hospital in Cuba with patients in the hallways",
+        })
+        break
+
+      case "hosp_patient_blood_floor":
+        newData.push({
+          id: fact.node.id,
+          imageSrc: fact.node.childImageSharp.gatsbyImageData,
+          imageAlt:
+            "a patient looks like dying while the floor is full of blood in a hospital in Cuba",
+        })
+        break
       default:
         break
     }

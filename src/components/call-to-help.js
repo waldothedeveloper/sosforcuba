@@ -1,5 +1,6 @@
 import React from "react"
 import { ExternalLinkIcon } from "@heroicons/react/solid"
+import { Link } from "gatsby"
 
 //
 const CallToHelp = () => {
@@ -22,13 +23,16 @@ const CallToHelp = () => {
           </p>
           <div className="mt-8">
             <div className="inline-flex rounded-md">
-              <button className="inline-flex items-center justify-center px-5 py-3 border border-transparent text-base font-medium rounded-md bg-gradient-to-r from-red-500 to-red-800 text-coolGray-50">
+              <Link
+                to="/help-center"
+                className="inline-flex items-center justify-center px-5 py-3 border border-transparent text-base font-medium rounded-md bg-gradient-to-r from-red-500 to-red-800 text-coolGray-50"
+              >
                 Visit Help Center
                 <ExternalLinkIcon
                   className="-mr-1 ml-3 h-5 w-5 text-coolGray-50"
                   aria-hidden="true"
                 />
-              </button>
+              </Link>
             </div>
           </div>
         </div>

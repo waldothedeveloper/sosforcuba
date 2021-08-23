@@ -6,7 +6,7 @@ const CubaCovidData = () => {
 
   //
   return (
-    <div>
+    <div className="py-6">
       <p className="my-2 text-gray-400 font-medium text-lg">
         Coronavirus (COVID-19) Data
       </p>
@@ -16,9 +16,12 @@ const CubaCovidData = () => {
       <p className="py-0.5 text-gray-400 text-sm">Updated 2 days ago.</p>
       {/* Data */}
       {/* divide-y divide-gray-400 md:divide-y-0 md:divide-x */}
-      <dl className="mt-5 grid grid-cols-2 md:grid-cols-3 rounded-lg bg-gray-700 overflow-hidden ">
+      <dl className="mt-5 grid grid-cols-2 md:grid-cols-3 rounded-lg bg-gray-700 overflow-hidden border border-gray-400">
         {data.map(item => (
-          <div key={item.name} className="px-4 py-5 sm:p-6">
+          <div
+            key={item.name}
+            className="px-4 py-5 sm:p-6 border-r border-gray-400 border-b"
+          >
             <dt className="text-xs md:text-sm font-semibold text-gray-400">
               {item.name}
             </dt>

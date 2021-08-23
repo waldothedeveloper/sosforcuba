@@ -53,7 +53,7 @@ const NavBar = () => {
             <div className="flex justify-between items-center max-w-7xl mx-auto px-4 py-6 sm:px-6 md:justify-start md:space-x-10 lg:px-8">
               <div className="flex justify-start lg:w-0 lg:flex-1">
                 <Link to="/">
-                  <span className="bg-gradient-to-r from-sky-500 to-red-500 bg-origin-border font-extrabold text-xl bg-clip-text text-transparent">
+                  <span className="bg-gradient-to-r from-sky-500 via-gray-300 to-red-500 bg-origin-border font-extrabold text-xl bg-clip-text text-transparent">
                     S.O.S <span className="">CUBA</span>
                   </span>
                   {/* <img
@@ -156,10 +156,10 @@ const NavBar = () => {
               </Popover.Group>
               <div className="hidden md:flex items-center justify-end md:flex-1 lg:w-0">
                 <Link
-                  to="/"
-                  className="whitespace-nowrap inline-flex items-center justify-center bg-gradient-to-r from-pink-500 via-red-500 to-yellow-500 bg-origin-border px-4 py-2 border border-transparent rounded-md shadow-sm text-base font-medium text-gray-50"
+                  to="/help-center"
+                  className="whitespace-nowrap inline-flex items-center justify-center bg-gradient-to-r from-red-500 to-red-800 px-4 py-2 rounded-md text-base font-medium text-gray-50"
                 >
-                  Help Us End Communism in Cuba
+                  Donate
                 </Link>
               </div>
             </div>
@@ -245,10 +245,10 @@ const NavBar = () => {
                     </div>
                     <div className="mt-6">
                       <Link
-                        to="/"
-                        className="w-full flex items-center justify-center bg-gradient-to-r from-pink-500 via-red-500 to-yellow-500 bg-origin-border px-4 py-2 border border-transparent rounded-md shadow-sm text-base font-medium text-gray-50"
+                        to="/help-center"
+                        className="w-full flex items-center justify-center bg-gradient-to-r from-red-500 to-red-800 bg-origin-border px-4 py-2 rounded-md text-base font-medium text-gray-50"
                       >
-                        Help Us End Communism in Cuba
+                        Donate
                       </Link>
                       <p className="mt-6 text-center text-xl font-bold text-red-50">
                         PATRIA Y VIDA
