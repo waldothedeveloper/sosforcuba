@@ -1,26 +1,27 @@
 import React from "react"
+import medicinesIcon from "../images/medicines-icon.png"
+import internetIcon from "../images/internet-icon.png"
+import aidIcon from "../images/aid-icon.png"
 
 const incentives = [
   {
     name: "Medicines and Supplies",
-    imageSrc:
-      "https://tailwindui.com/img/ecommerce/icons/icon-shipping-simple.svg",
+    icon: medicinesIcon,
+    imageSrc: medicinesIcon,
     description:
-      "It's not actually free we just price it into the products. Someone's paying for it, and it's not us.",
+      "Allows us to send medicines to church groups for distribution to families of jailed dissidents.",
   },
   {
     name: "Internet access",
-    imageSrc:
-      "https://tailwindui.com/img/ecommerce/icons/icon-warranty-simple.svg",
+    imageSrc: internetIcon,
     description:
-      "If it breaks in the first 10 years we'll replace it. After that you're on your own though.",
+      "Provides cellular Internet access to keep information flowing.",
   },
   {
     name: "Mutual Aid",
-    imageSrc:
-      "https://tailwindui.com/img/ecommerce/icons/icon-exchange-simple.svg",
+    imageSrc: aidIcon,
     description:
-      "If you don't like it, trade it to one of your friends for something of theirs. Don't send it here though.",
+      "Provides aid to support protests, social media advertising, and electronic devices such a smartphone for citizen journalism.",
   },
 ]
 
@@ -32,7 +33,7 @@ const DonationsUse = () => {
           <div className="max-w-xl mx-auto lg:max-w-none">
             <div className="text-center">
               <h2 className="text-2xl font-extrabold tracking-tight text-gray-800">
-                Understand what your tax-deductible donations provide
+                What your donations will provide?
               </h2>
             </div>
             <div className="mt-12 max-w-sm mx-auto grid grid-cols-1 gap-y-10 gap-x-8 sm:max-w-none lg:grid-cols-3">
@@ -44,9 +45,8 @@ const DonationsUse = () => {
                   <div className="sm:flex-shrink-0">
                     <div className="flow-root">
                       <img
-                        className="w-16 h-16 mx-auto"
                         src={incentive.imageSrc}
-                        alt=""
+                        className="w-16 h-16 mx-auto"
                       />
                     </div>
                   </div>

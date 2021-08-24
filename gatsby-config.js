@@ -59,6 +59,3 @@ module.exports = {
     // `gatsby-plugin-offline`,
   ],
 }
-
-// user: sos4cuba_user
-// password:  vuyWTW7fcgcb5fpU

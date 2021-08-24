@@ -26,6 +26,8 @@
     "gatsby-source-filesystem": "^3.11.0",
     "gatsby-transformer-sharp": "^3.11.0",
     "hls.js": "^1.0.7",
+    "lord-icon-element": "^2.1.0",
+    "lottie-web": "^5.7.13",
     "moment": "^2.29.1",
     "postcss": "^8.3.6",
     "prop-types": "^15.7.2",

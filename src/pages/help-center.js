@@ -3,7 +3,7 @@ import Layout from "../components/layout"
 import { StaticImage } from "gatsby-plugin-image"
 import DonationsUse from "../components/donations-use"
 import HelpDonations from "../components/help-donations"
-import DonationsDisclaimer from "../components/donations-disclaimer"
+// import DonationsDisclaimer from "../components/donations-disclaimer"
 
 //
 
@@ -12,12 +12,10 @@ const HelpCenter = () => {
     <Layout>
       <div className="bg-gray-800">
         {/* medium and large screens */}
+        {/* medium and large screens */}
+        {/* medium and large screens */}
         <div className="md:flex md:flex-col hidden">
           <div className="relative">
-            <div
-              aria-hidden="true"
-              className="hidden absolute w-1/2 h-full bg-gray-800 lg:block"
-            />
             <div className="relative bg-gray-800 lg:bg-transparent">
               <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 lg:grid lg:grid-cols-2">
                 <div className="max-w-2xl mx-auto py-24 lg:py-64 lg:max-w-none">
@@ -51,7 +49,7 @@ const HelpCenter = () => {
               </div>
             </div>
 
-            <div className="w-full h-48 sm:h-64 lg:absolute lg:top-0 lg:right-0 lg:w-1/2 lg:h-full">
+            <div className="absolute top-0 right-0 w-1/2 h-full">
               <StaticImage
                 imgStyle={{ objectPosition: "center" }}
                 className="w-full h-full"
@@ -61,12 +59,23 @@ const HelpCenter = () => {
                 layout="fullWidth"
                 transformOptions={{ fit: "cover" }}
               />
+              <p className="text-gray-400 -mt-6 ml-2 text-xs absolute">
+                Photo by{" "}
+                <a
+                  className="font-medium text-sky-500"
+                  rel="noreferrer noopener"
+                  target="_blank"
+                  href="https://www.instagram.com/jimmy_cacer_photo/"
+                >
+                  @jimmy_cacer_photo
+                </a>
+              </p>
             </div>
           </div>
 
           <div>
             <HelpDonations />
-            <DonationsDisclaimer />
+            {/* <DonationsDisclaimer /> */}
             <DonationsUse />
           </div>
         </div>
@@ -88,8 +97,19 @@ const HelpCenter = () => {
             <div className="absolute inset-0 bg-gradient-to-t from-gray-800" />
           </div>
 
-          <div className="relative -mt-32 max-w-7xl mx-auto pb-16 px-4 sm:pb-24 sm:px-6 lg:px-8">
+          <div className="relative -mt-2 max-w-7xl mx-auto pb-16 px-4 sm:pb-24 sm:px-6 lg:px-8">
             <div className="max-w-2xl mx-auto text-center lg:max-w-4xl">
+              <p className="text-gray-400 ml-2 text-xs">
+                Photo by{` `}
+                <a
+                  className="text-sky-500"
+                  rel="noreferrer noopener"
+                  target="_blank"
+                  href="https://www.instagram.com/jimmy_cacer_photo/"
+                >
+                  @jimmy_cacer_photo
+                </a>
+              </p>
               <h2 className="text-3xl font-extrabold tracking-tight bg-gradient-to-r from-gray-200 via-gray-300 to-gray-500 bg-clip-text text-transparent sm:text-4xl">
                 End Communism in Cuba
               </h2>
@@ -118,7 +138,7 @@ const HelpCenter = () => {
           {/* help steps */}
           <div>
             <HelpDonations />
-            <DonationsDisclaimer />
+            {/* <DonationsDisclaimer /> */}
             <DonationsUse />
           </div>
         </div>
