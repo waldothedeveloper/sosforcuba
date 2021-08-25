@@ -10,8 +10,8 @@ const DonationsDisclaimer = () => {
         <p className="text-xs font-semibold text-gray-400">
           DISCLAIMER: We are NOT a not-for-profit organization. We do NOT offer
           any service or product in return for your donations. If you would like
-          to donate an amount equal to or greater than 20K USD we must contact
-          you due to laws and regulations in the USA.
+          to donate an amount equal to or greater than 20K USD please contact us
+          at info@sosforcuba.com.
         </p>
       </div>
     </div>

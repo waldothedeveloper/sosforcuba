@@ -36,7 +36,7 @@ const HLSVideoPlayer = props => {
 
   return (
     <video
-      className="object-cover shadow-lg rounded-lg"
+      className="shadow-lg rounded-lg w-full h-full"
       controls
       ref={videoRef}
       poster={poster}

@@ -154,6 +154,7 @@ const Footer = () => {
                 </label>
                 <div className="relative">
                   <select
+                    // SEE THIS? YOU NEED TO DELETE THE DISABLED SO YOU CAN USE THE FORM ONCE YOU IMPLEMENT I18N
                     disabled={true}
                     id="language"
                     name="language"
@@ -176,6 +177,12 @@ const Footer = () => {
                 </div>
               </fieldset>
             </form>
+            <p className="text-gray-400 mt-10 text-sm">
+              Want to Contact Us? Write us an email at{" "}
+              <span className="text-gray-300 font-medium">
+                info@sosforcuba.com
+              </span>
+            </p>
           </div>
         </div>
         <div className="border-t border-gray-700 pt-8 lg:flex lg:items-center lg:justify-between xl:mt-0">

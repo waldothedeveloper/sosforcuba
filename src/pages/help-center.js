@@ -3,7 +3,15 @@ import Layout from "../components/layout"
 import { StaticImage } from "gatsby-plugin-image"
 import DonationsUse from "../components/donations-use"
 import HelpDonations from "../components/help-donations"
-// import DonationsDisclaimer from "../components/donations-disclaimer"
+// import DonationFacts from "../components/donation-facts"
+import Donations_WhatElse from "../components/donations-whatElse"
+import DonationsDisclaimer from "../components/donations-disclaimer"
+
+const title = "Donate to the Freedom of Cuba"
+const subtitle1 =
+  "+62 years of communism is NOT a consequence of the U.S embargo."
+const subtitle2 =
+  "The U.S. embargo allows humanitarian goods to reach Cuba, and the U.S. government expedites requests to export humanitarian or medical supplies to Cuba."
 
 //
 
@@ -21,18 +29,10 @@ const HelpCenter = () => {
                 <div className="max-w-2xl mx-auto py-24 lg:py-64 lg:max-w-none">
                   <div className="lg:pr-16">
                     <h1 className="font-extrabold tracking-tight bg-gradient-to-r from-gray-200 via-gray-300 to-gray-500 bg-clip-text text-transparent  sm:text-4xl xl:text-5xl">
-                      End Communism in Cuba{" "}
-                      <span className="text-gray-100">🇨🇺 </span>
+                      {title} <span className="text-gray-50">🇨🇺 </span>
                     </h1>
-                    <p className="mt-12 text-xl text-gray-400">
-                      None of what the Cuban people are going through is a
-                      consequence of the U.S embargo.
-                    </p>
-                    <p className="mt-12 text-xl text-gray-400">
-                      The U.S. embargo allows humanitarian goods to reach Cuba,
-                      and the U.S. government expedites requests to export
-                      humanitarian or medical supplies to Cuba.
-                    </p>
+                    <p className="mt-12 text-xl text-gray-300">{subtitle1}</p>
+                    <p className="mt-12 text-xl text-gray-300">{subtitle2}</p>
                     <p className="mt-12 text-sm text-gray-400">
                       more on this{" "}
                       <a
@@ -75,8 +75,10 @@ const HelpCenter = () => {
 
           <div>
             <HelpDonations />
-            {/* <DonationsDisclaimer /> */}
             <DonationsUse />
+            {/* <DonationFacts /> */}
+            <Donations_WhatElse />
+            <DonationsDisclaimer />
           </div>
         </div>
         {/* small screens */}
@@ -111,17 +113,10 @@ const HelpCenter = () => {
                 </a>
               </p>
               <h2 className="text-3xl font-extrabold tracking-tight bg-gradient-to-r from-gray-200 via-gray-300 to-gray-500 bg-clip-text text-transparent sm:text-4xl">
-                End Communism in Cuba
+                {title} <span className="text-gray-50">🇨🇺 </span>
               </h2>
-              <p className="mt-4 text-gray-400 text-base">
-                None of what the Cuban people are going through is a consequence
-                of the U.S embargo.
-              </p>
-              <p className="mt-12 text-gray-400 text-base">
-                The U.S. embargo allows humanitarian goods to reach Cuba, and
-                the U.S. government expedites requests to export humanitarian or
-                medical supplies to Cuba.
-              </p>
+              <p className="mt-4 text-gray-300 text-base">{subtitle1}</p>
+              <p className="mt-12 text-gray-300 text-base">{subtitle2}</p>
               <p className="mt-12 text-sm text-gray-400">
                 more on this{" "}
                 <a
@@ -138,8 +133,10 @@ const HelpCenter = () => {
           {/* help steps */}
           <div>
             <HelpDonations />
-            {/* <DonationsDisclaimer /> */}
             <DonationsUse />
+            <Donations_WhatElse />
+            <DonationsDisclaimer />
+            {/* <DonationFacts /> */}
           </div>
         </div>
       </div>

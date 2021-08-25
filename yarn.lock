@@ -8460,16 +8460,6 @@ loose-envify@^1.0.0, loose-envify@^1.1.0, loose-envify@^1.4.0:
   dependencies:
     js-tokens "^3.0.0 || ^4.0.0"
 
-lord-icon-element@^2.1.0:
-  version "2.1.0"
-  resolved "https://registry.yarnpkg.com/lord-icon-element/-/lord-icon-element-2.1.0.tgz#c1cfc2675c29e510ad40a04dd7def3174f005542"
-  integrity sha512-bhbufmn6U8Kj7OpucpgSJqg8Yf1ceSY6RJCR6bMF8iY8JFUM5a1m0tDftxv98+AwlzCNFp+Ngc1xzyHE3KRsoA==
-
-lottie-web@^5.7.13:
-  version "5.7.13"
-  resolved "https://registry.yarnpkg.com/lottie-web/-/lottie-web-5.7.13.tgz#c4087e4742c485fc2c4034adad65d1f3fcd438b0"
-  integrity sha512-6iy93BGPkdk39b0jRgJ8Zosxi8QqcMP5XcDvg1f0XAvEkke6EMCl6BUO4Lu78dpgvfG2tzut4QJ+0vCrfbrldQ==
-
 loud-rejection@^1.0.0:
   version "1.6.0"
   resolved "https://registry.yarnpkg.com/loud-rejection/-/loud-rejection-1.6.0.tgz#5b46f80147edee578870f086d04821cf998e551f"

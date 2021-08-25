@@ -1,9 +1,9 @@
 {
-  "name": "gatsby-starter-default",
+  "name": "sos-for-cuba",
   "private": true,
-  "description": "A simple starter to get up and developing quickly with Gatsby",
+  "description": "A website committed to ending Communism in Cuba once and for all",
   "version": "0.1.0",
-  "author": "Kyle Mathews <mathews.kyle@gmail.com>",
+  "author": "SOS FOR CUBA <info@sosforcuba.com>",
   "dependencies": {
     "@headlessui/react": "^1.4.0",
     "@heroicons/react": "^1.0.3",
@@ -26,8 +26,6 @@
     "gatsby-source-filesystem": "^3.11.0",
     "gatsby-transformer-sharp": "^3.11.0",
     "hls.js": "^1.0.7",
-    "lord-icon-element": "^2.1.0",
-    "lottie-web": "^5.7.13",
     "moment": "^2.29.1",
     "postcss": "^8.3.6",
     "prop-types": "^15.7.2",

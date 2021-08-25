@@ -15,21 +15,21 @@ const incentives = [
     name: "Internet access",
     imageSrc: internetIcon,
     description:
-      "Provides cellular Internet access to keep information flowing.",
+      "Allow us to purchase of internet access packages to keep information flowing.",
   },
   {
     name: "Mutual Aid",
     imageSrc: aidIcon,
     description:
-      "Provides aid to support protests, social media advertising, and electronic devices such a smartphone for citizen journalism.",
+      "Allow us to provide support for protests, social media advertising, and electronic devices such as smartphones for citizen journalism.",
   },
 ]
 
 const DonationsUse = () => {
   return (
-    <div className="bg-white">
+    <div className="bg-gray-800">
       <div className="max-w-7xl mx-auto px-4 py-24 sm:px-6 lg:px-8">
-        <div className="bg-gray-50 rounded-2xl px-6 py-16 sm:p-16">
+        <div className="bg-gradient-to-r from-coolGray-100 to-coolGray-200 rounded-2xl px-6 py-16 sm:p-16">
           <div className="max-w-xl mx-auto lg:max-w-none">
             <div className="text-center">
               <h2 className="text-2xl font-extrabold tracking-tight text-gray-800">
