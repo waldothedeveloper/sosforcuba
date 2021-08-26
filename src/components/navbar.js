@@ -21,7 +21,7 @@ const solutions = [
     name: "Events on July 11, 2021",
     description:
       "Get a better understanding of where your traffic is coming from.",
-    href: "/",
+    href: "/events-on-july-11-2021",
     icon: InboxIcon,
   },
   {
@@ -78,7 +78,7 @@ const NavBar = () => {
                         <ChevronDownIcon
                           className={classNames(
                             open ? "text-gray-300" : "text-gray-400",
-                            "ml-2 h-5 w-5 group-hover:text-gray-500"
+                            "ml-2 h-5 w-5 group-hover:text-gray-300"
                           )}
                           aria-hidden="true"
                         />
@@ -137,17 +137,17 @@ const NavBar = () => {
                   Protests
                 </Link>
                 <Link
-                  to="/"
+                  to="/human-rights-violations-in-cuba"
                   className="text-base font-medium text-gray-400 hover:text-gray-300"
                 >
                   Human Rights
                 </Link>
-                <Link
+                {/* <Link
                   to="/"
                   className="text-base font-medium text-gray-400 hover:text-gray-300"
                 >
                   Legal
-                </Link>
+                </Link> */}
               </Popover.Group>
               <div className="hidden md:flex items-center justify-end md:flex-1 lg:w-0">
                 <Link
@@ -221,17 +221,17 @@ const NavBar = () => {
                         Protests
                       </Link>
                       <Link
-                        to="/"
+                        to="/human-rights-violations-in-cuba"
                         className="text-base font-medium text-gray-300 hover:text-gray-400"
                       >
                         Human Rights
                       </Link>
-                      <Link
+                      {/* <Link
                         to="/"
                         className="text-base font-medium text-gray-300 hover:text-gray-400"
                       >
                         Legal
-                      </Link>
+                      </Link> */}
                     </div>
                     <div className="mt-6">
                       <Link

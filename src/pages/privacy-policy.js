@@ -285,34 +285,6 @@ const PrivacyPolicy = () => {
                   data we hold to determine how to respond.
                 </li>
               </ul>
-
-              <figure>
-                <img
-                  className="w-full rounded-lg"
-                  src="https://images.unsplash.com/photo-1500648767791-00dcc994a43e?ixlib=rb-1.2.1&auto=format&fit=facearea&w=1310&h=873&q=80&facepad=3"
-                  alt=""
-                  width={1310}
-                  height={873}
-                />
-                <figcaption>
-                  Sagittis scelerisque nulla cursus in enim consectetur quam.
-                </figcaption>
-              </figure>
-              <h2>Everything you need to get up and running</h2>
-              <p>
-                Purus morbi dignissim senectus mattis <a href="#">adipiscing</a>
-                . Amet, massa quam varius orci dapibus volutpat cras. In amet eu
-                ridiculus leo sodales cursus tristique. Tincidunt sed tempus ut
-                viverra ridiculus non molestie. Gravida quis fringilla amet eget
-                dui tempor dignissim. Facilisis auctor venenatis varius nunc,
-                congue erat ac. Cras fermentum convallis quam.
-              </p>
-              <p>
-                Faucibus commodo massa rhoncus, volutpat. Dignissim sed eget
-                risus enim. Mattis mauris semper sed amet vitae sed turpis id.
-                Id dolor praesent donec est. Odio penatibus risus viverra tellus
-                varius sit neque erat velit.
-              </p>
             </div>
           </div>
         </div>

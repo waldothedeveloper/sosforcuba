@@ -6,11 +6,11 @@ import Layout from "../components/layout"
 const InternetBan = () => {
   return (
     <Layout>
-      <div className="space-y-12 py-32 prose prose-blue prose-lg text-gray-300 mx-auto max-w-4xl">
+      <div className="py-32 prose prose-red prose-lg text-gray-300 mx-auto max-w-sm px-4 md:px-0 md:max-w-4xl">
         <div className="text-lg max-w-prose mx-auto">
           <h1>
             <span className="block text-base text-center text-red-600 font-semibold tracking-wide uppercase">
-              later on July 11, 2021
+              on July 11, 2021
             </span>
             <span className="mt-2 block text-3xl text-center leading-8 font-extrabold tracking-tight text-gray-50 sm:text-4xl">
               Internet Ban
@@ -18,8 +18,8 @@ const InternetBan = () => {
           </h1>
         </div>
         <p>
-          In addition, the Cuban government took an extra step in response to
-          these events:
+          In addition, the Cuban government took an additional step in response
+          to these peaceful protests:
         </p>
 
         <span className="py-12 block text-3xl text-center leading-8 font-extrabold tracking-tight text-yellow-400 sm:text-4xl">
@@ -68,14 +68,14 @@ const InternetBan = () => {
           But, this is not due to the U.S. embargo.
         </p>
 
-        <p>
+        <p className="mt-4 text-3xl font-extrabold bg-gradient-to-r from-gray-200 via-gray-300 to-gray-400 bg-clip-text text-transparent sm:text-4xl">
           Any internet & phone U.S. company -such as AT&T or T-Mobile- can do
           business directly with Cuba.
         </p>
 
         <p>
           The real problem is that the government{" "}
-          <span className="underline font-medium text-yellow-400">
+          <span className="underline font-medium text-yellow-400 text-2xl">
             wants to control all communications on the island.
           </span>{" "}
           They want to see, hear, and know everything.

@@ -12,7 +12,7 @@ const HLSVideoPlayer = props => {
     if (videoRef.current) {
       const video = videoRef.current
 
-      if (url && poster) {
+      if (url) {
         if (video.canPlayType("application/vnd.apple.mpegurl")) {
           // Some browers (safari and ie edge) support HLS natively
           video.src = url

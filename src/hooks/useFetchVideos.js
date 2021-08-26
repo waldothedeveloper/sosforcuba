@@ -8,7 +8,7 @@ export const useFetchVideos = () => {
     fetch("/.netlify/functions/fetch-mux-videos")
       .then(res => res.json())
       .then(data => {
-        console.log(`data`, data)
+        // console.log(`data`, data)
         setVideos(data)
       })
       .catch(err => console.log("error fetching netlify fn", err))

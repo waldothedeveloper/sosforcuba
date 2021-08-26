@@ -31,7 +31,7 @@ export const useProtestForm = validate => {
       // save the protest in the fauna dababase
       saveProtestInDB({ data })
         .then(ret => {
-          console.log(ret)
+          // console.log(ret)
           setValues({})
           setIsSubmitting(false)
           setOpenNotification(true)

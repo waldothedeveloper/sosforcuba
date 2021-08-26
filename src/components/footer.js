@@ -5,7 +5,7 @@ import { Link } from "gatsby"
 
 const navigation = {
   events: [
-    { name: "Events on Jul-11", href: "/" },
+    { name: "Events on Jul-11", href: "/events-on-july-11-2021" },
     { name: "Cuban gov response", href: "/cuban-gov-response" },
     { name: "Internet ban", href: "/internet-ban" },
     { name: "Detained people", href: "/detained-people" },
@@ -14,7 +14,9 @@ const navigation = {
     { name: "Upcoming protests", href: "/protests" },
     { name: "Submit your protest", href: "/submit-protest" },
   ],
-  human_rights: [{ name: "Violations", href: "/section5-human-rights" }],
+  human_rights: [
+    { name: "Violations", href: "/human-rights-violations-in-cuba" },
+  ],
   impact: [
     { name: "World Impact", href: "/world-impact" },
     { name: "USA response", href: "/usa-response" },
@@ -124,7 +126,7 @@ const Footer = () => {
                   ))}
                 </ul>
               </div>
-              <div className="mt-12 md:mt-0">
+              {/* <div className="mt-12 md:mt-0">
                 <h3 className="text-sm font-semibold text-gray-400 tracking-wider uppercase">
                   Legal
                 </h3>
@@ -140,7 +142,7 @@ const Footer = () => {
                     </li>
                   ))}
                 </ul>
-              </div>
+              </div> */}
             </div>
           </div>
           <div className="mt-12 xl:mt-0">
@@ -178,7 +180,7 @@ const Footer = () => {
               </fieldset>
             </form>
             <p className="text-gray-400 mt-10 text-sm">
-              Want to Contact Us? Write us an email at{" "}
+              To get in touch please send us an email at{" "}
               <span className="text-gray-300 font-medium">
                 info@sosforcuba.com
               </span>
@@ -217,7 +219,7 @@ const Footer = () => {
                 </button>
               </div>
             </div>
-            <p className="mt-3 text-sm text-red-500">
+            <p className="mt-3 text-sm text-gray-400">
               We care about the protection of your data. Read our{" "}
               <Link
                 to="/privacy-policy"

@@ -21,7 +21,7 @@ const StatisticsOfDetainedPeople = () => {
             </dd>
           </div>
 
-          <div className="flex flex-col mt-10">
+          <div className="flex flex-col mt-10 md:mt-0">
             <dt className="order-2 mt-2 text-lg leading-6 font-medium text-gray-400">
               Missing or Detained
             </dt>

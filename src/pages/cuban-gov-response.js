@@ -12,7 +12,7 @@ const CubanGovernmentResponse = () => {
   //
   return (
     <Layout>
-      <div className="py-32 prose prose-red prose-lg text-gray-300 mx-auto max-w-xs md:max-w-4xl">
+      <div className="py-32 prose prose-red prose-lg text-gray-300 mx-auto max-w-sm px-4 md:px-0 md:max-w-4xl">
         <div className="text-lg max-w-prose mx-auto">
           <h1>
             <span className="block text-base text-center text-red-600 font-semibold tracking-wide uppercase">
@@ -57,11 +57,11 @@ const CubanGovernmentResponse = () => {
         <div className="aspect-w-16 aspect-h-9">
           <HLSVideoPlayer
             url="https://stream.mux.com/Pka19Cqqc1Fo9p7vi01jkCCNoA2T3oPVPGOx9WWKkU004.m3u8"
-            poster="https://image.mux.com/Pka19Cqqc1Fo9p7vi01jkCCNoA2T3oPVPGOx9WWKkU004/thumbnail.png?width=600&height=600&fit_mode=pad&time=03"
+            poster="https://image.mux.com/Pka19Cqqc1Fo9p7vi01jkCCNoA2T3oPVPGOx9WWKkU004/thumbnail.png?width=1920&height=1080&fit_mode=pad&time=03"
           />
         </div>
 
-        <span className="mt-96 mb-32 md:my-32 block text-3xl text-center leading-8 font-semibold tracking-tight text-gray-300 sm:text-4xl">
+        <span className="my-24 md:my-32 block text-3xl text-center leading-8 font-semibold tracking-tight text-gray-300 sm:text-4xl">
           The so called{" "}
           <span className="text-red-500 underline">revolutionaries</span> by the
           president are simply:

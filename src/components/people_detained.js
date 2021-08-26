@@ -9,7 +9,7 @@ const PeopleDetained = () => {
   )
 
   return (
-    <div className="my-12">
+    <div className="pt-12 pb-32 max-w-xs md:max-w-5xl mx-auto">
       <div className="flex items-center justify-between text-gray-400 mt-3 mb-2">
         <p>Full Name</p>
         <p>Date of Detention</p>
@@ -18,11 +18,11 @@ const PeopleDetained = () => {
         dataLength={data.length}
         next={fetchMoreData}
         hasMore={hasMore}
-        loader={<h4>Loading...</h4>}
+        loader={<h4 className="text-gray-400">Loading...</h4>}
         height={288}
       >
         <div className="px-1">
-          <ul className="divide-y divide-gray-200 overflow-y-auto">
+          <ul id="hide-scrollbar" className="divide-y divide-gray-200">
             {data.map((person, id) => (
               <li key={id} className="py-4">
                 <div className="flex space-x-3">
@@ -43,7 +43,7 @@ const PeopleDetained = () => {
         </div>
       </InfiniteScroll>
 
-      <span className="mt-12 text-gray-400 text-sm">
+      <span className="py-12 text-gray-400 text-sm">
         Although every effort is put into keeping this list updated, you can
         find the latest updates for missing or detained people{" "}
         <a

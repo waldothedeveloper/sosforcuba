@@ -14,7 +14,7 @@ const ProtestNotification = ({
     if (openNotification) {
       setTimeout(() => {
         setOpenNotification(false)
-        console.log("settimeout ran")
+        // console.log("settimeout ran")
       }, 15000)
     }
   }, [openNotification])

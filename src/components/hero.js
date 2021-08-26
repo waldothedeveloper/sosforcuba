@@ -9,7 +9,6 @@ export default function Hero() {
           <div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 sm:static">
             <div className="sm:max-w-lg">
               <h1 className="text-8xl md:text-9xl tracking-tight font-extrabold text-gray-50">
-                {/* <span className="inline text-4xl text-sky-500"># </span> */}
                 <span className="inline text-6xl bg-gradient-to-r from-coolGray-100 to-coolGray-300 bg-clip-text text-transparent">
                   <span className="text-4xl">#</span> S.O.S
                 </span>{" "}
