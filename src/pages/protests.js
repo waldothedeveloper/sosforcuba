@@ -91,7 +91,8 @@ const Protests = () => {
                             <p className="text-2xl font-semibold text-gray-50">
                               {post.node.name}
                             </p>
-                            <p className="mt-2 text-sm font-medium text-gray-400">
+                            {/* Date of the protest */}
+                            <p className="mt-2 text-sm font-medium bg-gradient-to-r from-pink-500 via-red-500 to-yellow-500 bg-clip-text text-transparent">
                               {moment(post.node.date).format("dddd, MMM Do")}
                               {` `}
                               {militaryToStandard(post.node.time)}
@@ -118,17 +119,6 @@ const Protests = () => {
                             </p>
                           </div>
                         </div>
-                        {/* organizer */}
-                        {/* <div className="mt-6 flex items-center justify-start font-semibold">
-                          <UserIcon
-                            className="h-4 w-4 text-gray-400"
-                            aria-hidden="true"
-                          />
-                          <p className="mx-0.5 text-xs text-gray-400">
-                            {Math.floor(Math.random() * 4) + 1}K people notified
-                          </p>
-                          
-                        </div> */}
                       </div>
                     </div>
                   ))}
