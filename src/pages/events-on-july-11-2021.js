@@ -1,7 +1,5 @@
 import React from "react"
-import protests_map_july_11 from "../images/protests-map-july-11.png"
-import san_antonio from "../images/san-antonio-de-los-banos.png"
-import YoutubeEmbed from "../components/youtubeEmbed"
+import { StaticImage } from "gatsby-plugin-image"
 import Layout from "../components/layout"
 import HLSVideoPlayer from "../components/hls-player"
 
@@ -31,10 +29,13 @@ const EventsOnJuly_11_2021 = () => {
             are not afraid&rdquo;.
           </p>
 
-          <img
-            className="w-full h-80 object-cover rounded-md"
-            src={san_antonio}
+          <StaticImage
+            imgStyle={{ borderRadius: "0.5rem" }}
+            src="../images/san-antonio-de-los-banos.png"
             alt="map of Cuba showing the different places of protests reported on july 11, 2021"
+            placeholder="blurred"
+            layout="fullWidth"
+            transformOptions={{ fit: "cover" }}
           />
 
           <p className="mt-8 leading-8">
@@ -91,11 +92,15 @@ const EventsOnJuly_11_2021 = () => {
             same time in more than 91 places on the island...
           </p>
 
-          <img
-            className="w-full h-80 object-cover rounded-md"
-            src={protests_map_july_11}
+          <StaticImage
+            imgStyle={{ borderRadius: "0.5rem" }}
+            src="../images/protests-map-july-11.png"
             alt="map of Cuba showing the different places of protests reported on july 11, 2021"
+            placeholder="blurred"
+            layout="fullWidth"
+            transformOptions={{ fit: "cover" }}
           />
+
           <p className="text-sm text-gray-400">
             A detailed google map project with the locations of the protests can
             be found{" "}

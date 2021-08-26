@@ -17,7 +17,7 @@ const StatisticsOfDetainedPeople = () => {
               Dissapeared or Detained
             </dt>
             <dd className="order-1 text-5xl font-extrabold text-red-600">
-              742
+              840
             </dd>
           </div>
 
@@ -26,7 +26,7 @@ const StatisticsOfDetainedPeople = () => {
               Missing or Detained
             </dt>
             <dd className="order-1 text-5xl font-extrabold text-red-600">
-              562
+              503
             </dd>
           </div>
 
@@ -35,7 +35,7 @@ const StatisticsOfDetainedPeople = () => {
               Freed or Released
             </dt>
             <dd className="order-1 text-5xl font-extrabold text-red-600">
-              142
+              337
             </dd>
           </div>
         </dl>

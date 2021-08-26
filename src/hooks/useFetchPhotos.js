@@ -9,7 +9,7 @@ export const useFetchPhotos = () => {
             small
           }
           user {
-            name
+            username
           }
           alt_description
         }

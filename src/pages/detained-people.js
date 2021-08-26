@@ -1,6 +1,6 @@
 import React from "react"
 import { TwitterTweetEmbed } from "react-twitter-embed"
-import jdferrer from "../images/jdferrer.jpg"
+import { StaticImage } from "gatsby-plugin-image"
 import StatisticsOfDetainedPeople from "../components/statistics_of_detained_people"
 import YoutubeEmbed from "../components/youtubeEmbed"
 import GettyImages from "../components/gettyImages"
@@ -226,13 +226,16 @@ const DetainedPeople = () => {
           still alive.
         </p>
 
-        <figure>
-          <img
-            className="h-auto w-auto object-cover"
-            src={jdferrer}
-            alt="Jose Daniel Ferrer, leader of UNPACU"
-          />
-        </figure>
+        <StaticImage
+          imgStyle={{ borderRadius: "0.5rem" }}
+          className="object-top"
+          src="../images/jdferrer.jpg"
+          alt="Jose Daniel Ferrer, opposing leader of the Cuban communist party"
+          placeholder="blurred"
+          layout="fullWidth"
+          transformOptions={{ fit: "cover" }}
+        />
+
         <p>
           Here&apos;s a video where his wife and son demand the government to
           see him. They mention that no one is allow to see him, speak, or send

@@ -1,7 +1,7 @@
 import React from "react"
 import { TwitterTweetEmbed } from "react-twitter-embed"
-import etecsa from "../images/ETECSA_logo.png"
 import Layout from "../components/layout"
+import { StaticImage } from "gatsby-plugin-image"
 
 const InternetBan = () => {
   return (
@@ -53,13 +53,14 @@ const InternetBan = () => {
           </p>
         </blockquote>
 
-        <figure className="py-12 flex justify-center">
-          <img
-            className="w-auto h-auto object-cover"
-            src={etecsa}
+        <div className="flex justify-center">
+          <StaticImage
+            src="../images/etecsa_logo.png"
             alt="etecsa logo, the only phone and internet company in Cuba"
+            placeholder="dominantColor"
+            layout="fixed"
           />
-        </figure>
+        </div>
 
         <p>
           <span className="text-yellow-400 underline">

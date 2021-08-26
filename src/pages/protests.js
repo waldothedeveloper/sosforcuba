@@ -7,10 +7,14 @@ import { Link } from "gatsby"
 import { useFilterProtests } from "../hooks/useFilterProtests"
 import moment from "moment"
 import EmptyProtestResults from "../components/empty-protest-result"
+
+// Math.floor(Math.random() * (30 - 0) + 0)
 //
 const Protests = () => {
   const photos = useFetchPhotos()
+  console.log("photos: ", photos)
   const { tabs, filterProtests, handleChange } = useFilterProtests()
+  console.log("filterProtests: ", filterProtests)
 
   return (
     <>
@@ -42,27 +46,45 @@ const Protests = () => {
             <div>
               {filterProtests.length > 0 ? (
                 <div className="mt-12 max-w-lg mx-auto grid gap-5 lg:grid-cols-3 lg:max-w-none">
-                  {filterProtests.map(post => (
+                  {filterProtests.map((post, id) => (
                     <div
                       key={post.node.id}
                       className="flex flex-col rounded-lg shadow-lg overflow-hidden"
                     >
                       {/*  banner image */}
-                      <div className="flex-shrink-0">
+                      <div className="flex-shrink-0 relative">
                         <img
                           className="h-48 w-full object-cover"
                           src={
-                            photos[Math.floor(Math.random() * (30 - 0) + 0)]
-                              .urls.small ||
+                            photos[id].urls.small ||
                             "https://images.unsplash.com/photo-1584026695379-979d8dbda7f2?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=774&q=80"
                           }
-                          alt={
-                            photos[Math.floor(Math.random() * (30 - 0) + 0)]
-                              .alt_description
-                          }
+                          alt={photos[id].alt_description}
                         />
+                        <div className="absolute inset-0 bg-gradient-to-t from-gray-800" />
+                        <p className="text-gray-400 text-xs absolute -mt-5 ml-1">
+                          Photo by{" "}
+                          <a
+                            className="text-gray-300"
+                            target="blank"
+                            rel="noopener noreferrer"
+                            href={`https://unsplash.com/@${photos[id].user.username}?utm_source=sos_for_cuba&utm_medium=referral`}
+                          >
+                            {photos[id].user.username}
+                          </a>{" "}
+                          on{" "}
+                          <a
+                            className="text-gray-300"
+                            target="blank"
+                            rel="noopener noreferrer"
+                            href="https://unsplash.com/?utm_source=sos_for_cuba&utm_medium=referral"
+                          >
+                            Unsplash
+                          </a>
+                        </p>
                       </div>
                       {/* card content */}
+
                       <div className="flex-1 bg-gray-700 p-6 flex flex-col justify-between">
                         <div className="flex-1">
                           <div className="block mt-2">

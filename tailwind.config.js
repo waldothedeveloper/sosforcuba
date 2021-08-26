@@ -26,6 +26,9 @@ module.exports = {
       typography: {
         DEFAULT: {
           css: {
+            img: {
+              margin: "0 !important",
+            },
             blockquote: {
               color: "#dc2626",
             },

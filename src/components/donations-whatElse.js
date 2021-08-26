@@ -1,5 +1,5 @@
 import React from "react"
-import girlProtesting from "../images/girl_protesting.jpg"
+import { StaticImage } from "gatsby-plugin-image"
 
 //
 const features = [
@@ -30,10 +30,13 @@ const Donations_WhatElse = () => {
     <div className="bg-gradient-to-r from-coolGray-50 to-coolGray-100">
       <section aria-labelledby="features-heading" className="relative">
         <div className="aspect-w-3 aspect-h-2 overflow-hidden sm:aspect-w-5 lg:aspect-none lg:absolute lg:w-1/2 lg:h-full lg:pr-4 xl:pr-16">
-          <img
-            src={girlProtesting}
-            alt="Black leather journal with silver steel disc binding resting on wooden shelf with machined steel pen."
-            className="h-full w-full object-top object-cover lg:h-full lg:w-full"
+          <StaticImage
+            className="object-top"
+            src="../images/girl_protesting.jpg"
+            alt="A girl in Washington protesting for the freedom of Cuba"
+            placeholder="blurred"
+            layout="fullWidth"
+            transformOptions={{ fit: "cover" }}
           />
         </div>
 

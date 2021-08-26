@@ -7,7 +7,6 @@ import CallToHelp from "../components/call-to-help"
 import CovidCrisis from "../components/covid-crisis"
 import Closings from "../components/closing"
 import NoUSEmbargo from "../components/no-us-embargo"
-// import SectionWrapper from "./section-wrapper"
 
 const IndexPage = () => (
   <>
@@ -20,7 +19,6 @@ const IndexPage = () => (
       <CovidCrisis />
       <Closings />
       <CallToHelp />
-      {/* <SectionWrapper /> */}
     </Layout>
   </>
 )

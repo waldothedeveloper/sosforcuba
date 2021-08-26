@@ -22,7 +22,7 @@ exports.sourceNodes = async ({
 }) => {
   // get photos from unsplash
   const result = await fetch(
-    `https://api.unsplash.com/search/photos?per_page=30&query=cuba+buildings&client_id=${process.env.unsplash_api_access_key}`
+    `https://api.unsplash.com/search/photos?per_page=30&query=cuba+cars&client_id=${process.env.unsplash_api_access_key}`
   )
   const resultData = await result.json()
 

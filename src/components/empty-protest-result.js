@@ -1,13 +1,22 @@
 import React from "react"
 import { PlusIcon } from "@heroicons/react/solid"
-import protest from "../images/aid-icon-gray.png"
 import { Link } from "gatsby"
+import { StaticImage } from "gatsby-plugin-image"
+
+//
 
 const EmptyProtestResults = () => {
   return (
     <div className="flex flex-col items-center justify-center">
       <div className="text-center">
-        <img className="mx-auto h-24 w-24" src={protest} alt="" />
+        <StaticImage
+          className="mx-auto w-24 h-24"
+          src="../images/empty-protests.png"
+          alt="protest icon"
+          placeholder="blurred"
+          layout="fullWidth"
+        />
+
         <h3 className="mt-2 text-sm font-medium text-gray-50">
           No upcoming protests
         </h3>
