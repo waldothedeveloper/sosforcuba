@@ -135,9 +135,14 @@ const Footer = () => {
             </form>
             <p className="text-gray-400 mt-10 text-sm">
               To get in touch please send us an email at{" "}
-              <span className="text-gray-300 font-medium">
+              <a
+                href="mailto:info@sosforcuba.com"
+                rel="noopener noreferrer"
+                target="_blank"
+                className="text-gray-300 font-medium underline"
+              >
                 info@sosforcuba.com
-              </span>
+              </a>
             </p>
           </div>
         </div>

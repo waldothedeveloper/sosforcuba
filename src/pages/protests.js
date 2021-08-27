@@ -64,7 +64,7 @@ const Protests = () => {
                           Photo by{" "}
                           <a
                             className="text-gray-300"
-                            target="blank"
+                            target="_blank"
                             rel="noopener noreferrer"
                             href={`https://unsplash.com/@${photos[id].user.username}?utm_source=sos_for_cuba&utm_medium=referral`}
                           >
@@ -73,7 +73,7 @@ const Protests = () => {
                           on{" "}
                           <a
                             className="text-gray-300"
-                            target="blank"
+                            target="_blank"
                             rel="noopener noreferrer"
                             href="https://unsplash.com/?utm_source=sos_for_cuba&utm_medium=referral"
                           >
