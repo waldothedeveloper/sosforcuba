@@ -7,6 +7,12 @@ import CallToHelp from "../components/call-to-help"
 import CovidCrisis from "../components/covid-crisis"
 import Closings from "../components/closing"
 import NoUSEmbargo from "../components/no-us-embargo"
+import LogRocket from "logrocket"
+import setupLogRocketReact from "logrocket-react"
+
+//  Mr. LogRocket
+LogRocket.init("0po6xe/sosforcuba")
+setupLogRocketReact(LogRocket)
 
 const IndexPage = () => (
   <>
