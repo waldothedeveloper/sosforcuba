@@ -36,6 +36,13 @@ module.exports = {
       },
     },
     {
+      resolve: "gatsby-plugin-mailchimp",
+      options: {
+        endpoint: process.env.mailchimp,
+        timeout: 3500,
+      },
+    },
+    {
       resolve: `gatsby-source-faunadb`,
       options: {
         // The secret for the key you're using to connect to your Fauna database.

@@ -12,9 +12,7 @@ import EmptyProtestResults from "../components/empty-protest-result"
 //
 const Protests = () => {
   const photos = useFetchPhotos()
-  console.log("photos: ", photos)
   const { tabs, filterProtests, handleChange } = useFilterProtests()
-  console.log("filterProtests: ", filterProtests)
 
   return (
     <>
