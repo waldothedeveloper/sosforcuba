@@ -6,17 +6,17 @@ import PropTypes from "prop-types"
 const SubscribedNotification = ({ subscribed, setSubscribed }) => {
   //
   return (
-    <div className="fixed bottom-0 inset-x-0 pb-2 sm:pb-5">
-      <Transition
-        show={subscribed}
-        as={Fragment}
-        enter="transform ease-out duration-300 transition"
-        enterFrom="translate-y-2 opacity-0 sm:translate-y-0 sm:translate-x-2"
-        enterTo="translate-y-0 opacity-100 sm:translate-x-0"
-        leave="transition ease-in duration-100"
-        leaveFrom="opacity-100"
-        leaveTo="opacity-0"
-      >
+    <Transition
+      show={subscribed}
+      as={Fragment}
+      enter="transform ease-out duration-300 transition"
+      enterFrom="translate-y-2 opacity-0 sm:translate-y-0 sm:translate-x-2"
+      enterTo="translate-y-0 opacity-100 sm:translate-x-0"
+      leave="transition ease-in duration-100"
+      leaveFrom="opacity-100"
+      leaveTo="opacity-0"
+    >
+      <div className="fixed bottom-0 inset-x-0 pb-2 sm:pb-5">
         <div className="max-w-7xl mx-auto px-2 sm:px-6 lg:px-8">
           <div className="p-2 rounded-lg bg-gradient-to-r from-sky-400 to-cyan-300 shadow-lg sm:p-3">
             <div className="flex items-center justify-between flex-wrap">
@@ -48,8 +48,8 @@ const SubscribedNotification = ({ subscribed, setSubscribed }) => {
             </div>
           </div>
         </div>
-      </Transition>
-    </div>
+      </div>
+    </Transition>
   )
 }
 export default SubscribedNotification
