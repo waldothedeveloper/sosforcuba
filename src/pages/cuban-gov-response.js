@@ -1,4 +1,5 @@
 import React from "react"
+import { OutboundLink } from "gatsby-plugin-google-gtag"
 import HLSVideoPlayer from "../components/hls-player"
 import { pichyboysVideos } from "../utils/instagram_vids"
 import SocialMediaEmbedCarousel from "../components/carousel"
@@ -33,7 +34,7 @@ const CubanGovernmentResponse = () => {
           transformOptions={{ fit: "cover" }}
         />
         <p>
-          <a
+          <OutboundLink
             href="https://twitter.com/DiazCanelB"
             rel="noopener noreferrer"
             target="_blank"
@@ -41,7 +42,7 @@ const CubanGovernmentResponse = () => {
             <span className="text-yellow-400 underline">
               Miguel Díaz-Canel Bermúdez
             </span>
-          </a>
+          </OutboundLink>
           , the actual president of Cuba, made a speech transmitted on national
           TV calling for repression of the protests and inciting national
           violence. In his own words, he said:
@@ -134,7 +135,7 @@ const CubanGovernmentResponse = () => {
               }}
             >
               <div style={{ padding: 0, margin: 0, textAlign: "left" }}>
-                <a
+                <OutboundLink
                   href="http://www.gettyimages.com/detail/1233949092"
                   target="_blank"
                   style={{
@@ -147,7 +148,7 @@ const CubanGovernmentResponse = () => {
                   rel="noreferrer noopener"
                 >
                   Embed from Getty Images
-                </a>
+                </OutboundLink>
               </div>
               <div
                 style={{
@@ -231,13 +232,13 @@ const CubanGovernmentResponse = () => {
 
         <p className="text-sm text-gray-400 text-center">
           Link to cited article{" "}
-          <a
+          <OutboundLink
             href="https://home.treasury.gov/news/press-releases/jy0298"
             target="_blank"
             rel="noreferrer noopener"
           >
             here.
-          </a>
+          </OutboundLink>
         </p>
 
         <p className="py-12">

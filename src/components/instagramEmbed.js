@@ -1,5 +1,6 @@
 import React from "react"
 import PropTypes from "prop-types"
+import { OutboundLink } from "gatsby-plugin-google-gtag"
 
 const InstaEmbed = ({ url }) => {
   return (
@@ -21,7 +22,7 @@ const InstaEmbed = ({ url }) => {
       }}
     >
       <div style={{ padding: "16px" }}>
-        <a
+        <OutboundLink
           href={url}
           style={{
             background: "#FFFFFF",
@@ -242,7 +243,7 @@ const InstaEmbed = ({ url }) => {
               }}
             />
           </div>
-        </a>
+        </OutboundLink>
       </div>
     </blockquote>
   )

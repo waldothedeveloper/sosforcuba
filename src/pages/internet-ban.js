@@ -2,6 +2,9 @@ import React from "react"
 import { TwitterTweetEmbed } from "react-twitter-embed"
 import Layout from "../components/layout"
 import { StaticImage } from "gatsby-plugin-image"
+import { OutboundLink } from "gatsby-plugin-google-gtag"
+
+//
 
 const InternetBan = () => {
   return (
@@ -28,13 +31,13 @@ const InternetBan = () => {
 
         <p>
           <span className="font-bold text-md">The BBC News</span> wrote an{" "}
-          <a
+          <OutboundLink
             target="_blank"
             rel="noreferrer noopener"
             href="https://www.bbc.com/news/world-latin-america-57818918"
           >
             <span className="text-sky-400 font-semibold">article</span>
-          </a>{" "}
+          </OutboundLink>{" "}
           explaining the strategy behind the Cuban government&apos;s actions:
         </p>
         {/* cut the internet wire */}
