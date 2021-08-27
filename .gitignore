@@ -67,3 +67,7 @@ yarn-error.log
 .pnp.js
 # Yarn Integrity file
 .yarn-integrity
+# Fauna db
+.faunarc
+# Local Netlify folder
+.netlify

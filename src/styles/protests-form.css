@@ -1,0 +1,7 @@
+input[type="time"]::-webkit-calendar-picker-indicator {
+  filter: invert(100%) brightness(100%);
+}
+
+input[type="date"]::-webkit-calendar-picker-indicator {
+  filter: invert(100%) brightness(100%);
+}
