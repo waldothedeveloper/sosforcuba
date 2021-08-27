@@ -6,6 +6,7 @@ import { militaryToStandard } from "../utils/militaryToStandardTime"
 import { Link } from "gatsby"
 import { useFilterProtests } from "../hooks/useFilterProtests"
 import moment from "moment"
+import { OutboundLink } from "gatsby-plugin-google-gtag"
 import EmptyProtestResults from "../components/empty-protest-result"
 
 // Math.floor(Math.random() * (30 - 0) + 0)
@@ -62,23 +63,23 @@ const Protests = () => {
                         <div className="absolute inset-0 bg-gradient-to-t from-gray-800" />
                         <p className="text-gray-400 text-xs absolute -mt-5 ml-1">
                           Photo by{" "}
-                          <a
+                          <OutboundLink
                             className="text-gray-300"
                             target="_blank"
                             rel="noopener noreferrer"
                             href={`https://unsplash.com/@${photos[id].user.username}?utm_source=sos_for_cuba&utm_medium=referral`}
                           >
                             {photos[id].user.username}
-                          </a>{" "}
+                          </OutboundLink>{" "}
                           on{" "}
-                          <a
+                          <OutboundLink
                             className="text-gray-300"
                             target="_blank"
                             rel="noopener noreferrer"
                             href="https://unsplash.com/?utm_source=sos_for_cuba&utm_medium=referral"
                           >
                             Unsplash
-                          </a>
+                          </OutboundLink>
                         </p>
                       </div>
                       {/* card content */}

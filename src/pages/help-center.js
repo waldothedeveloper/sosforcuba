@@ -1,5 +1,6 @@
 import React from "react"
 import Layout from "../components/layout"
+import { OutboundLink } from "gatsby-plugin-google-gtag"
 import { StaticImage } from "gatsby-plugin-image"
 import DonationsUse from "../components/donations-use"
 import HelpDonations from "../components/help-donations"
@@ -35,14 +36,14 @@ const HelpCenter = () => {
                     <p className="mt-12 text-xl text-gray-300">{subtitle2}</p>
                     <p className="mt-12 text-sm text-gray-400">
                       more on this{" "}
-                      <a
+                      <OutboundLink
                         className="underline"
                         href="https://www.state.gov/fact-sheet-provision-of-humanitarian-assistance-to-cuba/"
                         target="_blank"
                         rel="noopener noreferrer"
                       >
                         here
-                      </a>
+                      </OutboundLink>
                     </p>
                   </div>
                 </div>
@@ -61,14 +62,14 @@ const HelpCenter = () => {
               />
               <p className="text-gray-400 -mt-6 ml-2 text-xs absolute">
                 Photo by{" "}
-                <a
+                <OutboundLink
                   className="font-medium text-sky-500"
                   rel="noreferrer noopener"
                   target="_blank"
                   href="https://www.instagram.com/jimmy_cacer_photo/"
                 >
                   @jimmy_cacer_photo
-                </a>
+                </OutboundLink>
               </p>
             </div>
           </div>
@@ -103,14 +104,14 @@ const HelpCenter = () => {
             <div className="max-w-2xl mx-auto text-center lg:max-w-4xl">
               <p className="text-gray-400 ml-2 text-xs">
                 Photo by{` `}
-                <a
+                <OutboundLink
                   className="text-sky-500"
                   rel="noreferrer noopener"
                   target="_blank"
                   href="https://www.instagram.com/jimmy_cacer_photo/"
                 >
                   @jimmy_cacer_photo
-                </a>
+                </OutboundLink>
               </p>
               <h2 className="text-3xl font-extrabold tracking-tight bg-gradient-to-r from-gray-200 via-gray-300 to-gray-500 bg-clip-text text-transparent sm:text-4xl">
                 {title} <span className="text-gray-50">🇨🇺 </span>
@@ -119,14 +120,14 @@ const HelpCenter = () => {
               <p className="mt-12 text-gray-300 text-base">{subtitle2}</p>
               <p className="mt-12 text-sm text-gray-400">
                 more on this{" "}
-                <a
+                <OutboundLink
                   className="underline"
                   href="https://www.state.gov/fact-sheet-provision-of-humanitarian-assistance-to-cuba/"
                   target="_blank"
                   rel="noopener noreferrer"
                 >
                   here
-                </a>
+                </OutboundLink>
               </p>
             </div>
           </div>

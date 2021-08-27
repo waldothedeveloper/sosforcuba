@@ -1,4 +1,5 @@
 import React from "react"
+import { OutboundLink } from "gatsby-plugin-google-gtag"
 import InfiniteScroll from "react-infinite-scroll-component"
 import { list_of_detained_people } from "../utils/detained_people"
 import { useInfiniteScrollData } from "../hooks/useInfiniteScrollData"
@@ -46,14 +47,14 @@ const PeopleDetained = () => {
       <span className="py-12 text-gray-400 text-sm">
         Although every effort is put into keeping this list updated, you can
         find the latest updates for missing or detained people{" "}
-        <a
+        <OutboundLink
           className="text-yellow-400 underline font-medium"
           href="https://www.facebook.com/centrodedenunciasFDP"
           target="_blank"
           rel="noopener noreferrer"
         >
           here.
-        </a>
+        </OutboundLink>
       </span>
     </div>
   )

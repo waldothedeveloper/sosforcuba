@@ -1,4 +1,5 @@
 import React from "react"
+import { OutboundLink } from "gatsby-plugin-google-gtag"
 import { TwitterTweetEmbed } from "react-twitter-embed"
 import { StaticImage } from "gatsby-plugin-image"
 import StatisticsOfDetainedPeople from "../components/statistics_of_detained_people"
@@ -40,7 +41,7 @@ const DetainedPeople = () => {
 
         {/* Anyelo Troya */}
         <p>
-          <a
+          <OutboundLink
             target="_blank"
             href="https://twitter.com/AnyeloTroyaGonz"
             rel="noreferrer noopener"
@@ -48,7 +49,7 @@ const DetainedPeople = () => {
             <span className="text-yellow-400 font-medium underline">
               Anyelo Troya Gonzalez
             </span>
-          </a>
+          </OutboundLink>
           , a Cuban photographer, was on the streets on July 11th documenting
           the protests. He was later detained and sentenced to 1 year in prison
           in a summary trial{" "}
@@ -66,7 +67,7 @@ const DetainedPeople = () => {
         />
         {/* Dina Stars */}
         <p>
-          <a
+          <OutboundLink
             target="_blank"
             href="https://twitter.com/Dinastars_"
             rel="noopener noreferrer"
@@ -74,10 +75,10 @@ const DetainedPeople = () => {
             <span className="text-yellow-400 font-medium underline">
               Dina Stars
             </span>
-          </a>
+          </OutboundLink>
           , a popular Cuban Youtuber and influencer was detained by government
           security forces on{" "}
-          <a
+          <OutboundLink
             href="https://www.npr.org/2021/07/14/1015837541/a-popular-youtuber-is-detained-by-cuban-police-on-live-tv-in-a-roundup-of-critic"
             target="_blank"
             rel="noopener noreferrer"
@@ -85,7 +86,7 @@ const DetainedPeople = () => {
             <span className="text-yellow-400 font-medium underline">
               live television Tuesday morning
             </span>
-          </a>{" "}
+          </OutboundLink>{" "}
           as she was discussing the sweeping arrests of activists, protesters
           and journalists.
         </p>
@@ -106,7 +107,7 @@ const DetainedPeople = () => {
         {/* 27NCuba */}
         <p>
           The{" "}
-          <a
+          <OutboundLink
             target="_blank"
             href="https://twitter.com/27Ncuba"
             rel="noopener noreferrer"
@@ -114,7 +115,7 @@ const DetainedPeople = () => {
             <span className="text-yellow-400 font-medium underline">
               27NCuba
             </span>
-          </a>{" "}
+          </OutboundLink>{" "}
           movement is a group of independent Cuban artists, writers, thinkers,
           and civil society members that formed in the wake of the unjust arrest
           of rapper Denis Solis Gonzalez on November 27, 2020.
@@ -129,7 +130,7 @@ const DetainedPeople = () => {
           placeholder="Loading"
         />
         <p>
-          <a
+          <OutboundLink
             target="_blank"
             href="https://twitter.com/LMOAlcantara"
             rel="noopener noreferrer"
@@ -137,7 +138,7 @@ const DetainedPeople = () => {
             <span className="text-yellow-400 font-medium underline">
               Luis Manuel Otero
             </span>
-          </a>{" "}
+          </OutboundLink>{" "}
           , who is a Cuban performance artist known for his public performances
           that openly criticize the Cuban government and its policies, said in a
           video posted on July 11th.
@@ -183,7 +184,7 @@ const DetainedPeople = () => {
 
         <p>
           And no one scapes to this level of repression, Spanish-born{" "}
-          <a
+          <OutboundLink
             target="_blank"
             href="https://www.instagram.com/aprespinosa/"
             rel="noopener noreferrer"
@@ -191,7 +192,7 @@ const DetainedPeople = () => {
             <span className="text-yellow-400 font-medium underline">
               Ramon Espinosa
             </span>
-          </a>
+          </OutboundLink>
           , a staff photographer with Associated Press (AP), was attacked by the
           police while covering the protests.
         </p>
@@ -210,7 +211,7 @@ const DetainedPeople = () => {
 
         {/* Jose Daniel Ferrer UNPACU */}
         <p>
-          <a
+          <OutboundLink
             target="_blank"
             href="https://twitter.com/jdanielferrer"
             rel="noreferrer noopener"
@@ -218,7 +219,7 @@ const DetainedPeople = () => {
             <span className="text-yellow-400 font-medium underline">
               José Daniel Ferrer García
             </span>
-          </a>{" "}
+          </OutboundLink>{" "}
           is a Cuban human rights activist and leader of the Patriotic Union of
           Cuba (UNPACU in Spanish). Jose was detained since July 11th by the
           regime. He has been a political prisoner twice. No information has
@@ -265,7 +266,7 @@ const DetainedPeople = () => {
             Rick Scott, Marco Rubio, and Ted Cruz
           </span>{" "}
           introduced a{" "}
-          <a
+          <OutboundLink
             href="https://www.rickscott.senate.gov/sen-rick-scott-leads-resolution-honoring-cuban-democracy-and-human-rights-leader-jose-daniel-ferrer"
             target="_blank"
             rel="noreferrer noopener"
@@ -273,7 +274,7 @@ const DetainedPeople = () => {
             <span className="text-yellow-400 font-medium underline">
               resolution
             </span>
-          </a>{" "}
+          </OutboundLink>{" "}
           honoring the efforts of Cuban democracy and human rights activist{" "}
           <span className="underline">José Daniel Ferrer</span> and the vital
           contribution and humanitarian efforts of the Patriotic Union of Cuba

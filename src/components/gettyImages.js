@@ -1,5 +1,6 @@
 import React from "react"
 import PropTypes from "prop-types"
+import { OutboundLink } from "gatsby-plugin-google-gtag"
 
 const GettyImages = ({ url, src }) => {
   return (
@@ -16,7 +17,7 @@ const GettyImages = ({ url, src }) => {
       }}
     >
       <div style={{ padding: 0, margin: 0, textAlign: "left" }}>
-        <a
+        <OutboundLink
           href={url}
           target="_blank"
           style={{
@@ -29,7 +30,7 @@ const GettyImages = ({ url, src }) => {
           rel="noreferrer"
         >
           Embed from Getty Images
-        </a>
+        </OutboundLink>
       </div>
       <div
         style={{

@@ -1,5 +1,7 @@
 import React from "react"
+import { OutboundLink } from "gatsby-plugin-google-gtag"
 
+//
 const HelpDonations = () => {
   return (
     <div className="bg-gradient-to-r from-coolGray-50 to-coolGray-100">
@@ -16,23 +18,23 @@ const HelpDonations = () => {
 
         <div className="mt-8 flex flex-col lg:mt-0 lg:flex-shrink-0">
           <div className="inline-flex rounded-md">
-            <a
+            <OutboundLink
               target="_blank"
               rel="noopener noreferrer"
               href="https://givebutter.com/sos4cuba"
               className="inline-flex items-center justify-center px-12 py-3 text-base font-medium rounded-md text-gray-50 bg-gradient-to-r from-red-500 to-red-800"
             >
               Donate
-            </a>
+            </OutboundLink>
             <div className="ml-3 inline-flex rounded-md">
-              <a
+              <OutboundLink
                 target="_blank"
                 rel="noopener noreferrer"
                 href="https://www.paypal.com/donate?business=DV5S2PXD86YDG&no_recurring=0&currency_code=USD"
                 className="inline-flex items-center justify-center px-12 py-3 text-base font-medium rounded-md text-gray-50 bg-gradient-to-r from-sky-400 to-cyan-300"
               >
                 Paypal
-              </a>
+              </OutboundLink>
             </div>
           </div>
           <p className="text-coolGray-500 mt-4 text-sm font-medium">

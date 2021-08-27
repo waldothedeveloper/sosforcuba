@@ -1,5 +1,6 @@
 import React from "react"
 import Layout from "../components/layout"
+import { OutboundLink } from "gatsby-plugin-google-gtag"
 
 const Section5_Human_Rights = () => {
   return (
@@ -52,13 +53,13 @@ const Section5_Human_Rights = () => {
           The U.S. Department of State contains a highly detailed document
           containing the 2020 Country Reports on Human Rights Practices in Cuba.
           You can read the referenced document{" "}
-          <a
+          <OutboundLink
             target="_blank"
             href="https://www.state.gov/reports/2020-country-reports-on-human-rights-practices/cuba/"
             rel="noreferrer noopener"
           >
             <span className="text-yellow-400 underline font-medium">here.</span>
-          </a>
+          </OutboundLink>
         </p>
       </div>
     </Layout>

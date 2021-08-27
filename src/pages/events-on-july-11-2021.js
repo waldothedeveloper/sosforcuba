@@ -2,6 +2,7 @@ import React from "react"
 import { StaticImage } from "gatsby-plugin-image"
 import Layout from "../components/layout"
 import HLSVideoPlayer from "../components/hls-player"
+import { OutboundLink } from "gatsby-plugin-google-gtag"
 
 const EventsOnJuly_11_2021 = () => {
   return (
@@ -104,7 +105,7 @@ const EventsOnJuly_11_2021 = () => {
           <p className="text-sm text-gray-400">
             A detailed google map project with the locations of the protests can
             be found{" "}
-            <a
+            <OutboundLink
               style={{ color: "#dc2626" }}
               className="underline"
               target="_blank"
@@ -112,7 +113,7 @@ const EventsOnJuly_11_2021 = () => {
               rel="noreferrer noopener"
             >
               here
-            </a>
+            </OutboundLink>
             .
           </p>
 
