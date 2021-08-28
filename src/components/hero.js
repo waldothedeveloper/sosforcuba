@@ -92,7 +92,7 @@ export default function Hero() {
                         <StaticImage
                           imgStyle={{ borderRadius: "0.5rem" }}
                           className="w-44 h-64 overflow-hidden"
-                          src="../images/hosp_person_hospital_4.jpg"
+                          src="../images/mother_holding_her_child_hospital_cuba.jpg"
                           alt=""
                           placeholder="blurred"
                           layout="fullWidth"
@@ -130,7 +130,7 @@ export default function Hero() {
                       <div className="flex-shrink-0 grid grid-cols-1 gap-y-6">
                         <StaticImage
                           className="w-44 h-64 rounded-lg overflow-hidden"
-                          src="../images/hosp_person_hospital_4.jpg"
+                          src="../images/mother_holding_her_child_hospital_cuba.jpg"
                           alt=""
                           placeholder="blurred"
                           layout="fullWidth"
