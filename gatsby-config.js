@@ -4,9 +4,18 @@ require("dotenv").config({
 
 module.exports = {
   siteMetadata: {
-    title: "S.O.S for Cuba",
-    description: "Cuba needs freedom.",
+    title:
+      "S.O.S. Cuba. The people of Cuba needs freedom. No more communism. No more dictatorship. No more abuse of human rights.",
+    description:
+      "The people of Cuba has suffered more than 62 years of human rights abuse. Harassment, incarceration, public acts of repudiation, beatings, intimidation, repression, surveillance, and arbitrary detentions are just a few. The list of prohibitions that Cubans have faced is actually much worse. Support our cause making a generous donation today.",
     author: "The people of Cuba",
+    keywords: [
+      "Cuba",
+      "S.O.S. Cuba",
+      "Communism",
+      "Decreto Ley 35",
+      "U.S. Embargo",
+    ],
     siteUrl: "https://sosforcuba.com",
   },
   plugins: [
