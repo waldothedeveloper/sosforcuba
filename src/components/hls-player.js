@@ -40,6 +40,7 @@ const HLSVideoPlayer = props => {
       controls
       ref={videoRef}
       poster={poster}
+      preload="none"
     />
   )
 }
