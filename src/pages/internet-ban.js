@@ -58,7 +58,7 @@ const InternetBan = () => {
 
         <div className="flex justify-center">
           <StaticImage
-            src="../images/etecsa_logo.png"
+            src="../images/etecsa_logo.jpg"
             alt="etecsa logo, the only phone and internet company in Cuba"
             placeholder="dominantColor"
             layout="fixed"

@@ -24,6 +24,14 @@ module.exports = {
     "gatsby-plugin-sharp",
     `gatsby-plugin-instagram-embed`,
     {
+      resolve: "gatsby-plugin-robots-txt",
+      options: {
+        host: "https://www.sosforcuba.com",
+        // sitemap: 'https://www.example.com/sitemap.xml',
+        policy: [{ userAgent: "*", allow: "/" }],
+      },
+    },
+    {
       resolve: "gatsby-plugin-manifest",
       options: {
         name: "gatsby-starter-default",
