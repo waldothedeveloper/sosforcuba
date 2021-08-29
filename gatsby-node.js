@@ -25,7 +25,6 @@ exports.sourceNodes = async ({
     `https://api.unsplash.com/search/photos?per_page=30&query=cuba+cars&client_id=${process.env.unsplash_api_access_key}`
   )
   const resultData = await result.json()
-  console.log("resultData for UNSPLASH: ", resultData)
 
   // get list of countries
   const countries = await fetch(`https://restcountries.eu/rest/v2/all`)
