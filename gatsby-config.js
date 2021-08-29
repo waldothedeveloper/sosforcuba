@@ -2,6 +2,8 @@ require("dotenv").config({
   path: `.env.${process.env.NODE_ENV}`,
 })
 
+const siteUrl = process.env.URL || `https://www.sosforcuba.com`
+
 module.exports = {
   siteMetadata: {
     title: "S.O.S for Cuba",
@@ -20,9 +22,65 @@ module.exports = {
         path: `${__dirname}/src/images`,
       },
     },
+    {
+      resolve: "gatsby-plugin-sitemap",
+      options: {
+        query: `
+        {
+          allSitePage {
+            nodes {
+              path
+            }
+          }
+          allWpContentNode(filter: {nodeType: {in: ["Post", "Page"]}}) {
+            nodes {
+              ... on WpPost {
+                uri
+                modifiedGmt
+              }
+              ... on WpPage {
+                uri
+                modifiedGmt
+              }
+            }
+          }
+        }
+      `,
+        resolveSiteUrl: () => siteUrl,
+        resolvePages: ({
+          allSitePage: { nodes: allPages },
+          allWpContentNode: { nodes: allWpNodes },
+        }) => {
+          const wpNodeMap = allWpNodes.reduce((acc, node) => {
+            const { uri } = node
+            acc[uri] = node
+
+            return acc
+          }, {})
+
+          return allPages.map(page => {
+            return { ...page, ...wpNodeMap[page.path] }
+          })
+        },
+        serialize: ({ path, modifiedGmt }) => {
+          return {
+            url: path,
+            lastmod: modifiedGmt,
+          }
+        },
+      },
+    },
     "gatsby-transformer-sharp",
     "gatsby-plugin-sharp",
     `gatsby-plugin-instagram-embed`,
+    {
+      resolve: "gatsby-plugin-robots-txt",
+      options: {
+        host: "https://www.sosforcuba.com",
+        sitemap: "https://www.sosforcuba.com/sitemap.xml",
+        policy: [{ userAgent: "*", allow: "/" }],
+      },
+    },
     {
       resolve: "gatsby-plugin-manifest",
       options: {
@@ -83,7 +141,7 @@ module.exports = {
           // Setting this parameter is also optional
           respectDNT: true,
           // Avoids sending pageview hits from custom paths
-          exclude: ["/preview/**", "/do-not-track/me/too/"],
+          exclude: ["/preview/**"],
         },
       },
     },
