@@ -2,6 +2,8 @@ require("dotenv").config({
   path: `.env.${process.env.NODE_ENV}`,
 })
 
+const siteUrl = process.env.URL || `https://sosforcuba.com`
+
 module.exports = {
   siteMetadata: {
     title:
@@ -29,6 +31,7 @@ module.exports = {
         path: `${__dirname}/src/images`,
       },
     },
+
     "gatsby-transformer-sharp",
     "gatsby-plugin-sharp",
     `gatsby-plugin-instagram-embed`,
@@ -36,8 +39,34 @@ module.exports = {
       resolve: "gatsby-plugin-robots-txt",
       options: {
         host: "https://www.sosforcuba.com",
-        // sitemap: 'https://www.example.com/sitemap.xml',
+        sitemap: "https://www.sosforcuba.com/sitemap/sitemap-index.xml",
         policy: [{ userAgent: "*", allow: "/" }],
+      },
+    },
+    {
+      resolve: "gatsby-plugin-sitemap",
+      options: {
+        query: `
+        {
+          allSitePage {
+            nodes {
+              path
+            }
+          }
+        }
+      `,
+        resolveSiteUrl: () => siteUrl,
+        resolvePages: ({ allSitePage: { nodes: allPages } }) => {
+          return allPages.map(page => {
+            return { ...page }
+          })
+        },
+        serialize: ({ path, modifiedGmt }) => {
+          return {
+            url: path,
+            lastmod: modifiedGmt,
+          }
+        },
       },
     },
     {

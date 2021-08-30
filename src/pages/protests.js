@@ -140,37 +140,3 @@ const Protests = () => {
 }
 
 export default Protests
-// Protests.propTypes = {
-//   data: PropTypes.object,
-// }
-
-//
-// export const data = graphql`
-//   query getAllUpcomingProtests($currentDate: Date!) {
-//     allProtest(
-//       filter: { date: { gte: $currentDate }, approved: { eq: "true" } }
-//     ) {
-//       edges {
-//         node {
-//           id
-//           name
-//           contact {
-//             email
-//             message
-//             phone_number
-//           }
-//           address {
-//             city
-//             country
-//             state
-//             street_address
-//             zipcode
-//           }
-//           _id
-//           time
-//           date(formatString: "dddd, MMM Do")
-//         }
-//       }
-//     }
-//   }
-// `
