@@ -9,11 +9,12 @@ import Seo from "../components/seo"
 
 const InternetBan = () => {
   return (
-    <Layout>
+    <>
       <Seo
         title="S.O.S. Cuba. How the Cuban government silence public opinion."
         description="The Cuban government has absolute control over all communications on the island. The government creates laws to impose a zero tolerance policy for those who will attempt to express themselves freely against the government."
-      >
+      />
+      <Layout>
         <div className="py-32 prose prose-red prose-lg text-gray-300 mx-auto max-w-sm px-4 md:px-0 md:max-w-4xl">
           <div className="text-lg max-w-prose mx-auto">
             <h1>
@@ -101,8 +102,8 @@ const InternetBan = () => {
             State&apos;s Bureau of Western Hemisphere Affairs.
           </span>
         </div>
-      </Seo>
-    </Layout>
+      </Layout>
+    </>
   )
 }
 
