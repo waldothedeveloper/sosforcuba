@@ -2,11 +2,22 @@ require("dotenv").config({
   path: `.env.${process.env.NODE_ENV}`,
 })
 
+const siteUrl = process.env.URL || `https://sosforcuba.com`
+
 module.exports = {
   siteMetadata: {
-    title: "S.O.S for Cuba",
-    description: "Cuba needs freedom.",
+    title:
+      "S.O.S. Cuba. The people of Cuba needs freedom. No more communism. No more dictatorship. No more abuse of human rights.",
+    description:
+      "The people of Cuba has suffered more than 62 years of human rights abuse. Harassment, incarceration, public acts of repudiation, beatings, intimidation, repression, surveillance, and arbitrary detentions are just a few. The list of prohibitions that Cubans have faced is actually much worse. Support our cause making a generous donation today.",
     author: "The people of Cuba",
+    keywords: [
+      "Cuba",
+      "S.O.S. Cuba",
+      "Communism",
+      "Decreto Ley 35",
+      "U.S. Embargo",
+    ],
     siteUrl: "https://sosforcuba.com",
   },
   plugins: [
@@ -20,6 +31,7 @@ module.exports = {
         path: `${__dirname}/src/images`,
       },
     },
+
     "gatsby-transformer-sharp",
     "gatsby-plugin-sharp",
     `gatsby-plugin-instagram-embed`,
@@ -27,8 +39,34 @@ module.exports = {
       resolve: "gatsby-plugin-robots-txt",
       options: {
         host: "https://www.sosforcuba.com",
-        // sitemap: 'https://www.example.com/sitemap.xml',
+        sitemap: "https://www.sosforcuba.com/sitemap/sitemap-index.xml",
         policy: [{ userAgent: "*", allow: "/" }],
+      },
+    },
+    {
+      resolve: "gatsby-plugin-sitemap",
+      options: {
+        query: `
+        {
+          allSitePage {
+            nodes {
+              path
+            }
+          }
+        }
+      `,
+        resolveSiteUrl: () => siteUrl,
+        resolvePages: ({ allSitePage: { nodes: allPages } }) => {
+          return allPages.map(page => {
+            return { ...page }
+          })
+        },
+        serialize: ({ path, modifiedGmt }) => {
+          return {
+            url: path,
+            lastmod: modifiedGmt,
+          }
+        },
       },
     },
     {

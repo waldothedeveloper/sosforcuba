@@ -12,6 +12,8 @@ function Seo({ description, lang, meta, title }) {
             title
             description
             author
+            keywords
+            siteUrl
           }
         }
       }
