@@ -33,7 +33,7 @@ const ProtestFilter = ({ tabs, handleChange }) => {
                 className={classNames(
                   tab.current
                     ? "border-gray-200 text-gray-50"
-                    : "border-transparent text-gray-500 hover:text-gray-300 hover:border-gray-100",
+                    : "border-transparent text-gray-500 hover:text-gray-300 hover:border-gray-100 group",
                   "whitespace-nowrap flex py-4 px-1 border-b-2 font-medium text-sm cursor-pointer"
                 )}
                 aria-current={tab.current ? "page" : undefined}
@@ -44,8 +44,8 @@ const ProtestFilter = ({ tabs, handleChange }) => {
                     className={classNames(
                       tab.current
                         ? "bg-sky-100 text-sky-600"
-                        : "bg-gray-600 text-gray-300",
-                      "hidden ml-3 py-0.5 px-2.5 rounded-full text-xs font-medium md:inline-block"
+                        : "bg-gray-600 text-gray-400",
+                      "hidden ml-3 py-0.5 px-2.5 rounded-full text-xs font-medium md:inline-block hover:text-gray-300 hover:bg-gray-500"
                     )}
                   >
                     {tab.count}
