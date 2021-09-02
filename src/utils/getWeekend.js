@@ -1,26 +1,16 @@
-import { monthAndDay } from "./getMonthAndDay"
+import moment from "moment"
 
 export const getWeekend = () => {
-  const currDate = new Date()
-  const currDay = currDate.getDay()
+  const saturdayMoment = moment().day(6)
+  const sundayMoment = moment().day(7)
 
-  const first = currDate.getDate() - currDate.getDay() // First day is the day of the month - the day of the week
-  const last = first + 6 // last day is the first day + 6
-  const firstday = new Date(currDate.setDate(first))
-  const lastday = new Date(currDate.setDate(last))
-  // this is technically the first day of the next week on the calendar
-  const nextSunday = new Date(
-    firstday.getFullYear(),
-    firstday.getMonth(),
-    firstday.getDate() + 7
-  )
+  const saturday = moment(saturdayMoment)
+    .format("")
+    .match(/(\d{4})-(\d{2})-(\d{2})/)[0]
 
-  if (currDay === 0) {
-    return [{ sunday: `${firstday.getFullYear()}-${monthAndDay(currDate)}` }]
-  } else {
-    return [
-      { saturday: `${lastday.getFullYear()}-${monthAndDay(currDate)}` },
-      { sunday: `${nextSunday.getFullYear()}-${monthAndDay(nextSunday)}` },
-    ]
-  }
+  const sunday = moment(sundayMoment)
+    .format("")
+    .match(/(\d{4})-(\d{2})-(\d{2})/)[0]
+
+  return [{ saturday: saturday }, { sunday: sunday }]
 }
