@@ -6,7 +6,12 @@ import { useState } from "react"
 
 export const useFilterProtests = () => {
   const filteredData = useFetchProtests()
-  const [filterProtests, setFilterProtests] = useState(filteredData)
+  // I have to think about this. It's nice to have protest filtered starting from the current date. It's less appealing to the eyes to see such little data, but it's ok.
+
+  // useState(
+  //   filteredData.filter(elem => elem.node.date >= getToday())
+  // )
+  const [filterProtests, setFilterProtests] = useState([])
 
   const protestsToday = () => {
     const today = filteredData.filter(elem => elem.node.date === getToday())
