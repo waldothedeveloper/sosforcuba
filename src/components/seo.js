@@ -63,6 +63,10 @@ function Seo({ description, lang, meta, title }) {
           name: `twitter:description`,
           content: metaDescription,
         },
+        {
+          name: "purpleads-verification",
+          content: "e7d6c882a5a3f2cf81f1e7e9",
+        },
       ].concat(meta)}
     />
   )
