@@ -6,12 +6,10 @@ import { useState } from "react"
 
 export const useFilterProtests = () => {
   const filteredData = useFetchProtests()
-  // I have to think about this. It's nice to have protest filtered starting from the current date. It's less appealing to the eyes to see such little data, but it's ok.
 
-  // useState(
-  //   filteredData.filter(elem => elem.node.date >= getToday())
-  // )
-  const [filterProtests, setFilterProtests] = useState([])
+  const [filterProtests, setFilterProtests] = useState(() =>
+    filteredData.filter(elem => elem.node.date >= getToday())
+  )
 
   const protestsToday = () => {
     const today = filteredData.filter(elem => elem.node.date === getToday())
@@ -74,7 +72,9 @@ export const useFilterProtests = () => {
     }
 
     if (name === "All" || name?.target?.value === "All") {
-      setFilterProtests(filteredData)
+      setFilterProtests(
+        filteredData.filter(elem => elem.node.date >= getToday())
+      )
       setActiveTab(name === "All" ? name : name.target.value)
     }
   }
