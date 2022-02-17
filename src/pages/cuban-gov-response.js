@@ -1,32 +1,32 @@
-import React from "react"
-import { OutboundLink } from "gatsby-plugin-google-gtag"
 import HLSVideoPlayer from "../components/hls-player"
-import { pichyboysVideos } from "../utils/instagram_vids"
-import SocialMediaEmbedCarousel from "../components/carousel"
-import { TwitterTweetEmbed } from "react-twitter-embed"
 import Layout from "../components/layout"
 import { Link } from "gatsby"
+import { OutboundLink } from "gatsby-plugin-google-gtag"
+import React from "react"
+import SocialMediaEmbedCarousel from "../components/carousel"
 import { StaticImage } from "gatsby-plugin-image"
+import { TwitterTweetEmbed } from "react-twitter-embed"
+import { pichyboysVideos } from "../utils/instagram_vids"
 
 //
 const CubanGovernmentResponse = () => {
   //
   return (
     <Layout>
-      <div className="py-32 prose prose-red prose-lg text-gray-300 mx-auto max-w-sm px-4 md:px-0 md:max-w-4xl">
-        <div className="text-lg max-w-prose mx-auto">
+      <div className="prose prose-lg prose-red mx-auto max-w-sm py-32 px-4 text-gray-300 md:max-w-4xl md:px-0">
+        <div className="mx-auto max-w-prose text-lg">
           <h1>
-            <span className="block text-base text-center text-red-600 font-semibold tracking-wide uppercase">
+            <span className="block text-center text-base font-semibold uppercase tracking-wide text-red-600">
               on July 11, 2021
             </span>
-            <span className="mt-2 block text-3xl text-center leading-8 font-extrabold tracking-tight text-gray-50 sm:text-4xl">
+            <span className="mt-2 block text-center text-3xl font-extrabold leading-8 tracking-tight text-gray-50 sm:text-4xl">
               Cuban Gov Response
             </span>
           </h1>
         </div>
         <StaticImage
           imgStyle={{ borderRadius: "0.5rem" }}
-          className="w-44 h-64 overflow-hidden"
+          className="h-64 w-44 overflow-hidden"
           src="../images/miguel-diaz-canel.jpg"
           alt=""
           placeholder="blurred"
@@ -57,12 +57,12 @@ const CubanGovernmentResponse = () => {
         {/* video declarations */}
         <div className="aspect-w-16 aspect-h-9">
           <HLSVideoPlayer
-            url="https://stream.mux.com/Pka19Cqqc1Fo9p7vi01jkCCNoA2T3oPVPGOx9WWKkU004.m3u8"
-            poster="https://image.mux.com/Pka19Cqqc1Fo9p7vi01jkCCNoA2T3oPVPGOx9WWKkU004/thumbnail.png?width=1920&height=1080&fit_mode=pad&time=03"
+            url="https://stream.vidsrv.net/Pka19Cqqc1Fo9p7vi01jkCCNoA2T3oPVPGOx9WWKkU004.m3u8"
+            poster="https://image.vidsrv.net/Pka19Cqqc1Fo9p7vi01jkCCNoA2T3oPVPGOx9WWKkU004/thumbnail.png?width=1920&height=1080&fit_mode=pad&time=03"
           />
         </div>
 
-        <span className="my-24 md:my-32 block text-3xl text-center leading-8 font-semibold tracking-tight text-gray-300 sm:text-4xl">
+        <span className="my-24 block text-center text-3xl font-semibold leading-8 tracking-tight text-gray-300 sm:text-4xl md:my-32">
           The so called{" "}
           <span className="text-red-500 underline">revolutionaries</span> by the
           president are simply:
@@ -77,7 +77,7 @@ const CubanGovernmentResponse = () => {
             {/* boinas negras */}
             <StaticImage
               imgStyle={{ borderRadius: "0.5rem" }}
-              className="w-full h-96 overflow-hidden"
+              className="h-96 w-full overflow-hidden"
               src="../images/boinas_negras.jpeg"
               alt="military cuban forces known as black berets"
               placeholder="blurred"
@@ -92,7 +92,7 @@ const CubanGovernmentResponse = () => {
             {/* policia nacional */}
             <StaticImage
               imgStyle={{ borderRadius: "0.5rem" }}
-              className="w-full h-96 overflow-hidden"
+              className="h-96 w-full overflow-hidden"
               src="../images/policia_cubana.jpg"
               alt="military cuban forces known as black berets"
               placeholder="blurred"
@@ -107,7 +107,7 @@ const CubanGovernmentResponse = () => {
             {/* minint */}
             <StaticImage
               imgStyle={{ borderRadius: "0.5rem" }}
-              className="w-full h-96 overflow-hidden"
+              className="h-96 w-full overflow-hidden"
               src="../images/minint_cuba.jpg"
               alt="military cuban forces known as black berets"
               placeholder="blurred"
@@ -160,6 +160,7 @@ const CubanGovernmentResponse = () => {
                 }}
               >
                 <iframe
+                  title="Cubans take part in a demonstration in support of Cuban President Miguel Diaz-Canel"
                   src="//embed.gettyimages.com/embed/1233949092?et=E502nK7XT-VoAQgd3hRRHg&tld=com&sig=muvmo3T0bZnnnr2-ANHH1E26UjycBRYd8Cyvy2V8c8k=&caption=true&ver=1"
                   scrolling="no"
                   frameBorder={0}
@@ -194,7 +195,7 @@ const CubanGovernmentResponse = () => {
           protesters themselves shows a significant
         </p>
 
-        <span className="pt-12 pb-24 block text-3xl text-center leading-8 font-extrabold tracking-tight text-yellow-400 sm:text-4xl">
+        <span className="block pt-12 pb-24 text-center text-3xl font-extrabold leading-8 tracking-tight text-yellow-400 sm:text-4xl">
           shocking level of violence from the government.
         </span>
 
@@ -230,7 +231,7 @@ const CubanGovernmentResponse = () => {
           </span>
         </blockquote>
 
-        <p className="text-sm text-gray-400 text-center">
+        <p className="text-center text-sm text-gray-400">
           Link to cited article{" "}
           <OutboundLink
             href="https://home.treasury.gov/news/press-releases/jy0298"

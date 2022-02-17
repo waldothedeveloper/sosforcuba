@@ -12,7 +12,7 @@ exports.sourceNodes = async ({
   const resultData = await result.json()
 
   // get list of countries
-  const countries = await fetch(`https://restcountries.eu/rest/v2/all`)
+  const countries = await fetch(`https://restcountries.com/v3.1/all`)
   const listOfCountries = await countries.json()
 
   // get raw covid data from github API
@@ -31,27 +31,34 @@ exports.sourceNodes = async ({
       type: `Unsplash`,
       contentDigest: createContentDigest(resultData),
     },
-  }),
-    // create node for list of countries
-    createNode({
-      countries: listOfCountries,
-      id: `list_of_countries`,
-      parent: null,
-      children: [],
-      internal: {
-        type: `Countries`,
-        contentDigest: createContentDigest(listOfCountries),
-      },
-    }),
-    // create node for COVID CUBA cases
-    createNode({
-      covid_cases_cuba: CubaCovidData,
-      id: `cuba_covid_cases`,
-      parent: null,
-      children: [],
-      internal: {
-        type: `CubaCOVIDCases`,
-        contentDigest: createContentDigest(CubaCovidData),
-      },
-    })
+  })
+  // create node for list of countries
+  createNode({
+    countries: listOfCountries,
+    id: `list_of_countries`,
+    parent: null,
+    children: [],
+    internal: {
+      type: `Countries`,
+      contentDigest: createContentDigest(listOfCountries),
+    },
+  })
+  // create node for COVID CUBA cases
+  createNode({
+    covid_cases_cuba: CubaCovidData,
+    id: `cuba_covid_cases`,
+    parent: null,
+    children: [],
+    internal: {
+      type: `CubaCOVIDCases`,
+      contentDigest: createContentDigest(CubaCovidData),
+    },
+  })
+}
+
+// get put this here so that no one visits the help center since donations are not needed
+exports.onCreatePage = async ({ page, actions: { deletePage } }) => {
+  if (page.path.match(/help_center/g)) {
+    deletePage(page)
+  }
 }

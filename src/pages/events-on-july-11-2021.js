@@ -1,25 +1,25 @@
+import HLSVideoPlayer from "../components/hls-player"
+import Layout from "../components/layout"
+import { OutboundLink } from "gatsby-plugin-google-gtag"
 import React from "react"
 import { StaticImage } from "gatsby-plugin-image"
-import Layout from "../components/layout"
-import HLSVideoPlayer from "../components/hls-player"
-import { OutboundLink } from "gatsby-plugin-google-gtag"
 
 const EventsOnJuly_11_2021 = () => {
   return (
     <Layout>
-      <div className="py-32 prose prose-red prose-lg text-gray-300 mx-auto max-w-sm px-4 md:px-0 md:max-w-4xl">
+      <div className="prose prose-lg prose-red mx-auto max-w-sm py-32 px-4 text-gray-300 md:max-w-4xl md:px-0">
         <div className="text-lg">
           <h1>
-            <span className="block text-base text-center text-red-600 font-semibold tracking-wide uppercase">
+            <span className="block text-center text-base font-semibold uppercase tracking-wide text-red-600">
               July 11, 2021
             </span>
-            <span className="mt-2 block text-3xl text-center leading-8 font-extrabold tracking-tight text-gray-50 sm:text-4xl">
+            <span className="mt-2 block text-center text-3xl font-extrabold leading-8 tracking-tight text-gray-50 sm:text-4xl">
               Events
             </span>
           </h1>
         </div>
         {/* section 1 */}
-        <div className="mt-12 prose prose-red prose-lg text-gray-300 mx-auto max-w-4xl">
+        <div className="prose prose-lg prose-red mx-auto mt-12 max-w-4xl text-gray-300">
           <p className="mt-8 leading-8">
             On Sunday July 11, 2021, a large group of people took the streets on{" "}
             <span className="text-yellow-400 underline">
@@ -49,8 +49,8 @@ const EventsOnJuly_11_2021 = () => {
             <p>Such as Camaguey...</p>
             <div className="aspect-w-16 aspect-h-9">
               <HLSVideoPlayer
-                url="https://stream.mux.com/UtRXCpJYMJqvEPWluAwlLy3ve2kAjqb016yVRrij02W7s.m3u8"
-                poster="https://image.mux.com/UtRXCpJYMJqvEPWluAwlLy3ve2kAjqb016yVRrij02W7s/thumbnail.png?width=1920&height=1080&fit_mode=pad"
+                url="https://stream.vidsrv.net/UtRXCpJYMJqvEPWluAwlLy3ve2kAjqb016yVRrij02W7s.m3u8"
+                poster="https://image.vidsrv.net/UtRXCpJYMJqvEPWluAwlLy3ve2kAjqb016yVRrij02W7s/thumbnail.png?width=1920&height=1080&fit_mode=pad"
               />
             </div>
           </div>
@@ -60,8 +60,8 @@ const EventsOnJuly_11_2021 = () => {
             <p>Las Tunas</p>
             <div className="aspect-w-16 aspect-h-9">
               <HLSVideoPlayer
-                url="https://stream.mux.com/gaWnpfKC8gAHwayjoXzJO9ci2KqD01r4YTH8Exju63eA.m3u8"
-                poster="https://image.mux.com/gaWnpfKC8gAHwayjoXzJO9ci2KqD01r4YTH8Exju63eA/thumbnail.png?width=1920&height=1080&fit_mode=pad"
+                url="https://stream.vidsrv.net/gaWnpfKC8gAHwayjoXzJO9ci2KqD01r4YTH8Exju63eA.m3u8"
+                poster="https://image.vidsrv.net/gaWnpfKC8gAHwayjoXzJO9ci2KqD01r4YTH8Exju63eA/thumbnail.png?width=1920&height=1080&fit_mode=pad"
               />
             </div>
           </div>
@@ -71,8 +71,8 @@ const EventsOnJuly_11_2021 = () => {
             <p>Ciego de Avila</p>
             <div className="aspect-w-16 aspect-h-9">
               <HLSVideoPlayer
-                url="https://stream.mux.com/zW4qlyd58ZMbwCuNin8YCxIGlFlfvbDIKT7vBxCAPi00.m3u8"
-                poster="https://image.mux.com/zW4qlyd58ZMbwCuNin8YCxIGlFlfvbDIKT7vBxCAPi00/thumbnail.png?width=1920&height=1080&fit_mode=pad"
+                url="https://stream.vidsrv.net/zW4qlyd58ZMbwCuNin8YCxIGlFlfvbDIKT7vBxCAPi00.m3u8"
+                poster="https://image.vidsrv.net/zW4qlyd58ZMbwCuNin8YCxIGlFlfvbDIKT7vBxCAPi00/thumbnail.png?width=1920&height=1080&fit_mode=pad"
               />
             </div>
           </div>
@@ -82,8 +82,8 @@ const EventsOnJuly_11_2021 = () => {
             <p>Pinar del Rio...and many more</p>
             <div className="aspect-w-16 aspect-h-9">
               <HLSVideoPlayer
-                url="https://stream.mux.com/V01zretkHryYQz7CtiV97TmPCwW013BMNOch1dgAOVYe8.m3u8"
-                poster="https://image.mux.com/V01zretkHryYQz7CtiV97TmPCwW013BMNOch1dgAOVYe8/thumbnail.png?width=1920&height=1080&fit_mode=pad"
+                url="https://stream.vidsrv.net/V01zretkHryYQz7CtiV97TmPCwW013BMNOch1dgAOVYe8.m3u8"
+                poster="https://image.vidsrv.net/V01zretkHryYQz7CtiV97TmPCwW013BMNOch1dgAOVYe8/thumbnail.png?width=1920&height=1080&fit_mode=pad"
               />
             </div>
           </div>

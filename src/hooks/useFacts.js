@@ -1,4 +1,4 @@
-import { useStaticQuery, graphql } from "gatsby"
+import { graphql, useStaticQuery } from "gatsby"
 
 export const useFacts = () => {
   const newData = []
@@ -18,7 +18,7 @@ export const useFacts = () => {
     }
   `)
 
-  data.allFile.edges.map(fact => {
+  data.allFile.edges.forEach(fact => {
     switch (fact.node.name) {
       case "facts_repression":
         newData.push({

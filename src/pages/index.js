@@ -1,13 +1,13 @@
-import React from "react"
-import Layout from "../components/layout"
-import Seo from "../components/seo"
-import Hero from "../components/hero"
-import Facts from "../components/facts"
-import CallToHelp from "../components/call-to-help"
-import CovidCrisis from "../components/covid-crisis"
 import Closings from "../components/closing"
-import NoUSEmbargo from "../components/no-us-embargo"
+// import CallToHelp from "../components/call-to-help"
+import CovidCrisis from "../components/covid-crisis"
+import Facts from "../components/facts"
+import Hero from "../components/hero"
+import Layout from "../components/layout"
 import LogRocket from "logrocket"
+import NoUSEmbargo from "../components/no-us-embargo"
+import React from "react"
+import Seo from "../components/seo"
 import setupLogRocketReact from "logrocket-react"
 
 //  Mr. LogRocket
@@ -24,10 +24,10 @@ const IndexPage = () => (
       <Hero />
       <Facts />
       <NoUSEmbargo />
-      <CallToHelp />
+      {/* <CallToHelp /> */}
       <CovidCrisis />
       <Closings />
-      <CallToHelp />
+      {/* <CallToHelp /> */}
     </Layout>
   </>
 )

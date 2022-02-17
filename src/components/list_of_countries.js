@@ -1,31 +1,38 @@
-import React, { Fragment } from "react"
-import InfiniteScroll from "react-infinite-scroll-component"
-import useCountries from "../hooks/useCountries"
-import { Menu, Transition } from "@headlessui/react"
-import { ChevronDownIcon } from "@heroicons/react/solid"
-import { classNames } from "../utils/classNames"
-import { useInfiniteScrollData } from "../hooks/useInfiniteScrollData"
 import "../styles/scrollbarHide.css"
+
+import { Menu, Transition } from "@headlessui/react"
+import React, { Fragment } from "react"
+
+import { ChevronDownIcon } from "@heroicons/react/solid"
+import InfiniteScroll from "react-infinite-scroll-component"
 import PropTypes from "prop-types"
+import { classNames } from "../utils/classNames"
+import { compare } from "../utils/compare"
+import useCountries from "../hooks/useCountries"
+import { useInfiniteScrollData } from "../hooks/useInfiniteScrollData"
 
 const ListOfCountries = ({ handleCountry, errors, selectedCountry }) => {
-  const { countries } = useCountries()
-  const { data, hasMore, fetchMoreData } = useInfiniteScrollData(countries)
+  const countries = useCountries()
+  const sortedCountries = countries.sort(compare)
+  const { data, hasMore, fetchMoreData } =
+    useInfiniteScrollData(sortedCountries)
 
   //
+
+  // return <div>TEST</div>
   return (
     <Menu as="div" className="relative inline-block text-left">
       {({ open }) => (
         <>
           <div>
-            <Menu.Button className="inline-flex justify-center w-full rounded-md border border-gray-300 shadow-sm px-4 py-2 bg-transparent text-sm font-medium text-gray-300 focus:outline-none">
+            <Menu.Button className="inline-flex w-full justify-center rounded-md border border-gray-300 bg-transparent px-4 py-2 text-sm font-medium text-gray-300 shadow-sm focus:outline-none">
               {selectedCountry}
               <ChevronDownIcon
                 className="-mr-1 ml-2 h-5 w-5"
                 aria-hidden="true"
               />
             </Menu.Button>
-            <p className="mt-2 text-sm text-red-600 flex items-center justify-center">
+            <p className="mt-2 flex items-center justify-center text-sm text-red-600">
               {errors.country || ""}
             </p>
           </div>
@@ -42,7 +49,7 @@ const ListOfCountries = ({ handleCountry, errors, selectedCountry }) => {
           >
             <Menu.Items
               static
-              className="origin-top-right absolute left-0 mt-2 w-80 rounded-md shadow-lg bg-gray-700 ring-1 ring-black ring-opacity-5 divide-y divide-gray-100 focus:outline-none"
+              className="absolute left-0 mt-2 w-80 origin-top-right divide-y divide-gray-100 rounded-md bg-gray-700 shadow-lg ring-1 ring-black ring-opacity-5 focus:outline-none"
             >
               <InfiniteScroll
                 dataLength={data.length}
@@ -53,27 +60,27 @@ const ListOfCountries = ({ handleCountry, errors, selectedCountry }) => {
               >
                 <div id="hide-scrollbar">
                   {data.map(country => (
-                    <div key={country.numericCode} className="py-1">
+                    <div key={country.ccn3} className="py-1">
                       <Menu.Item>
                         {({ active }) => (
                           <button
                             type="button"
                             onClick={() => {
-                              handleCountry(country.name)
+                              handleCountry(country.name.official)
                             }}
                             className={classNames(
                               active
                                 ? "bg-gray-600 text-gray-100"
                                 : "text-gray-300",
-                              "group flex items-center px-4 py-2 text-sm w-full truncate"
+                              "group flex w-full items-center truncate px-4 py-2 text-sm"
                             )}
                           >
-                            <img
+                            {/* <img
                               className="mr-3 h-5 w-5"
                               src={country.flag}
                               alt="country flag"
-                            />
-                            {country.name}
+                            /> */}
+                            {country.name.official}
                           </button>
                         )}
                       </Menu.Item>

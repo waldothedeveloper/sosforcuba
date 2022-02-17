@@ -1,6 +1,6 @@
-import React from "react"
-import PropTypes from "prop-types"
 import { OutboundLink } from "gatsby-plugin-google-gtag"
+import PropTypes from "prop-types"
+import React from "react"
 
 const GettyImages = ({ url, src }) => {
   return (
@@ -42,6 +42,7 @@ const GettyImages = ({ url, src }) => {
         }}
       >
         <iframe
+          title="images from Getty Images related to Cuban protests on July 11th, 2021"
           src={src}
           scrolling="no"
           frameBorder={0}

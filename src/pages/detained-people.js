@@ -1,30 +1,30 @@
-import React from "react"
+import GettyImages from "../components/gettyImages"
+import HLSVideoPlayer from "../components/hls-player"
+import Layout from "../components/layout"
 import { OutboundLink } from "gatsby-plugin-google-gtag"
-import { TwitterTweetEmbed } from "react-twitter-embed"
+import PeopleDetained from "../components/people_detained"
+import React from "react"
 import { StaticImage } from "gatsby-plugin-image"
 import StatisticsOfDetainedPeople from "../components/statistics_of_detained_people"
+import { TwitterTweetEmbed } from "react-twitter-embed"
 import YoutubeEmbed from "../components/youtubeEmbed"
-import GettyImages from "../components/gettyImages"
-import Layout from "../components/layout"
-import HLSVideoPlayer from "../components/hls-player"
-import PeopleDetained from "../components/people_detained"
 
 const DetainedPeople = () => {
   return (
     <Layout>
-      <div className="pt-32 prose prose-red prose-lg text-gray-300 mx-auto max-w-sm px-4 md:px-0 md:max-w-4xl">
-        <div className="text-lg max-w-prose mx-auto">
+      <div className="prose prose-lg prose-red mx-auto max-w-sm px-4 pt-32 text-gray-300 md:max-w-4xl md:px-0">
+        <div className="mx-auto max-w-prose text-lg">
           <h1>
-            <span className="block text-base text-center text-red-600 font-semibold tracking-wide uppercase">
+            <span className="block text-center text-base font-semibold uppercase tracking-wide text-red-600">
               events July 12-22, 2021
             </span>
-            <span className="mt-2 block text-3xl text-center leading-8 font-extrabold tracking-tight text-gray-50 sm:text-4xl">
+            <span className="mt-2 block text-center text-3xl font-extrabold leading-8 tracking-tight text-gray-50 sm:text-4xl">
               Missing and Detained People
             </span>
           </h1>
         </div>
 
-        <div className="pt-12 space-y-6 flex flex-col items-center justify-center">
+        <div className="flex flex-col items-center justify-center space-y-6 pt-12">
           <GettyImages
             url="http://www.gettyimages.com/detail/1233949303"
             src="//embed.gettyimages.com/embed/1233949303?et=r8odOetkQ2dZkP1NFRvuag&tld=com&sig=x0eDHfzBfPVzFKcyZfWM8sHhTsyAXM-drh8ePptrQhw=&caption=true&ver=1"
@@ -46,14 +46,14 @@ const DetainedPeople = () => {
             href="https://twitter.com/AnyeloTroyaGonz"
             rel="noreferrer noopener"
           >
-            <span className="text-yellow-400 font-medium underline">
+            <span className="font-medium text-yellow-400 underline">
               Anyelo Troya Gonzalez
             </span>
           </OutboundLink>
           , a Cuban photographer, was on the streets on July 11th documenting
           the protests. He was later detained and sentenced to 1 year in prison
           in a summary trial{" "}
-          <span className="text-yellow-400 font-medium">
+          <span className="font-medium text-yellow-400">
             {" "}
             -without a lawyer-{" "}
           </span>{" "}
@@ -72,7 +72,7 @@ const DetainedPeople = () => {
             href="https://twitter.com/Dinastars_"
             rel="noopener noreferrer"
           >
-            <span className="text-yellow-400 font-medium underline">
+            <span className="font-medium text-yellow-400 underline">
               Dina Stars
             </span>
           </OutboundLink>
@@ -83,7 +83,7 @@ const DetainedPeople = () => {
             target="_blank"
             rel="noopener noreferrer"
           >
-            <span className="text-yellow-400 font-medium underline">
+            <span className="font-medium text-yellow-400 underline">
               live television Tuesday morning
             </span>
           </OutboundLink>{" "}
@@ -112,7 +112,7 @@ const DetainedPeople = () => {
             href="https://twitter.com/27Ncuba"
             rel="noopener noreferrer"
           >
-            <span className="text-yellow-400 font-medium underline">
+            <span className="font-medium text-yellow-400 underline">
               27NCuba
             </span>
           </OutboundLink>{" "}
@@ -135,7 +135,7 @@ const DetainedPeople = () => {
             href="https://twitter.com/LMOAlcantara"
             rel="noopener noreferrer"
           >
-            <span className="text-yellow-400 font-medium underline">
+            <span className="font-medium text-yellow-400 underline">
               Luis Manuel Otero
             </span>
           </OutboundLink>{" "}
@@ -151,15 +151,15 @@ const DetainedPeople = () => {
         </blockquote>
         <div className="aspect-w-16 aspect-h-9">
           <HLSVideoPlayer
-            url="https://stream.mux.com/xrZMBltEjrnlrYa3xwi8ywoeQ9GtFbCsgNlHBjfFlRM.m3u8"
-            poster="https://image.mux.com/xrZMBltEjrnlrYa3xwi8ywoeQ9GtFbCsgNlHBjfFlRM/thumbnail.png?width=1920&height=1080&fit_mode=pad"
+            url="https://stream.vidsrv.net/xrZMBltEjrnlrYa3xwi8ywoeQ9GtFbCsgNlHBjfFlRM.m3u8"
+            poster="https://image.vidsrv.net/xrZMBltEjrnlrYa3xwi8ywoeQ9GtFbCsgNlHBjfFlRM/thumbnail.png?width=1920&height=1080&fit_mode=pad"
           />
         </div>
         {/* <InstaEmbed url="https://www.instagram.com/p/CRMcwjlBz74/" /> */}
-        <span className="py-12 block text-3xl text-center leading-8 font-extrabold tracking-tight text-yellow-400 sm:text-4xl">
+        <span className="block py-12 text-center text-3xl font-extrabold leading-8 tracking-tight text-yellow-400 sm:text-4xl">
           He was detained and sent to a maximum-security prison.
         </span>
-        <span className="py-12 block text-3xl text-center leading-8 font-extrabold tracking-tight text-yellow-400 sm:text-4xl">
+        <span className="block py-12 text-center text-3xl font-extrabold leading-8 tracking-tight text-yellow-400 sm:text-4xl">
           Allegedly accused of Attack, Resistance, and Contempt.
         </span>
         <p>
@@ -189,7 +189,7 @@ const DetainedPeople = () => {
             href="https://www.instagram.com/aprespinosa/"
             rel="noopener noreferrer"
           >
-            <span className="text-yellow-400 font-medium underline">
+            <span className="font-medium text-yellow-400 underline">
               Ramon Espinosa
             </span>
           </OutboundLink>
@@ -216,7 +216,7 @@ const DetainedPeople = () => {
             href="https://twitter.com/jdanielferrer"
             rel="noreferrer noopener"
           >
-            <span className="text-yellow-400 font-medium underline">
+            <span className="font-medium text-yellow-400 underline">
               José Daniel Ferrer García
             </span>
           </OutboundLink>{" "}
@@ -262,7 +262,7 @@ const DetainedPeople = () => {
 
         <p>
           On April 22, 2021 Senators{" "}
-          <span className="text-yellow-400 font-medium underline">
+          <span className="font-medium text-yellow-400 underline">
             Rick Scott, Marco Rubio, and Ted Cruz
           </span>{" "}
           introduced a{" "}
@@ -271,7 +271,7 @@ const DetainedPeople = () => {
             target="_blank"
             rel="noreferrer noopener"
           >
-            <span className="text-yellow-400 font-medium underline">
+            <span className="font-medium text-yellow-400 underline">
               resolution
             </span>
           </OutboundLink>{" "}

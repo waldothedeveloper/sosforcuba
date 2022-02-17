@@ -1,6 +1,6 @@
+import PropTypes from "prop-types"
 import React from "react"
 import { classNames } from "../utils/classNames"
-import PropTypes from "prop-types"
 
 const ProtestFilter = ({ tabs, handleChange }) => {
   return (
@@ -14,7 +14,7 @@ const ProtestFilter = ({ tabs, handleChange }) => {
           onChange={event => handleChange(event)}
           id="tabs"
           name="tabs"
-          className="block w-full pl-3 pr-10 py-2 bg-gray-600 text-base border-gray-600 text-gray-300  focus:ring-blue-500 focus:border-blue-500 sm:text-sm rounded-md"
+          className="block w-full rounded-md border-gray-600 bg-gray-600 py-2 pl-3 pr-10 text-base  text-gray-300 focus:border-blue-500 focus:ring-blue-500 sm:text-sm"
         >
           {tabs.map(tab => (
             <option value={tab.name} key={tab.name}>
@@ -27,14 +27,14 @@ const ProtestFilter = ({ tabs, handleChange }) => {
         <div className="border-b border-gray-200">
           <nav className="-mb-px flex space-x-8" aria-label="Tabs">
             {tabs.map(tab => (
-              <a
+              <button
                 key={tab.name}
                 onClick={() => handleChange(tab.name)}
                 className={classNames(
                   tab.current
                     ? "border-gray-200 text-gray-50"
-                    : "border-transparent text-gray-500 hover:text-gray-300 hover:border-gray-100 group",
-                  "whitespace-nowrap flex py-4 px-1 border-b-2 font-medium text-sm cursor-pointer"
+                    : "group border-transparent text-gray-500 hover:border-gray-100 hover:text-gray-300",
+                  "flex cursor-pointer whitespace-nowrap border-b-2 py-4 px-1 text-sm font-medium"
                 )}
                 aria-current={tab.current ? "page" : undefined}
               >
@@ -45,13 +45,13 @@ const ProtestFilter = ({ tabs, handleChange }) => {
                       tab.current
                         ? "bg-sky-100 text-sky-600"
                         : "bg-gray-600 text-gray-400",
-                      "hidden ml-3 py-0.5 px-2.5 rounded-full text-xs font-medium md:inline-block hover:text-gray-300 hover:bg-gray-500"
+                      "ml-3 hidden rounded-full py-0.5 px-2.5 text-xs font-medium hover:bg-gray-500 hover:text-gray-300 md:inline-block"
                     )}
                   >
                     {tab.count}
                   </span>
                 ) : null}
-              </a>
+              </button>
             ))}
           </nav>
         </div>

@@ -1,19 +1,23 @@
-import { useStaticQuery, graphql } from "gatsby"
+import { graphql, useStaticQuery } from "gatsby"
 
 const useCountries = () => {
   const countries = useStaticQuery(graphql`
     {
-      countries {
-        countries {
-          name
-          flag
-          alpha3Code
-          numericCode
+      allCountries {
+        nodes {
+          countries {
+            name {
+              official
+            }
+            flag
+            cca3
+            ccn3
+          }
         }
       }
     }
   `)
-  return countries.countries
+  return countries.allCountries.nodes[0].countries
 }
 
 export default useCountries

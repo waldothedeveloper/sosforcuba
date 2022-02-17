@@ -1,4 +1,5 @@
-import { useState, useEffect } from "react"
+import { useEffect, useState } from "react"
+
 import { saveProtestInDB } from "../config/faunadb"
 
 export const useProtestForm = validate => {
@@ -44,7 +45,7 @@ export const useProtestForm = validate => {
           setIsSubmitting(false)
         })
     }
-  }, [errors])
+  }, [errors, isSubmitting, values])
 
   const handleCountry = country => {
     if (country.length > 0) {

@@ -11,7 +11,7 @@ export const useInfiniteScrollData = bigArray => {
     return () => {
       setData([])
     }
-  }, [])
+  }, [bigArray])
 
   // get more data
   const fetchMoreData = () => {

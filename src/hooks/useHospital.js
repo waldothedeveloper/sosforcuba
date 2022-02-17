@@ -1,4 +1,4 @@
-import { useStaticQuery, graphql } from "gatsby"
+import { graphql, useStaticQuery } from "gatsby"
 
 export const useHospital = () => {
   const newData = []
@@ -19,7 +19,7 @@ export const useHospital = () => {
   `)
 
   //
-  data.allFile.edges.map(fact => {
+  data.allFile.edges.forEach(fact => {
     switch (fact.node.name) {
       case "hosp_hospital-in-cuba-1":
         newData.push({

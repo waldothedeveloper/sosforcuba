@@ -1,7 +1,7 @@
-import { useFetchProtests } from "./useFetchProtests"
 import { getToday } from "../utils/getToday"
 import { getTomorrow } from "../utils/getTomorrow"
 import { getWeekend } from "../utils/getWeekend"
+import { useFetchProtests } from "./useFetchProtests"
 import { useState } from "react"
 
 export const useFilterProtests = () => {
@@ -44,7 +44,7 @@ export const useFilterProtests = () => {
 
   const setActiveTab = name => {
     const newTabsState = tabs
-    newTabsState.map(elem => {
+    newTabsState.forEach(elem => {
       if (elem.name !== name) {
         elem.current = false
       } else {

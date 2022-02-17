@@ -1,26 +1,26 @@
-import React from "react"
 import Layout from "../components/layout"
 import { OutboundLink } from "gatsby-plugin-google-gtag"
+import React from "react"
 
 const Section5_Human_Rights = () => {
   return (
     <Layout>
-      <div className="py-32 prose prose-red prose-lg text-gray-300 mx-auto max-w-sm px-4 md:px-0 md:max-w-4xl">
-        <div className="text-lg max-w-prose mx-auto">
+      <div className="prose prose-lg prose-red mx-auto max-w-sm py-32 px-4 text-gray-300 md:max-w-4xl md:px-12">
+        <div className="mx-auto max-w-prose text-lg">
           <h1>
-            <span className="mt-2 block text-3xl text-center leading-8 font-extrabold tracking-tight text-gray-50 sm:text-4xl">
+            <span className="mb-12 block text-center text-3xl font-extrabold leading-8 tracking-tight text-gray-50 sm:text-4xl">
               Human Rights Violations in Cuba
             </span>
           </h1>
         </div>
 
-        <p>
+        <p className="pb-4">
           There are over 17 human rights violations by the communist government
           of Cuba. They started after 1959 and for{" "}
           {new Date().getFullYear() - 1959} years have not stopped.
         </p>
 
-        <ol className="text-yellow-400 font-medium">
+        <ol className="font-medium text-yellow-400">
           <li>No Freedom of Speech.</li>
           <li>No Freedom of the Press</li>
           <li>Restrictions on Freedom of Religion</li>
@@ -43,13 +43,13 @@ const Section5_Human_Rights = () => {
           <li>Use of Police Coercion and Brutality</li>
         </ol>
 
-        <p>
+        <p className="pt-4">
           The citizens of Cuba live in genuine fear due to the dark government
           history of repression, beatings, public shaming acts, harassment,
           fines, detentions, and surveillance.
         </p>
 
-        <p>
+        <p className="pt-4">
           The U.S. Department of State contains a highly detailed document
           containing the 2020 Country Reports on Human Rights Practices in Cuba.
           You can read the referenced document{" "}
@@ -58,7 +58,7 @@ const Section5_Human_Rights = () => {
             href="https://www.state.gov/reports/2020-country-reports-on-human-rights-practices/cuba/"
             rel="noreferrer noopener"
           >
-            <span className="text-yellow-400 underline font-medium">here.</span>
+            <span className="font-medium text-yellow-400 underline">here.</span>
           </OutboundLink>
         </p>
       </div>
