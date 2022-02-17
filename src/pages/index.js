@@ -9,27 +9,32 @@ import NoUSEmbargo from "../components/no-us-embargo"
 import React from "react"
 import Seo from "../components/seo"
 import setupLogRocketReact from "logrocket-react"
-
+import { useEffect } from "react"
 //  Mr. LogRocket
 LogRocket.init("waldo-the-developer/sos-for-cuba")
-setupLogRocketReact(LogRocket)
 
-const IndexPage = () => (
-  <>
-    <Seo
-      title="S.O.S. Cuba. The people of Cuba needs freedom. No more communism. No more dictatorship. No more abuse of human rights."
-      description="The people of Cuba has suffered more than 62 years of human rights abuse. Harassment, incarceration, public acts of repudiation, beatings, intimidation, repression, surveillance, and arbitrary detentions are just a few. The list of prohibitions that Cubans have faced is actually much worse. Support our cause making a generous donation today."
-    />
-    <Layout>
-      <Hero />
-      <Facts />
-      <NoUSEmbargo />
-      {/* <CallToHelp /> */}
-      <CovidCrisis />
-      <Closings />
-      {/* <CallToHelp /> */}
-    </Layout>
-  </>
-)
+const IndexPage = () => {
+  useEffect(() => {
+    setupLogRocketReact(LogRocket)
+  }, [])
+
+  return (
+    <>
+      <Seo
+        title="S.O.S. Cuba. The people of Cuba needs freedom. No more communism. No more dictatorship. No more abuse of human rights."
+        description="The people of Cuba has suffered more than 62 years of human rights abuse. Harassment, incarceration, public acts of repudiation, beatings, intimidation, repression, surveillance, and arbitrary detentions are just a few. The list of prohibitions that Cubans have faced is actually much worse. Support our cause making a generous donation today."
+      />
+      <Layout>
+        <Hero />
+        <Facts />
+        <NoUSEmbargo />
+        {/* <CallToHelp /> */}
+        <CovidCrisis />
+        <Closings />
+        {/* <CallToHelp /> */}
+      </Layout>
+    </>
+  )
+}
 
 export default IndexPage
