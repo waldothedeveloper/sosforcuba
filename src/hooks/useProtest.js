@@ -10,36 +10,38 @@ export const useProtestForm = validate => {
   const [dbError, setDbError] = useState(null)
 
   useEffect(() => {
-    if (Object.keys(errors).length === 0 && isSubmitting) {
-      const data = {
-        approved: "pending",
-        name: values.event_name,
-        time: values.time,
-        date: values.date,
-        address: {
-          country: values.country,
-          street_address: values.street_address,
-          city: values.city,
-          state: values.state,
-          zipcode: values.zipcode,
-        },
-        contact: {
-          email: values.email,
-          phone_number: values.phone_number,
-          message: values.message,
-        },
-      }
-      // save the protest in the fauna dababase
+    const data = {
+      approved: "pending",
+      name: values.event_name,
+      time: values.time,
+      date: values.date,
+      address: {
+        country: values.country,
+        street_address: values.street_address,
+        city: values.city,
+        state: values.state,
+        zipcode: values.zipcode,
+      },
+      contact: {
+        email: values.email,
+        phone_number: values.phone_number,
+        message: values.message,
+      },
+    }
+
+    if (
+      Object.keys(errors).length === 0 &&
+      isSubmitting &&
+      Object.keys(values).length !== 0
+    ) {
+      //! save the protest in the fauna dababase
       saveProtestInDB({ data })
         .then(ret => {
-          // console.log(ret)
           setValues({})
           setIsSubmitting(false)
           setOpenNotification(true)
-          // ! REMEMBER TO IMPLEMENT SOME EMAIL FEATURE THAT NOTIFY ME AND THE PERSON SUBMITTING THIS FORM
         })
         .catch(err => {
-          console.error("Error: %s", err)
           setOpenNotification(true)
           setDbError(err)
           setIsSubmitting(false)
