@@ -11,7 +11,7 @@ import Seo from "../components/seo"
 import setupLogRocketReact from "logrocket-react"
 
 //  Mr. LogRocket
-LogRocket.init("0po6xe/sosforcuba")
+LogRocket.init("waldo-the-developer/sos-for-cuba")
 setupLogRocketReact(LogRocket)
 
 const IndexPage = () => (

@@ -71,3 +71,6 @@ yarn-error.log
 .faunarc
 # Local Netlify folder
 .netlify
+
+# Error logs from Netlify deploy
+logs.from.netlify.txt
